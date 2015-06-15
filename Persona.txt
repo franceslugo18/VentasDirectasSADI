@@ -17,7 +17,11 @@ class Persona{
 
 	public void mostrarNombre()
 	{
-		Console.WriteLine(Nombre);
+		Console.WriteLine(Nombre + apellido);
 
 	}
+
+	public string mostrarNombreCompleto(){
+		return Nombre + apellido;
+	{
 }
