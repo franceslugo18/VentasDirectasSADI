@@ -1,0 +1,9 @@
+class Persona{
+	string nombre;
+	string apellido;
+	
+	Persona(string n, string p){
+		nombre = n;
+		apellido = p;
+	}
+}
