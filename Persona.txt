@@ -1,9 +1,11 @@
 class Persona{
-	string nombre;
+	string Nombre;
 	string apellido;
+	int edad;
 	
-	Persona(string n, string p){
+	Persona(string n, string p, int e){
 		nombre = n;
 		apellido = p;
+		edad = e;
 	}
 }
