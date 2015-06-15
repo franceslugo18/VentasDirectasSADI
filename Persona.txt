@@ -1,13 +1,14 @@
 class Persona{
 	string Nombre;
-	string apellido;
+	
 	int edad;
 	int sexo;
+	int telefono;
 	
 
-	Persona(string n, string p, int e, int sexo){
+	Persona(string n, int e, int sexo){
 		nombre = n;
-		apellido = p;
+		
 		if (e > 18)
 		{
 			edad = e;
@@ -17,11 +18,13 @@ class Persona{
 
 	public void mostrarNombre()
 	{
-		Console.WriteLine(Nombre + apellido);
+		Console.WriteLine(Nombre);
 
 	}
 
-	public string mostrarNombreCompleto(){
-		return Nombre + apellido;
+	public void setTelefono(int tel)
 	{
+		telefono = tel;
+	}
+
 }
