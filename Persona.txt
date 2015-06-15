@@ -4,15 +4,20 @@ class Persona{
 	int edad;
 	int sexo;
 	
+
 	Persona(string n, string p, int e, int sexo){
 		nombre = n;
 		apellido = p;
-		edad = e;
+		if (e > 18)
+		{
+			edad = e;
+		}
 		sexo = s;
 	}
 
 	public void mostrarNombre()
 	{
 		Console.WriteLine(Nombre);
+
 	}
 }
