@@ -5,20 +5,15 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace SADI
+namespace SADIsoft.prueba
 {
-    public partial class PropietarioCuenta : System.Web.UI.Page
+    public partial class INDEX : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Response.Write(Session["usuario"].ToString());
-        }
-
-        protected void LinkButton1_Click(object sender, EventArgs e)
-        {
             Session.Abandon();
             Response.Cookies.Add(new HttpCookie("ASP.NET_SessionId", ""));
-            Response.Redirect("Default.aspx");
+            Response.Redirect("/vw/haber.aspx");
         }
     }
 }

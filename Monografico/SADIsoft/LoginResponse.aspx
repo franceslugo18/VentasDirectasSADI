@@ -25,7 +25,7 @@
             <div class="col-sm-6 col-md-4 col-md-offset-4">
                 <h1 class="text-center login-title">Iniciar Seccion en SADI</h1>
                 <div class="account-wall">
-                    <img class="profile-img" src="logo/lo.jpg"
+                    <img class="profile-img" src="/logo/lo.jpg"
                         alt=""/>
                     <form class="form-signin" runat="server">
                         <asp:TextBox ID="textUsuarios" runat="server" type="text" class="form-control" placeholder="Email" required autofocus ></asp:TextBox>

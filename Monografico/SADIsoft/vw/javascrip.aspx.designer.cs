@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SADI {
+namespace SADIsoft.prueba {
     
     
-    public partial class PropietarioCuenta {
+    public partial class javascrip {
         
         /// <summary>
         /// form1 control.
@@ -22,12 +22,12 @@ namespace SADI {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// LinkButton1 control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

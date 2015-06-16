@@ -29,7 +29,7 @@ namespace SADIsoft
             {
 
                 ReportViewer1.ProcessingMode = Microsoft.Reporting.WebForms.ProcessingMode.Remote;
-                ReportViewer1.ServerReport.ReportServerUrl = new System.Uri("http://francisco-lugo/Reportserver_SQLEXPRESS");
+                ReportViewer1.ServerReport.ReportServerUrl = new System.Uri("http://localhost/Reportserver");
                 ReportViewer1.ServerReport.ReportPath = "/InmobiliariaReport/Report1";
                 ReportViewer1.ServerReport.Refresh();
                   
@@ -54,7 +54,7 @@ namespace SADIsoft
             try
             {
 
-                GenerarContratoLitisControlador.guardarContrato(ddlPropietario1.SelectedValue, GridView1.SelectedDataKey.Value.ToString(), DateTime.Now);
+                GenerarContratoLitisControlador.guardarContrato(GridView1.SelectedDataKey.Value.ToString(), DateTime.Now);
 
                 ReportParameter InmuebleId = new ReportParameter();
                 InmuebleId.Name = "InmuebleId";

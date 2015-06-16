@@ -23,7 +23,7 @@ namespace SADIsoft
             {
 
                 ReportViewer1.ProcessingMode = Microsoft.Reporting.WebForms.ProcessingMode.Remote;
-                ReportViewer1.ServerReport.ReportServerUrl = new System.Uri("http://francisco-lugo/Reportserver_SQLEXPRESS");
+                ReportViewer1.ServerReport.ReportServerUrl = new System.Uri("http://localhost/Reportserver");
                 ReportViewer1.ServerReport.ReportPath = "/InmobiliariaReport/ContratoAlquiler";
                 ReportViewer1.ServerReport.Refresh();
 

@@ -59,13 +59,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AdministracionResp.aspx" />
     <Content Include="App_Data\PostgradoDB.mdf" />
     <Content Include="App_Data\PostgradoDB_log.ldf">
       <DependentUpon>PostgradoDB.mdf</DependentUpon>
     </Content>
-    <Content Include="Buscar.aspx" />
-    <Content Include="CambiarContrasena.aspx" />
     <Content Include="ContratoAlquiler.aspx" />
     <Content Include="ContratoLitis.aspx" />
     <Content Include="Default.aspx" />
@@ -83,47 +80,36 @@
     <Content Include="Images\1088-5\1088-2.jpg" />
     <Content Include="Images\1088-5\1088-3.jpg" />
     <Content Include="Images\1088-5\1088-4.jpg" />
-    <Content Include="LoginCambioResp.aspx" />
     <Content Include="LoginResponse.aspx" />
     <Content Include="logo\iconolo.png" />
     <Content Include="logo\lo.jpg" />
-    <Content Include="PropietarioCuenta.aspx" />
-    <Content Include="propietarios registrados\PropietariosReg.aspx" />
     <Content Include="Propietarios.aspx" />
     <Content Include="prueba\PRUEBA.aspx" />
     <Content Include="prueba\WebForm1.aspx" />
-    <Content Include="registrar cliente\RegistrarClientes.aspx" />
-    <Content Include="registrar inmueble\RegistrarInmuebles.aspx" />
-    <Content Include="registrar propietarios\RegistrarPropietarios.aspx" />
-    <Content Include="registrar usuario\RegistroUsuario.aspx" />
     <Content Include="stilo\estilos.css" />
+    <Content Include="stilo\Maestra.css" />
     <Content Include="VerDetallesInmueble.aspx" />
+    <Content Include="vw\AdministracionResp.aspx" />
+    <Content Include="vw\BuscarPPP.aspx" />
+    <Content Include="vw\CambiarContrasena.aspx" />
+    <Content Include="vw\haber.aspx" />
+    <Content Include="vw\INDEX.aspx" />
+    <Content Include="vw\javascrip.aspx" />
+    <Content Include="vw\LoginCambioResp.aspx" />
+    <Content Include="vw\PaginaPrincipal.aspx" />
+    <Content Include="vw\PIvote.aspx" />
+    <Content Include="vw\PropietariosReg.aspx" />
+    <Content Include="vw\RegistrarClientes.aspx" />
+    <Content Include="vw\RegistrarInmuebles.aspx" />
+    <Content Include="vw\RegistrarPropietarios.aspx" />
+    <Content Include="vw\RegistroUsuario.aspx" />
+    <Content Include="vw\VerticalMenueP.aspx" />
+    <Content Include="vw\WebUserControl1.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdministracionResp.aspx.cs">
-      <DependentUpon>AdministracionResp.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AdministracionResp.aspx.designer.cs">
-      <DependentUpon>AdministracionResp.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Buscar.aspx.cs">
-      <DependentUpon>Buscar.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Buscar.aspx.designer.cs">
-      <DependentUpon>Buscar.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CambiarContrasena.aspx.cs">
-      <DependentUpon>CambiarContrasena.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CambiarContrasena.aspx.designer.cs">
-      <DependentUpon>CambiarContrasena.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Code\Validacion.cs" />
     <Compile Include="ContratoAlquiler.aspx.cs">
       <DependentUpon>ContratoAlquiler.aspx</DependentUpon>
@@ -158,20 +144,6 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Inicio.Master.cs">
-      <DependentUpon>Inicio.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Inicio.Master.designer.cs">
-      <DependentUpon>Inicio.Master</DependentUpon>
-    </Compile>
-    <Compile Include="LoginCambioResp.aspx.cs">
-      <DependentUpon>LoginCambioResp.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="LoginCambioResp.aspx.designer.cs">
-      <DependentUpon>LoginCambioResp.aspx</DependentUpon>
-    </Compile>
     <Compile Include="LoginResponse.aspx.cs">
       <DependentUpon>LoginResponse.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -201,20 +173,6 @@
     <Compile Include="Model\Sector.cs" />
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PropietarioCuenta.aspx.cs">
-      <DependentUpon>PropietarioCuenta.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PropietarioCuenta.aspx.designer.cs">
-      <DependentUpon>PropietarioCuenta.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="propietarios registrados\PropietariosReg.aspx.cs">
-      <DependentUpon>PropietariosReg.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="propietarios registrados\PropietariosReg.aspx.designer.cs">
-      <DependentUpon>PropietariosReg.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Propietarios.aspx.cs">
       <DependentUpon>Propietarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -236,34 +194,6 @@
     <Compile Include="prueba\WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
-    <Compile Include="registrar cliente\RegistrarClientes.aspx.cs">
-      <DependentUpon>RegistrarClientes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="registrar cliente\RegistrarClientes.aspx.designer.cs">
-      <DependentUpon>RegistrarClientes.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="registrar inmueble\RegistrarInmuebles.aspx.cs">
-      <DependentUpon>RegistrarInmuebles.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="registrar inmueble\RegistrarInmuebles.aspx.designer.cs">
-      <DependentUpon>RegistrarInmuebles.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="registrar propietarios\RegistrarPropietarios.aspx.cs">
-      <DependentUpon>RegistrarPropietarios.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="registrar propietarios\RegistrarPropietarios.aspx.designer.cs">
-      <DependentUpon>RegistrarPropietarios.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="registrar usuario\RegistroUsuario.aspx.cs">
-      <DependentUpon>RegistroUsuario.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="registrar usuario\RegistroUsuario.aspx.designer.cs">
-      <DependentUpon>RegistroUsuario.aspx</DependentUpon>
-    </Compile>
     <Compile Include="VerDetallesInmueble.aspx.cs">
       <DependentUpon>VerDetallesInmueble.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -271,10 +201,121 @@
     <Compile Include="VerDetallesInmueble.aspx.designer.cs">
       <DependentUpon>VerDetallesInmueble.aspx</DependentUpon>
     </Compile>
+    <Compile Include="vw\AdministracionResp.aspx.cs">
+      <DependentUpon>AdministracionResp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\AdministracionResp.aspx.designer.cs">
+      <DependentUpon>AdministracionResp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\BuscarPPP.aspx.cs">
+      <DependentUpon>BuscarPPP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\BuscarPPP.aspx.designer.cs">
+      <DependentUpon>BuscarPPP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\CambiarContrasena.aspx.cs">
+      <DependentUpon>CambiarContrasena.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\CambiarContrasena.aspx.designer.cs">
+      <DependentUpon>CambiarContrasena.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\haber.aspx.cs">
+      <DependentUpon>haber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\haber.aspx.designer.cs">
+      <DependentUpon>haber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\INDEX.aspx.cs">
+      <DependentUpon>INDEX.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\INDEX.aspx.designer.cs">
+      <DependentUpon>INDEX.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\javascrip.aspx.cs">
+      <DependentUpon>javascrip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\javascrip.aspx.designer.cs">
+      <DependentUpon>javascrip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\LoginCambioResp.aspx.cs">
+      <DependentUpon>LoginCambioResp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\LoginCambioResp.aspx.designer.cs">
+      <DependentUpon>LoginCambioResp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\PaginaPrincipal.aspx.cs">
+      <DependentUpon>PaginaPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\PaginaPrincipal.aspx.designer.cs">
+      <DependentUpon>PaginaPrincipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\PIvote.aspx.cs">
+      <DependentUpon>PIvote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\PIvote.aspx.designer.cs">
+      <DependentUpon>PIvote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\PropietariosReg.aspx.cs">
+      <DependentUpon>PropietariosReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\PropietariosReg.aspx.designer.cs">
+      <DependentUpon>PropietariosReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\RegistrarClientes.aspx.cs">
+      <DependentUpon>RegistrarClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\RegistrarClientes.aspx.designer.cs">
+      <DependentUpon>RegistrarClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\RegistrarInmuebles.aspx.cs">
+      <DependentUpon>RegistrarInmuebles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\RegistrarInmuebles.aspx.designer.cs">
+      <DependentUpon>RegistrarInmuebles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\RegistrarPropietarios.aspx.cs">
+      <DependentUpon>RegistrarPropietarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\RegistrarPropietarios.aspx.designer.cs">
+      <DependentUpon>RegistrarPropietarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\RegistroUsuario.aspx.cs">
+      <DependentUpon>RegistroUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\RegistroUsuario.aspx.designer.cs">
+      <DependentUpon>RegistroUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\VerticalMenueP.aspx.cs">
+      <DependentUpon>VerticalMenueP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\VerticalMenueP.aspx.designer.cs">
+      <DependentUpon>VerticalMenueP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\WebUserControl1.ascx.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\WebUserControl1.ascx.designer.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Maestra.Master" />
-    <Content Include="Inicio.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
