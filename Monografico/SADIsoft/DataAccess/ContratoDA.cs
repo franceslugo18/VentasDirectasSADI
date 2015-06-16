@@ -12,7 +12,7 @@ namespace SADIsoft.DataAccess
         private static SqlConnection conn;
         private static SqlCommand com;
 
-        public static void guardarContratoDA(string ProId, string InmId, DateTime fecha)
+        public static void guardarContratoDA(string InmId, DateTime fecha)
         {
             try
             {
@@ -22,7 +22,7 @@ namespace SADIsoft.DataAccess
                 com = new SqlCommand();
                 com.Connection = conn;
                 com.CommandType = CommandType.StoredProcedure;
-                com.CommandText = "USP_Reg_ContratoLits";
+                com.CommandText = "USP_Reg_ContratoLitis";
                 com.Parameters.Add("@InmuebleId", SqlDbType.Int).Value = Convert.ToInt32(InmId);
                 com.Parameters.Add("@Fecha", SqlDbType.DateTime).Value = fecha;
 

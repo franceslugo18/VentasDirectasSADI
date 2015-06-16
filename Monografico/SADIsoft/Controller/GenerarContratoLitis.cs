@@ -22,9 +22,9 @@ namespace SADIsoft.Controller
             }
         }
 
-        public static void guardarContrato(string ProId, string InmId, DateTime fecha)
+        public static void guardarContrato(string InmId, DateTime fecha)
         {
-            ContratoDA.guardarContratoDA(ProId,InmId,fecha);
+            ContratoDA.guardarContratoDA(InmId,fecha);
             
         }
     }

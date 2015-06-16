@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ContratoLitis.aspx.cs" Inherits="SADIsoft.ContratoLitis" %>
 
-<%@ Register assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" namespace="CrystalDecisions.Web" tagprefix="CR" %>
+
 <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
 <!DOCTYPE html>
@@ -22,13 +22,17 @@
         Seleccione Inmueble:<br />
         <asp:GridView ID="GridView1" runat="server" Width="197px" AutoGenerateColumns="False" DataKeyNames="InmuebleId" DataSourceID="SqlDataSource1">
             <Columns>
+                <asp:CommandField ShowSelectButton="True" />
                 <asp:BoundField DataField="InmuebleId" HeaderText="InmuebleId" InsertVisible="False" ReadOnly="True" SortExpression="InmuebleId" />
                 <asp:CheckBoxField DataField="TipoInmueble" HeaderText="TipoInmueble" SortExpression="TipoInmueble" />
-                <asp:BoundField DataField="foto1" HeaderText="foto1" SortExpression="foto1" />
                 <asp:BoundField DataField="Direccion" HeaderText="Direccion" ReadOnly="True" SortExpression="Direccion" />
+                <asp:ImageField DataImageUrlField="foto1" DataImageUrlFormatString="Images\{0}" HeaderText="foto">
+                    <ControlStyle Height="100px" Width="100px" />
+                    <ItemStyle Height="5px" Width="5px" />
+                </asp:ImageField>
             </Columns>
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString %>" SelectCommand="SELECT I.InmuebleId, I.TipoInmueble, I.foto1, D.Calle + ', No. ' + D.Numero + ', ' + S.Nombre + ', ' + M.Nombre + ', ' + Pr.Nombre AS Direccion FROM Inmuebles AS I INNER JOIN Propietarios AS P ON I.PropietarioId = p.PropietarioId INNER JOIN Direcciones AS D ON I.DireccionId = D.DireccionId INNER JOIN Provincias AS Pr ON D.ProvinciaId = Pr.ProvinciaId INNER JOIN Municipios AS M ON D.MunicipioId = M.MunicipioId INNER JOIN Sectores AS S ON D.SectorId = S.SectorId WHERE I.PropietarioId = @PropietarioId AND isContratoLitis = 0
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SadiConnectionString %>" SelectCommand="SELECT I.InmuebleId, I.TipoInmueble, I.foto1, D.Calle + ', No. ' + D.Numero + ', ' + S.Nombre + ', ' + M.Nombre + ', ' + Pr.Nombre AS Direccion FROM Inmuebles AS I INNER JOIN Propietarios AS P ON I.PropietarioId = p.PropietarioId INNER JOIN Direcciones AS D ON I.DireccionId = D.DireccionId INNER JOIN Provincias AS Pr ON D.ProvinciaId = Pr.ProvinciaId INNER JOIN Municipios AS M ON D.MunicipioId = M.MunicipioId INNER JOIN Sectores AS S ON D.SectorId = S.SectorId WHERE I.PropietarioId = @PropietarioId
 ">
             <SelectParameters>
                 <asp:ControlParameter ControlID="ddlPropietario1" Name="PropietarioId" PropertyName="SelectedValue" />
@@ -38,8 +42,8 @@
         <br />
         <br />
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
-        <rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Verdana" Font-Size="8pt" Height="796px" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="964px" SizeToReportContent="True" ShowCredentialPrompts="False" AsyncRendering="False" ProcessingMode="Remote">
-            <ServerReport ReportServerUrl="http://localhost/Reportserver_SQLEXPRESS" ReportPath="/InmobiliariaReport/Report1" DisplayName="Cuota Litis" />
+        <rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Verdana" Font-Size="8pt" Height="796px" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="964px" SizeToReportContent="True" ShowCredentialPrompts="False" AsyncRendering="False" ProcessingMode="Remote" ShowParameterPrompts="False">
+            <ServerReport ReportServerUrl="http://localhost/Reportserver" ReportPath="/InmobiliariaReport/Report1" DisplayName="Cuota Litis" />
             <LocalReport DisplayName="ContratoLItis">
                 <DataSources>
                     <rsweb:ReportDataSource DataSourceId="ObjectDataSource2" Name="DataSet1" />
