@@ -35,12 +35,19 @@ namespace SADIsoft.DataAccess
             }
         }
 
-        internal static void guardarContratoDA(int inmId, int cliId, int diaP, DateTime dateTime)
+        internal static void guardarContratoDA(int inmId, int cliId, int diaP, DateTime fecha)
         {
             conn = Conexion.Conectar();
-            string query = string.Format(@"INSERT INTO Contratos(InmuebleId,ClienteId,DiaPago,Fecha) 
-                VALUES({0},{1},'{2}','{3}')", inmId,cliId,diaP,dateTime);
-            com = new SqlCommand(query, conn);
+
+
+            com = new SqlCommand();
+            com.Connection = conn;
+            com.CommandType = CommandType.StoredProcedure;
+            com.CommandText = "USP_Reg_ContratoAlquiler";
+            com.Parameters.Add("@InmuebleId", SqlDbType.Int).Value = Convert.ToInt32(inmId);
+            com.Parameters.Add("@ClienteId", SqlDbType.Int).Value = Convert.ToInt32(cliId);
+            com.Parameters.Add("@DiaPago", SqlDbType.Int).Value = Convert.ToInt32(diaP);
+            com.Parameters.Add("@Fecha", SqlDbType.DateTime).Value = fecha;
 
             int i = com.ExecuteNonQuery();
             conn.Close();

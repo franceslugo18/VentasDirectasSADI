@@ -86,6 +86,7 @@
     <Content Include="Propietarios.aspx" />
     <Content Include="prueba\PRUEBA.aspx" />
     <Content Include="prueba\WebForm1.aspx" />
+    <Content Include="RegistrarPagos.aspx" />
     <Content Include="stilo\estilos.css" />
     <Content Include="stilo\Maestra.css" />
     <Content Include="VerDetallesInmueble.aspx" />
@@ -193,6 +194,13 @@
     </Compile>
     <Compile Include="prueba\WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarPagos.aspx.cs">
+      <DependentUpon>RegistrarPagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrarPagos.aspx.designer.cs">
+      <DependentUpon>RegistrarPagos.aspx</DependentUpon>
     </Compile>
     <Compile Include="VerDetallesInmueble.aspx.cs">
       <DependentUpon>VerDetallesInmueble.aspx</DependentUpon>
