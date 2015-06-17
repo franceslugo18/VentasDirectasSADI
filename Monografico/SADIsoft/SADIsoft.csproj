@@ -103,7 +103,6 @@
     <Content Include="vw\RegistrarInmuebles.aspx" />
     <Content Include="vw\RegistrarPropietarios.aspx" />
     <Content Include="vw\RegistroUsuario.aspx" />
-    <Content Include="vw\VerticalMenueP.aspx" />
     <Content Include="vw\WebUserControl1.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -298,13 +297,6 @@
     </Compile>
     <Compile Include="vw\RegistroUsuario.aspx.designer.cs">
       <DependentUpon>RegistroUsuario.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="vw\VerticalMenueP.aspx.cs">
-      <DependentUpon>VerticalMenueP.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="vw\VerticalMenueP.aspx.designer.cs">
-      <DependentUpon>VerticalMenueP.aspx</DependentUpon>
     </Compile>
     <Compile Include="vw\WebUserControl1.ascx.cs">
       <DependentUpon>WebUserControl1.ascx</DependentUpon>

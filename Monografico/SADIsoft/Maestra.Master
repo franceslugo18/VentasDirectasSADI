@@ -107,7 +107,7 @@
                 <a href="/vw/RegistrarPropietarios.aspx" class="list-group-item">Agregar</a>
                 <a href="javascript:;" class="list-group-item">Actualizar</a>
                 <a href="javascript:;" class="list-group-item">Eliminar</a>
-                <a href="/propietarios registrados/PropietariosReg.aspx" class="list-group-item">Ver</a>
+                <a href="/vw/PropietariosReg.aspx" class="list-group-item">Ver</a>
             </div>
 
             <a href="#demo2" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Inmueble</a>
