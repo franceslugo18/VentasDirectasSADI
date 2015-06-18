@@ -97,6 +97,7 @@
     <Content Include="vw\javascrip.aspx" />
     <Content Include="vw\LoginCambioResp.aspx" />
     <Content Include="vw\PaginaPrincipal.aspx" />
+    <Content Include="vw\Pagos.aspx" />
     <Content Include="vw\PIvote.aspx" />
     <Content Include="vw\PropietariosReg.aspx" />
     <Content Include="vw\RegistrarClientes.aspx" />
@@ -256,6 +257,13 @@
     </Compile>
     <Compile Include="vw\PaginaPrincipal.aspx.designer.cs">
       <DependentUpon>PaginaPrincipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\Pagos.aspx.cs">
+      <DependentUpon>Pagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\Pagos.aspx.designer.cs">
+      <DependentUpon>Pagos.aspx</DependentUpon>
     </Compile>
     <Compile Include="vw\PIvote.aspx.cs">
       <DependentUpon>PIvote.aspx</DependentUpon>
