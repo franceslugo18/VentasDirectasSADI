@@ -63,8 +63,6 @@
     <Content Include="App_Data\PostgradoDB_log.ldf">
       <DependentUpon>PostgradoDB.mdf</DependentUpon>
     </Content>
-    <Content Include="ContratoAlquiler.aspx" />
-    <Content Include="ContratoLitis.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="imagenes\edi.jpg" />
     <Content Include="imagenes\imagen1.jpg" />
@@ -92,6 +90,8 @@
     <Content Include="vw\AdministracionResp.aspx" />
     <Content Include="vw\BuscarPPP.aspx" />
     <Content Include="vw\CambiarContrasena.aspx" />
+    <Content Include="vw\ContratoAlquiler.aspx" />
+    <Content Include="vw\ContratoLitis.aspx" />
     <Content Include="vw\haber.aspx" />
     <Content Include="vw\INDEX.aspx" />
     <Content Include="vw\javascrip.aspx" />
@@ -110,20 +110,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Code\Validacion.cs" />
-    <Compile Include="ContratoAlquiler.aspx.cs">
-      <DependentUpon>ContratoAlquiler.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ContratoAlquiler.aspx.designer.cs">
-      <DependentUpon>ContratoAlquiler.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ContratoLitis.aspx.cs">
-      <DependentUpon>ContratoLitis.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ContratoLitis.aspx.designer.cs">
-      <DependentUpon>ContratoLitis.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Controller\GenerarContratoAlquilerControlador.cs" />
     <Compile Include="Controller\GenerarContratoLitis.cs" />
     <Compile Include="DataAccess\ClienteDA.cs" />
@@ -220,6 +206,20 @@
     </Compile>
     <Compile Include="vw\CambiarContrasena.aspx.designer.cs">
       <DependentUpon>CambiarContrasena.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\ContratoAlquiler.aspx.cs">
+      <DependentUpon>ContratoAlquiler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\ContratoAlquiler.aspx.designer.cs">
+      <DependentUpon>ContratoAlquiler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\ContratoLitis.aspx.cs">
+      <DependentUpon>ContratoLitis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\ContratoLitis.aspx.designer.cs">
+      <DependentUpon>ContratoLitis.aspx</DependentUpon>
     </Compile>
     <Compile Include="vw\haber.aspx.cs">
       <DependentUpon>haber.aspx</DependentUpon>

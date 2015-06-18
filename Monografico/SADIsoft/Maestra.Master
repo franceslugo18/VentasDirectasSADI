@@ -20,7 +20,7 @@
             var username = '<%= Session["Usuario"] %>';
             if (username == "admin") {
                 document.getElementById('MainMenu').style.display = "inline";
-                document.getElementById('MainMenu').style.width = "400px";
+                document.getElementById('MainMenu').style.width = "300px";
                 document.getElementById('MainMenu').style.marginLeft = "5px";
                 document.getElementById('MainMenu').style.marginTop = "50px";
                 document.getElementById('MainMenu').style.cssFloat = "left";
@@ -64,6 +64,22 @@
             border-top-left-radius: 25px;
             border-top-right-radius: 25px;
         }
+        #cuerpo2 
+        {
+            border:solid 1px;
+            width:750px;
+            height:900px;
+            float:right;
+            margin-right:200px;
+            
+
+        }
+        #cuerpo 
+        {
+            border:solid 1px;
+        }
+   
+
     </style>
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -128,8 +144,8 @@
 
             <a href="#demo4" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Contratos</a>
             <div class="collapse" id="demo4">
-                <a href="" class="list-group-item">Cuota Litis</a>
-                <a href="" class="list-group-item">General Contrato</a>
+                <a href="" class="list-group-item">Contrato Litis</a>
+                <a href="" class="list-group-item">General Contrato Alquiler</a>
                 <a href="" class="list-group-item">Ver</a>
             </div>
 
@@ -152,5 +168,12 @@
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
     </div>
+
+    <div id="cuerpo2">
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    
 </body>
 </html>
