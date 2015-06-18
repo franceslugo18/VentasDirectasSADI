@@ -11,7 +11,28 @@
     <form id="form1" runat="server">
     <div>
     
-        Cliente:<br />
+        <br />
+        Inquilino
+        <br />
+        Introduzca Cedula:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button1" runat="server" Text="Buscar" />
+        <br />
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+        <asp:GridView ID="GridView1" runat="server" DataSourceID="DataSourceCuotasCliente">
+        </asp:GridView>
+        <asp:SqlDataSource ID="DataSourceCuotasCliente" runat="server"></asp:SqlDataSource>
+        <br />
+        <br />
+        <asp:Button ID="Button2" runat="server" Text="Realizar pago a cuota" />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <br />
         <br />
     
