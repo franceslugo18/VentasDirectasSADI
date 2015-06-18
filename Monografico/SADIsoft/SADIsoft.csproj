@@ -130,10 +130,12 @@
     </Compile>
     <Compile Include="Controller\GenerarContratoAlquilerControlador.cs" />
     <Compile Include="Controller\GenerarContratoLitis.cs" />
+    <Compile Include="Controller\RealizarPagoControlador.cs" />
     <Compile Include="DataAccess\ClienteDA.cs" />
     <Compile Include="DataAccess\Conexion.cs" />
     <Compile Include="DataAccess\ContratoDA.cs" />
     <Compile Include="DataAccess\DireccionDA.cs" />
+    <Compile Include="DataAccess\FacturaDA.cs" />
     <Compile Include="DataAccess\InmuebleDA.cs" />
     <Compile Include="DataAccess\MunicipioDA.cs" />
     <Compile Include="DataAccess\PropietarioDA.cs" />
@@ -163,6 +165,8 @@
     </Compile>
     <Compile Include="Model\Cliente.cs" />
     <Compile Include="Controller\RegistrarClienteControlador.cs" />
+    <Compile Include="Model\Contrato.cs" />
+    <Compile Include="Model\Facturas.cs" />
     <Compile Include="Model\Inmueble.cs" />
     <Compile Include="Controller\LoginControlador.cs" />
     <Compile Include="Controller\MantenimientoPropietarioControlador.cs" />

@@ -15,6 +15,7 @@ namespace SADI.Model
         public string Tel1;
         public string Tel2;
         public string Email;
+        public Contrato Contrato;
 
         public Cliente(string nombre, string apellido, string cedula, string direccion, string tel1, string tel2, string email)
         {
@@ -27,10 +28,31 @@ namespace SADI.Model
             Email = email;
         }
 
+        public Cliente(string nombre, string apellido, string cedula, string direccion, string tel1, string tel2, string email, Contrato contrato)
+        {
+            Nombre = nombre;
+            Apellido = apellido;
+            Cedula = cedula;
+            Direccion = direccion;
+            Tel1 = tel1;
+            Tel2 = tel2;
+            Email = email;
+            Contrato = contrato;
+        }
+
         public Cliente()
         {
             // TODO: Complete member initialization
         }
+
+        public Cliente(string nombre, string apellido)
+        {
+            Nombre = nombre;
+            Apellido = apellido;
+            
+        }
+
+
 
 
 

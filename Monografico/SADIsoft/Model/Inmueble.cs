@@ -50,6 +50,12 @@ namespace SADI.Model
             Banos = banos;
         }
 
+        public Inmueble(decimal precioAlquiler)
+        {
+            PrecioAlquiler = precioAlquiler;
+            
+        }
+
         public Inmueble()
         {
             // TODO: Complete member initialization

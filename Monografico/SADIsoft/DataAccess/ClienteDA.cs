@@ -69,5 +69,7 @@ namespace SADIsoft.DataAccess
 
             return cliente;
         }
+
+        
     }
 }
