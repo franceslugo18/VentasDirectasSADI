@@ -104,6 +104,7 @@
     <Content Include="vw\PropietariosReg.aspx" />
     <Content Include="vw\RegistrarClientes.aspx" />
     <Content Include="vw\RegistrarInmuebles.aspx" />
+    <Content Include="vw\RegistrarPagos.aspx" />
     <Content Include="vw\RegistrarPropietarios.aspx" />
     <Content Include="vw\RegistroUsuario.aspx" />
     <Content Include="vw\VerticalMenueP.aspx" />
@@ -236,6 +237,7 @@
     <Compile Include="vw\CambiarContrasena.aspx.designer.cs">
       <DependentUpon>CambiarContrasena.aspx</DependentUpon>
     </Compile>
+    <Compile Include="vw\ControlExtensions.cs" />
     <Compile Include="vw\haber.aspx.cs">
       <DependentUpon>haber.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -298,6 +300,13 @@
     </Compile>
     <Compile Include="vw\RegistrarInmuebles.aspx.designer.cs">
       <DependentUpon>RegistrarInmuebles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\RegistrarPagos.aspx.cs">
+      <DependentUpon>RegistrarPagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\RegistrarPagos.aspx.designer.cs">
+      <DependentUpon>RegistrarPagos.aspx</DependentUpon>
     </Compile>
     <Compile Include="vw\RegistrarPropietarios.aspx.cs">
       <DependentUpon>RegistrarPropietarios.aspx</DependentUpon>

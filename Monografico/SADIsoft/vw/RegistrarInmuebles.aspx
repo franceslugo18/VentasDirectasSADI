@@ -23,7 +23,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textProvincia">Provincia</label>
                 <div class="col-md-4"> 
-                    <asp:DropDownList ID="ddlProvincia1" runat="server" class="form-control" OnSelectedIndexChanged="ddlProvincia1_SelectedIndexChanged" AutoPostBack="True" ></asp:DropDownList>
+                    <asp:DropDownList ID="ddlProvincia1" runat="server" class="form-control" OnSelectedIndexChanged="ddlProvincia1_SelectedIndexChanged" AutoPostBack="True" ViewStateMode="Enabled" ></asp:DropDownList>
                 </div>
             </div>
 
