@@ -95,7 +95,7 @@
                         </Columns>
                     </asp:GridView>
                     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Realizar pago" />
-                    <asp:SqlDataSource ID="DataSourceCuotasCliente" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString %>" SelectCommand="select  
+                    <asp:SqlDataSource ID="DataSourceCuotasCliente" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString2 %>" SelectCommand="select  
 		
 		                Facturas.FacturaId,
 		                Facturas.NumeroCuota,

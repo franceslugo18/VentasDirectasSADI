@@ -35,6 +35,19 @@ namespace SADIsoft.Controller
             }
         }
 
-        
+
+
+        public static void PagarFacturas(List<int> facturas)
+        {
+            try
+            {
+                FacturaDA.PagarFacturas(facturas);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

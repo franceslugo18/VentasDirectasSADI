@@ -22,7 +22,7 @@ namespace SADIsoft.vw
             {
                 SumarFacturasSeleccionadas();
             }
-            
+
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
@@ -39,9 +39,9 @@ namespace SADIsoft.vw
                 TextMensualidad.Text = con.Inmueble.PrecioAlquiler.ToString();
 
                 GridView1.Enabled = true;
-                
 
-                
+
+
             }
             catch (Exception ex)
             {
@@ -51,13 +51,13 @@ namespace SADIsoft.vw
 
         protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
         {
-           
+
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-           
-            
+
+
         }
 
         private void SumarFacturasSeleccionadas()
@@ -67,7 +67,7 @@ namespace SADIsoft.vw
             {
                 if (row.RowType == DataControlRowType.DataRow)
                 {
-                    CheckBox ch = (CheckBox)ControlExtensions.FindControlRecursive(row,"chkMarca");
+                    CheckBox ch = (CheckBox)ControlExtensions.FindControlRecursive(row, "chkMarca");
                     if (ch.Checked == true)
                         suma += Convert.ToDouble(row.Cells[4].Text);
                 }
@@ -79,26 +79,24 @@ namespace SADIsoft.vw
 
         private void PagarFacturas()
         {
+
+            List<int> facturas = new List<int>();
             foreach (GridViewRow row in GridView1.Rows)
             {
-                List<int> facturas = new List<int>();
+
                 if (row.RowType == DataControlRowType.DataRow)
                 {
                     CheckBox ch = (CheckBox)ControlExtensions.FindControlRecursive(row, "chkMarca");
                     if (ch.Checked == true)
                     {
                         facturas.Add(Convert.ToInt32(row.Cells[0].Text));
-                    }
 
-                    for (int i = 0; i < facturas.Count(); i++)
-                    {
-                        TextNombre.Text += facturas[i].ToString() + " ";
                     }
-                        
                 }
             }
-            GridView1.FooterRow.Cells[3].Text = "Total";
-         
+
+            RealizarPagoControlador.PagarFacturas(facturas);
+
 
         }
 
@@ -107,10 +105,10 @@ namespace SADIsoft.vw
             PagarFacturas();
         }
 
-        
 
-       
 
-       
+
+
+
     }
 }
