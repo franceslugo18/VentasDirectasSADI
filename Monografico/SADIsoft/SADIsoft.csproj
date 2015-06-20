@@ -65,8 +65,8 @@
     <Content Include="App_Data\PostgradoDB_log.ldf">
       <DependentUpon>PostgradoDB.mdf</DependentUpon>
     </Content>
-    <Content Include="ContratoAlquiler.aspx" />
-    <Content Include="ContratoLitis.aspx" />
+    <Content Include="vw\ContratoAlquiler.aspx" />
+    <Content Include="vw\ContratoLitis.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="imagenes\edi.jpg" />
     <Content Include="imagenes\imagen1.jpg" />
@@ -115,18 +115,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Code\Validacion.cs" />
-    <Compile Include="ContratoAlquiler.aspx.cs">
+    <Compile Include="vw\ContratoAlquiler.aspx.cs">
       <DependentUpon>ContratoAlquiler.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ContratoAlquiler.aspx.designer.cs">
+    <Compile Include="vw\ContratoAlquiler.aspx.designer.cs">
       <DependentUpon>ContratoAlquiler.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ContratoLitis.aspx.cs">
+    <Compile Include="vw\ContratoLitis.aspx.cs">
       <DependentUpon>ContratoLitis.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ContratoLitis.aspx.designer.cs">
+    <Compile Include="vw\ContratoLitis.aspx.designer.cs">
       <DependentUpon>ContratoLitis.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controller\GenerarContratoAlquilerControlador.cs" />
