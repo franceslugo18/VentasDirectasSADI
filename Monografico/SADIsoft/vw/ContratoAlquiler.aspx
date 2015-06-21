@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ContratoAlquiler.aspx.cs" Inherits="SADIsoft.ContratoAlquiler" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ContratoAlquiler.aspx.cs" Inherits="SADIsoft.vw.ContratoAlquiler" %>
 
 <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 

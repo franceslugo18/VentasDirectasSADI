@@ -54,7 +54,7 @@ namespace SADIsoft.vw
         {
             int inmId = Convert.ToInt32(GridView1.SelectedDataKey.Value);
             int cliId = Convert.ToInt32(ddlCliente1.SelectedValue);
-            int diaP = Convert.ToInt32(txtDia.Text);
+            int diaP = Convert.ToInt32(TextBox1.Text);
 
             Controller.GenerarContratoAlquilerControlador.guardarContrato(inmId, cliId, diaP, DateTime.Now);
 
