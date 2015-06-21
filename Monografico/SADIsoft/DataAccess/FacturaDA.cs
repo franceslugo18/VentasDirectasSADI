@@ -21,7 +21,11 @@ namespace SADIsoft.DataAccess
             {
                 conn = Conexion.Conectar();
                 string query = string.Format(@" SELECT Clientes.Nombre, Clientes.Apellido, Contratos.ContratoId, Contratos.DiaPago, Inmuebles.PrecioAlquiler FROM Clientes INNER JOIN Contratos ON Contratos.ClienteId = Clientes.ClienteId INNER JOIN Inmuebles ON Inmuebles.InmuebleId = Contratos.InmuebleId WHERE Clientes.Cedula = '{0}'", cedula);
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> disenio
                 com = new SqlCommand(query, conn);
 
                 dr = com.ExecuteReader();
@@ -40,13 +44,21 @@ namespace SADIsoft.DataAccess
                     diaPago = Convert.ToInt32(dr[3]);
                     precioAlquiler = Convert.ToDecimal(dr[4]);
                 }
+<<<<<<< HEAD
                 Contrato contrato = new Contrato(nombre, apellido, contratoId, diaPago, precioAlquiler);
+=======
+                Contrato contrato = new Contrato(nombre,apellido,contratoId,diaPago,precioAlquiler);
+>>>>>>> disenio
                 dr.Close();
                 conn.Close();
                 return contrato;
 
 
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> disenio
             }
             catch (Exception ex)
             {
@@ -89,7 +101,11 @@ namespace SADIsoft.DataAccess
                 totalCuota = Convert.ToDecimal(dr[3]);
                 fecha = Convert.ToDateTime(dr[4]);
 
+<<<<<<< HEAD
                 factura = new Facturas(facturaId, numCuota, mora, totalCuota, fecha);
+=======
+                factura = new Facturas(facturaId,numCuota,mora,totalCuota,fecha);
+>>>>>>> disenio
 
                 lista.Add(factura);
             }
@@ -98,14 +114,20 @@ namespace SADIsoft.DataAccess
             return lista;
         }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> disenio
         internal static void PagarFacturas(List<int> facturas)
         {
             conn = Conexion.Conectar();
             com = new SqlCommand();
             com.CommandType = System.Data.CommandType.StoredProcedure;
             com.CommandText = "SP_PagarFactura";
+<<<<<<< HEAD
             com.Connection = conn;
+=======
+>>>>>>> disenio
 
             foreach (int fact in facturas)
             {
@@ -114,6 +136,9 @@ namespace SADIsoft.DataAccess
             }
 
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> disenio
     }
 }

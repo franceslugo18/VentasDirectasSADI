@@ -40,8 +40,6 @@ namespace SADIsoft.vw
 
                 GridView1.Enabled = true;
 
-
-
             }
             catch (Exception ex)
             {
@@ -57,7 +55,6 @@ namespace SADIsoft.vw
         protected void Button1_Click(object sender, EventArgs e)
         {
 
-
         }
 
         private void SumarFacturasSeleccionadas()
@@ -67,7 +64,9 @@ namespace SADIsoft.vw
             {
                 if (row.RowType == DataControlRowType.DataRow)
                 {
+
                     CheckBox ch = (CheckBox)ControlExtensions.FindControlRecursive(row, "chkMarca");
+
                     if (ch.Checked == true)
                         suma += Convert.ToDouble(row.Cells[4].Text);
                 }
@@ -79,6 +78,7 @@ namespace SADIsoft.vw
 
         private void PagarFacturas()
         {
+
 
             List<int> facturas = new List<int>();
             foreach (GridViewRow row in GridView1.Rows)
@@ -97,18 +97,12 @@ namespace SADIsoft.vw
 
             RealizarPagoControlador.PagarFacturas(facturas);
 
-
         }
 
         protected void Button1_Click1(object sender, EventArgs e)
         {
             PagarFacturas();
         }
-
-
-
-
-
 
     }
 }

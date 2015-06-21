@@ -7,7 +7,7 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace SADIsoft {
+namespace SADIsoft.vw {
     
     
     public partial class ContratoLitis {

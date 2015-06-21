@@ -1,19 +1,14 @@
-﻿using SADIsoft.DataAccess;
+﻿using Microsoft.Reporting.WebForms;
+using SADIsoft.Controller;
+using SADIsoft.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Microsoft.Reporting.WebForms;
-using System.Data.SqlClient;
-using System.Configuration;
-using SADIsoft.Controller;
 
-
-
-
-namespace SADIsoft
+namespace SADIsoft.vw
 {
     public partial class ContratoLitis : System.Web.UI.Page
     {
@@ -22,9 +17,9 @@ namespace SADIsoft
             if (!IsPostBack)
             {
                 CargarPropietarios();
-                
+
             }
-            
+
             try
             {
 
@@ -32,15 +27,15 @@ namespace SADIsoft
                 ReportViewer1.ServerReport.ReportServerUrl = new System.Uri("http://localhost/Reportserver");
                 ReportViewer1.ServerReport.ReportPath = "/InmobiliariaReport/Report1";
                 ReportViewer1.ServerReport.Refresh();
-                  
-               
+
+
             }
-            catch(Exception ex){
+            catch (Exception ex)
+            {
                 Response.Write(ex.ToString());
             }
 
         }
-
         private void CargarPropietarios()
         {
             ddlPropietario1.DataSource = PropietarioDA.CargarPropietariosDB();
@@ -51,6 +46,8 @@ namespace SADIsoft
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            //Session["Idinmueble"] = GridView1.SelectedDataKey.Value.ToString();
+            //Response.Redirect("/vw/ContratoLitisGenerado.aspx");
             try
             {
 
@@ -60,21 +57,18 @@ namespace SADIsoft
                 InmuebleId.Name = "InmuebleId";
                 InmuebleId.Values.Add(GridView1.SelectedDataKey.Value.ToString());
 
+                Session["Idinmueble"] = GridView1.SelectedDataKey.Value.ToString();
+
                 // Set the report parameters for the report
                 ReportViewer1.ServerReport.SetParameters(
                     new ReportParameter[] {InmuebleId });
-
-
-               
-
-                
-
 
             }
             catch (Exception ex)
             {
                 Response.Write(ex.ToString());
             }
+            
         }
 
         protected void ddlPropietario1_SelectedIndexChanged(object sender, EventArgs e)
@@ -88,7 +82,5 @@ namespace SADIsoft
 
 
         }
-
-        
     }
 }
