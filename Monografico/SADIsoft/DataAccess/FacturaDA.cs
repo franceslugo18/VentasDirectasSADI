@@ -115,6 +115,7 @@ namespace SADIsoft.DataAccess
             {
                 com.Parameters.Add("@FacturaId", SqlDbType.Int).Value = fact;
                 com.ExecuteNonQuery();
+                com.Parameters.Clear();
             }
 
         }
