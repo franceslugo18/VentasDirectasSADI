@@ -2,6 +2,8 @@
 using SADIsoft.Controller;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -105,7 +107,56 @@ namespace SADIsoft.vw
             PagarFacturas();
         }
 
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            string queryAplicarMora = string.Format("SELECT Contratos.ContratoId FROM Contratos INNER JOIN Facturas ON Contratos.ContratoId = Facturas.ContratoId WHERE DiaPago = datepart(d,dateadd(d, -5, '{0}')) AND Facturas.Estado = 0", "07-05-2015"/*DateTime.Now*/);
+            string queryGenerarFactura = string.Format("SELECT ContratoId FROM Contratos WHERE DiaPago = {0}", 30/*DateTime.Now.Day*/);
+            string queryActualizarContratos = string.Format("SELECT ContratoId FROM Contratos WHERE CONVERT(DATE,DATEADD(yy,1,Fecha)) = CONVERT(DATE,'{0}') AND isActivo = 1 AND ActualizarAutom = 1", "06-16-2016"/*DateTime.Now.Day*/);
 
+            string spAplicarMoras = "SP_Aplicar_Moras";
+            string spGenerarFactura = "SP_Generar_Factura";
+            string spActualizarContratos = "SP_Actualizar_Contrato";
+
+            EjecutarQuery(queryAplicarMora, spAplicarMoras);
+            EjecutarQuery(queryGenerarFactura, spGenerarFactura);
+            EjecutarQuery(queryActualizarContratos, spActualizarContratos);
+            
+        }
+
+        private void EjecutarQuery(string query, string storeProcedure)
+        {
+            SqlConnection conn = new SqlConnection(@"Data Source=FRANCISCO-LUGO\SQLEXPRESS;
+                Initial Catalog=PostgradoDB; user=sa; Password=adonay");
+            conn.Open();
+            
+            SqlCommand com = new SqlCommand(query, conn);
+
+            SqlDataReader dr = com.ExecuteReader();
+
+            List<object> lista = new List<object>();
+
+            while (dr.Read())
+            {
+                lista.Add(dr["ContratoId"]);
+            }
+            dr.Close();
+
+            com = new SqlCommand();
+            com.Connection = conn;
+            com.CommandType = CommandType.StoredProcedure;
+            com.CommandText = storeProcedure;
+
+            foreach (object obj in lista)
+            {
+                com.Parameters.Add("@ContratoId", SqlDbType.Int).Value = obj.ToString();
+                com.ExecuteNonQuery();
+                com.Parameters.Clear();
+            }
+
+            conn.Close();
+        }
+        
+    
 
 
 

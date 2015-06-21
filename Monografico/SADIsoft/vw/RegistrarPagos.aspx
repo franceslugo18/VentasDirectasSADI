@@ -94,6 +94,7 @@
                             </asp:TemplateField>
                         </Columns>
                     </asp:GridView>
+                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Button" />
                     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Realizar pago" />
                     <asp:SqlDataSource ID="DataSourceCuotasCliente" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString2 %>" SelectCommand="select  
 		
