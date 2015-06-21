@@ -40,12 +40,12 @@ namespace SADIsoft.DataAccess
                     diaPago = Convert.ToInt32(dr[3]);
                     precioAlquiler = Convert.ToDecimal(dr[4]);
                 }
+
                 Contrato contrato = new Contrato(nombre, apellido, contratoId, diaPago, precioAlquiler);
+
                 dr.Close();
                 conn.Close();
                 return contrato;
-
-
 
             }
             catch (Exception ex)
@@ -89,7 +89,9 @@ namespace SADIsoft.DataAccess
                 totalCuota = Convert.ToDecimal(dr[3]);
                 fecha = Convert.ToDateTime(dr[4]);
 
+
                 factura = new Facturas(facturaId, numCuota, mora, totalCuota, fecha);
+
 
                 lista.Add(factura);
             }
@@ -105,7 +107,9 @@ namespace SADIsoft.DataAccess
             com = new SqlCommand();
             com.CommandType = System.Data.CommandType.StoredProcedure;
             com.CommandText = "SP_PagarFactura";
+
             com.Connection = conn;
+
 
             foreach (int fact in facturas)
             {
