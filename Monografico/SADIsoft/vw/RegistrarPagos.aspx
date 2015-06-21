@@ -12,13 +12,18 @@
 
 
         }
+        #gri 
+        {
+            
+            width:350px;
+        }
        
     </style>
-
-
-
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 
         <form id="Form1" runat="server" class="form-horizontal">
 
@@ -74,28 +79,39 @@
                     </div>
                 </div>
             </div>
+             
              <!-- Text input-->
+            <br />
             <div class="form-group">
-                <label class="col-md-4 control-label" for="textGrip"></label>
+                <label class="col-md-4 control-label" for="text"></label>
                 <div class="col-md-4">
-                    <asp:GridView ID="GridView1" runat="server" DataSourceID="DataSourceCuotasCliente" AutoGenerateColumns="False" DataKeyNames="FacturaId" Width="555px" CellSpacing="5" Height="208px" OnRowDataBound="GridView1_RowDataBound" ShowFooter="True">
-                        <Columns>
-                            <asp:BoundField DataField="FacturaId" HeaderText="No. de Factura" InsertVisible="False" ReadOnly="True" SortExpression="FacturaId" />
-                            <asp:BoundField DataField="NumeroCuota" HeaderText="No. de Cuota" SortExpression="NumeroCuota" />
-                            <asp:BoundField DataField="FechaGenerada" HeaderText="Fecha de generacion de la factura" SortExpression="FechaGenerada" />
-                            <asp:BoundField DataField="Mora" HeaderText="Mora" SortExpression="Mora" />
-                            <asp:BoundField DataField="TotalCuota" HeaderText="Total a Pagar por Cuota" SortExpression="TotalCuota" />
-                            <asp:TemplateField>
-                                
-                                <ItemTemplate>
-                                    <asp:CheckBox ID="chkMarca" runat="server" AutoPostBack="True"/>
-                                </ItemTemplate>
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Realizar pago" name="singlebutton" class="btn btn-primary" />
+                </div>
+            </div>
+         
+            <div id="gri">
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="textGrip"></label>
+                    <div class="col-md-4">
+                        <asp:GridView ID="GridView1" runat="server" DataSourceID="DataSourceCuotasCliente" AutoGenerateColumns="False" DataKeyNames="FacturaId" Width="555px" CellSpacing="5" Height="208px" OnRowDataBound="GridView1_RowDataBound" ShowFooter="True">
+                            <Columns>
+                                <asp:BoundField DataField="FacturaId" HeaderText="No. de Factura" InsertVisible="False" ReadOnly="True" SortExpression="FacturaId" />
+                                <asp:BoundField DataField="NumeroCuota" HeaderText="No. de Cuota" SortExpression="NumeroCuota" />
+                                <asp:BoundField DataField="FechaGenerada" HeaderText="Fecha de generacion de la factura" SortExpression="FechaGenerada" />
+                                <asp:BoundField DataField="Mora" HeaderText="Mora" SortExpression="Mora" />
+                                <asp:BoundField DataField="TotalCuota" HeaderText="Total a Pagar por Cuota" SortExpression="TotalCuota" />
+                                <asp:TemplateField>
 
-                            </asp:TemplateField>
-                        </Columns>
-                    </asp:GridView>
-                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Realizar pago" />
-                    <asp:SqlDataSource ID="DataSourceCuotasCliente" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString2 %>" SelectCommand="select  
+                                    <ItemTemplate>
+                                        <asp:CheckBox ID="chkMarca" runat="server" AutoPostBack="True" />
+                                    </ItemTemplate>
+
+                                </asp:TemplateField>
+                            </Columns>
+                        </asp:GridView>
+                       
+                        <asp:SqlDataSource ID="DataSourceCuotasCliente" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString2 %>" SelectCommand="select  
 		
 		                Facturas.FacturaId,
 		                Facturas.NumeroCuota,
@@ -106,11 +122,12 @@
 		                 from Facturas INNER JOIN Contratos ON Facturas.ContratoId = Contratos.ContratoId
 					   
                             where Contratos.ContratoId = @ContratoId and Facturas.Estado = 0">
-                        <SelectParameters>
-                            <asp:ControlParameter ControlID="txtNoContrato" Name="ContratoId" PropertyName="Text" />
-                        </SelectParameters>
-                    </asp:SqlDataSource>
-                    
+                            <SelectParameters>
+                                <asp:ControlParameter ControlID="txtNoContrato" Name="ContratoId" PropertyName="Text" />
+                            </SelectParameters>
+                        </asp:SqlDataSource>
+
+                    </div>
                 </div>
             </div>
 
