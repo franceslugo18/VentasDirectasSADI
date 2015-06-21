@@ -1,3 +1,4 @@
+﻿
 ﻿using SADI.Model;
 using SADIsoft.Controller;
 using System;
