@@ -13,7 +13,7 @@ namespace SADIsoft
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["Usuario"] == null)
-                Response.Redirect("LoginResponse.aspx");
+                Response.Redirect("/LoginResponse.aspx");
             Response.Write(Session["Usuario"]);
         }
 
@@ -22,7 +22,7 @@ namespace SADIsoft
             try
             {
                 if (LoginControlador.CambiarContrasena(Session["Usuario"].ToString(), textContrase.Text)) Response.Write("Bien");
-                Response.Redirect("LoginResponse.aspx");
+                Response.Redirect("/LoginResponse.aspx");
             }
             catch (Exception ex)
             {
