@@ -20,7 +20,7 @@ namespace SADIsoft.DataAccess
             try
             {
                 conn = Conexion.Conectar();
-                string query = string.Format(@" SELECT Clientes.Nombre, Clientes.Apellido, Contratos.ContratoId, Contratos.DiaPago, Inmuebles.PrecioAlquiler FROM Clientes INNER JOIN Contratos ON Contratos.ClienteId = Clientes.ClienteId INNER JOIN Inmuebles ON Inmuebles.InmuebleId = Contratos.InmuebleId WHERE Clientes.Cedula = '{0}'", cedula);
+                string query = string.Format(@"SELECT Clientes.Nombre, Clientes.Apellido, Contratos.ContratoId, Contratos.DiaPago, Contratos.CuotaMensual FROM Clientes INNER JOIN Contratos ON Contratos.ClienteId = Clientes.ClienteId  WHERE Clientes.Cedula = '{0}' and Contratos.isActivo = 1", cedula);
 
                 com = new SqlCommand(query, conn);
 
@@ -111,6 +111,7 @@ namespace SADIsoft.DataAccess
             {
                 com.Parameters.Add("@FacturaId", SqlDbType.Int).Value = fact;
                 com.ExecuteNonQuery();
+                com.Parameters.Clear();
             }
 
         }
