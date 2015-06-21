@@ -101,14 +101,16 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul id="Lista" class="nav navbar-nav">
                     <li class="active"><a href="/inicio/index.aspx" />Inicio <span class="sr-only">(current)</span></a></li>
-                    <form class="navbar-form navbar-right">
-                        <div class="form-group">
+                 </ul>   
+                 <form class="navbar-form navbar-right">
+                <div class="form-group">
 
-                            <input id="singlebutton" type="button" name="singlebutton" class="btn btn-success" value="Iniciar Seccion" onclick="Login();" />
+                    <input id="singlebutton" type="button" name="singlebutton" class="btn btn-success" value="Iniciar Seccion" onclick="Login();" />
 
-                        </div>
-                    </form>
+                </div>
+            </form>
             </div>
+           
             <!--/.navbar-collapse -->
         </div>
     </nav>
