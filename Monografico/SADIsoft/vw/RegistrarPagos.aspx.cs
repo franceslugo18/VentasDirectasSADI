@@ -3,6 +3,7 @@
 using SADIsoft.Controller;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -15,16 +16,16 @@ namespace SADIsoft.vw
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (!IsPostBack)
-            {
-                GridView1.Enabled = false;
-            }
-            if (GridView1.Enabled == true)
-            {
-                SumarFacturasSeleccionadas();
-            }
+
+            
+               
+            
 
         }
+
+
+        
+
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -35,11 +36,17 @@ namespace SADIsoft.vw
                 con = RealizarPagoControlador.BuscarContratoPorCedula(txtCedula.Text);
 
                 TextNombre.Text = con.Cliente.Nombre + " " + con.Cliente.Apellido;
-                txtNoContrato.Text = con.ContratoId.ToString();
+                //txtNoContrato.Text = con.ContratoId.ToString();
                 TextDiaPago.Text = con.DiaPago.ToString();
                 TextMensualidad.Text = con.Inmueble.PrecioAlquiler.ToString();
 
-                GridView1.Enabled = true;
+                List<int> lista = RealizarPagoControlador.CargarContratosIds(txtCedula.Text);
+                DropDownList1.DataSource = lista;
+                DropDownList1.DataBind();
+                //ListItem item = new ListItem("--Seleccione---");
+                //DropDownList1.Items.Insert(0,item);
+
+                        
 
             }
             catch (Exception ex)
@@ -47,6 +54,22 @@ namespace SADIsoft.vw
                 Response.Write(ex.ToString());
             }
         }
+
+        DataView dv = new DataView();
+        DataSet ds = new DataSet();
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           /*
+            ds = RealizarPagoControlador.BuscarFacturasContrato(txtCedula.Text);
+            dv.Table = ds.Tables["Facturas"];
+            dv.RowFilter = string.Format("ContratoId = {0}", Convert.ToInt32(DropDownList1.SelectedValue));
+            GridView1.DataSource = dv.ToTable();
+            GridView1.DataBind();
+            */
+            GridView1.Enabled = true;
+        }
+
 
         protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
         {
@@ -69,7 +92,10 @@ namespace SADIsoft.vw
                     CheckBox ch = (CheckBox)ControlExtensions.FindControlRecursive(row, "chkMarca");
 
                     if (ch.Checked == true)
+                    {
                         suma += Convert.ToDouble(row.Cells[4].Text);
+
+                    }
                 }
             }
             GridView1.FooterRow.Cells[3].Text = "Total";
@@ -104,6 +130,18 @@ namespace SADIsoft.vw
         {
             PagarFacturas();
         }
+
+        protected void Checked_change(object sender, EventArgs e)
+        {
+            SumarFacturasSeleccionadas();
+        }
+
+        protected void DropDownList1_DataBound(object sender, EventArgs e)
+        {
+
+        }
+
+        
 
     }
 }

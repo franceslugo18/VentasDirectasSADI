@@ -25,11 +25,12 @@ namespace SADI.Model
 
         }
 
-        public Facturas(int facturaId, int numCuota, decimal mora, decimal totalCuota, DateTime fecha)
+        public Facturas(int facturaId, int numCuota, int contratoId, decimal mora, decimal totalCuota, DateTime fecha)
         {
             // TODO: Complete member initialization
             this.FacturaId = facturaId;
             this.NumCuota = numCuota;
+            this.ContratoId = contratoId;
             this.Mora = mora;
             this.TotalCuota = totalCuota;
             this.FechaGenerada = fecha;
@@ -42,5 +43,7 @@ namespace SADI.Model
         public DateTime FechaGenerada { get; set; }
         public Contrato Contrato { get; set; }
 
+
+        public int ContratoId { get; set; }
     }
 }

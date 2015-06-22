@@ -59,7 +59,30 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="textContrato">N. Contrato</label>
                     <div class="col-md-4">
-                        <asp:TextBox ID="txtNoContrato" runat="server" type="text" class="form-control input-md" placeholder="N.Contrato" Enabled="false"></asp:TextBox>
+                         <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Height="16px" Width="175px">
+                            <asp:ListItem Value="0">-Seleccione-</asp:ListItem>
+                        </asp:DropDownList>
+                        <asp:SqlDataSource ID="SadiConnectionString2" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString %>" SelectCommand="SELECT Facturas.ContratoId FROM Facturas INNER JOIN Contratos ON Facturas.ContratoId = Contratos.ContratoId INNER JOIN Clientes ON Contratos.ClienteId = Clientes.ClienteId WHERE Clientes.Cedula = @Cedula GROUP BY Facturas.ContratoId">
+                            <SelectParameters>
+                                <asp:ControlParameter ControlID="txtCedula" Name="Cedula" PropertyName="Text" />
+                            </SelectParameters>
+                        </asp:SqlDataSource>
+                        <asp:SqlDataSource ID="SadiConnectionString" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString %>" SelectCommand="SELECT  
+	                Facturas.FacturaId,
+		            Facturas.NumeroCuota,
+					Facturas.ContratoId,
+		            isnull(Facturas.Mora,0) AS Mora,
+		            Facturas.TotalCuota, 
+		            Facturas.FechaGenerada 
+		 
+		        FROM Facturas INNER JOIN Contratos ON Facturas.ContratoId = Contratos.ContratoId
+                              INNER JOIN Clientes ON Contratos.ClienteId = Clientes.ClienteId
+					   
+               WHERE Facturas.ContratoId = @ContratoId and Facturas.Estado = 0">
+                            <SelectParameters>
+                                <asp:ControlParameter ControlID="DropDownList1" Name="ContratoId" PropertyName="SelectedValue" />
+                            </SelectParameters>
+                        </asp:SqlDataSource>
                     </div>
                 </div>
 
@@ -94,38 +117,23 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="textGrip"></label>
                     <div class="col-md-4">
-                        <asp:GridView ID="GridView1" runat="server" DataSourceID="DataSourceCuotasCliente" AutoGenerateColumns="False" DataKeyNames="FacturaId" Width="555px" CellSpacing="5" Height="208px" OnRowDataBound="GridView1_RowDataBound" ShowFooter="True">
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="555px" CellSpacing="5" Height="208px" OnRowDataBound="GridView1_RowDataBound" ShowFooter="True" DataKeyNames="FacturaId" DataSourceID="SadiConnectionString" EnableViewState="False">
                             <Columns>
-                                <asp:BoundField DataField="FacturaId" HeaderText="No. de Factura" InsertVisible="False" ReadOnly="True" SortExpression="FacturaId" />
-                                <asp:BoundField DataField="NumeroCuota" HeaderText="No. de Cuota" SortExpression="NumeroCuota" />
-                                <asp:BoundField DataField="FechaGenerada" HeaderText="Fecha de generacion de la factura" SortExpression="FechaGenerada" />
-                                <asp:BoundField DataField="Mora" HeaderText="Mora" SortExpression="Mora" />
-                                <asp:BoundField DataField="TotalCuota" HeaderText="Total a Pagar por Cuota" SortExpression="TotalCuota" />
-                                <asp:TemplateField>
-
-                                    <ItemTemplate>
-                                        <asp:CheckBox ID="chkMarca" runat="server" AutoPostBack="True" />
-                                    </ItemTemplate>
-
-                                </asp:TemplateField>
+                                <asp:BoundField DataField="FacturaId" HeaderText="FacturaId" InsertVisible="False" ReadOnly="True" SortExpression="FacturaId" />
+                                <asp:BoundField DataField="NumeroCuota" HeaderText="NumeroCuota" SortExpression="NumeroCuota" />
+                                <asp:BoundField DataField="ContratoId" HeaderText="ContratoId" SortExpression="ContratoId" />
+                                <asp:BoundField DataField="Mora" HeaderText="Mora" ReadOnly="True" SortExpression="Mora" />
+                                <asp:BoundField DataField="TotalCuota" HeaderText="TotalCuota" SortExpression="TotalCuota" />
+                                <asp:BoundField DataField="FechaGenerada" HeaderText="FechaGenerada" SortExpression="FechaGenerada" />
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:CheckBox ID="chkMarca" runat="server" AutoPostBack="true" OnCheckedChanged="Checked_change" />
+                                 </ItemTemplate>
+                             </asp:TemplateField>
                             </Columns>
                         </asp:GridView>
                        
-                        <asp:SqlDataSource ID="DataSourceCuotasCliente" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString2 %>" SelectCommand="select  
-		
-		                Facturas.FacturaId,
-		                Facturas.NumeroCuota,
-		                Facturas.Mora,
-		                Facturas.TotalCuota, 
-		                Facturas.FechaGenerada 
-		 
-		                 from Facturas INNER JOIN Contratos ON Facturas.ContratoId = Contratos.ContratoId
-					   
-                            where Contratos.ContratoId = @ContratoId and Facturas.Estado = 0">
-                            <SelectParameters>
-                                <asp:ControlParameter ControlID="txtNoContrato" Name="ContratoId" PropertyName="Text" />
-                            </SelectParameters>
-                        </asp:SqlDataSource>
+                        
 
                     </div>
                 </div>

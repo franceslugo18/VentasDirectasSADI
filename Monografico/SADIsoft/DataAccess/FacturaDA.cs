@@ -54,7 +54,7 @@ namespace SADIsoft.DataAccess
             }
         }
 
-        internal static List<Facturas> BuscarFacturasContratoDA(int p)
+        internal static DataSet BuscarFacturasContratoDA(string p)
         {
             List<Facturas> lista = new List<Facturas>();
             Facturas factura;
@@ -63,41 +63,52 @@ namespace SADIsoft.DataAccess
                 SELECT  
 	                Facturas.FacturaId,
 		            Facturas.NumeroCuota,
-		            Facturas.Mora,
+					Facturas.ContratoId,
+		            isnull(Facturas.Mora,0),
 		            Facturas.TotalCuota, 
 		            Facturas.FechaGenerada 
 		 
 		        FROM Facturas INNER JOIN Contratos ON Facturas.ContratoId = Contratos.ContratoId
+                              INNER JOIN Clientes ON Contratos.ClienteId = Clientes.ClienteId
 					   
-               WHERE Contratos.ContratoId = {0} and Facturas.Estado = 0", p);
+               WHERE Clientes.Cedula = '{0}' and Facturas.Estado = 0", p);
 
-            com = new SqlCommand(query, conn);
+            //com = new SqlCommand(query, conn);
 
-            dr = com.ExecuteReader();
+            //dr = com.ExecuteReader();
 
             int facturaId = 0;
             int numCuota = 0;
+            int contratoId = 0;
             decimal mora = 0;
             decimal totalCuota = 0;
             DateTime fecha;
 
-            while (dr.Read())
+            SqlDataAdapter dt = new SqlDataAdapter(query,conn);
+            DataSet ds = new DataSet();
+            dt.Fill(ds,"Facturas");
+            conn.Close();
+
+            /*while (dr.Read())
             {
                 facturaId = Convert.ToInt32(dr[0]);
                 numCuota = Convert.ToInt32(dr[1]);
-                mora = Convert.ToDecimal(dr[2]);
-                totalCuota = Convert.ToDecimal(dr[3]);
-                fecha = Convert.ToDateTime(dr[4]);
+                contratoId = Convert.ToInt32(dr[2]);
+                mora = Convert.ToDecimal(dr[3]);
+                totalCuota = Convert.ToDecimal(dr[4]);
+                fecha = Convert.ToDateTime(dr[5]);
 
 
-                factura = new Facturas(facturaId, numCuota, mora, totalCuota, fecha);
+                factura = new Facturas(facturaId, numCuota, contratoId, mora, totalCuota, fecha);
 
 
                 lista.Add(factura);
+             
             }
-            dr.Close();
-            conn.Close();
-            return lista;
+             * */
+            //dr.Close();
+            //conn.Close();
+            return ds;//lista;
         }
 
 
@@ -120,5 +131,22 @@ namespace SADIsoft.DataAccess
 
         }
 
+
+        internal static List<int> CargarContratosIdsDA(string cedula)
+        {
+            conn = Conexion.Conectar();
+            string query = string.Format(@"SELECT Facturas.ContratoId AS ContratoId FROM Facturas INNER JOIN Contratos ON Facturas.ContratoId = Contratos.ContratoId INNER JOIN Clientes ON Contratos.ClienteId = Clientes.ClienteId WHERE Clientes.Cedula = '{0}' GROUP BY Facturas.ContratoId", cedula);
+            com = new SqlCommand(query,conn);
+            List<int> lista = new List<int>();
+
+            dr = com.ExecuteReader();
+            while (dr.Read())
+            {
+                lista.Add(Convert.ToInt32(dr["ContratoId"]));
+            }
+
+            return lista;
+
+        }
     }
 }

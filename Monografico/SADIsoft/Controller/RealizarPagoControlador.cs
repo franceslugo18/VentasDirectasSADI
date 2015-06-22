@@ -2,6 +2,7 @@
 using SADIsoft.DataAccess;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 
@@ -23,7 +24,7 @@ namespace SADIsoft.Controller
         }
 
 
-        public static List<Facturas> BuscarFacturasContrato(int p)
+        public static DataSet BuscarFacturasContrato(string p)
         {
             try
             {
@@ -49,5 +50,17 @@ namespace SADIsoft.Controller
             }
         }
 
+
+        public static List<int> CargarContratosIds(string cedula)
+        {
+            try
+            {
+                return FacturaDA.CargarContratosIdsDA(cedula);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
