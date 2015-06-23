@@ -93,13 +93,13 @@ namespace SADIsoft.vw
 
                     if (ch.Checked == true)
                     {
-                        suma += Convert.ToDouble(row.Cells[4].Text);
+                        suma += Convert.ToDouble(row.Cells[3].Text);
 
                     }
                 }
             }
-            GridView1.FooterRow.Cells[3].Text = "Total";
-            GridView1.FooterRow.Cells[4].Text = Convert.ToString(suma);
+            GridView1.FooterRow.Cells[2].Text = "Total";
+            GridView1.FooterRow.Cells[3].Text = Convert.ToString(suma);
 
         }
 

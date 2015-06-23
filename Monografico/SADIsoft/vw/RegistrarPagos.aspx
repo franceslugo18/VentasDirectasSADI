@@ -70,7 +70,6 @@
                         <asp:SqlDataSource ID="SadiConnectionString" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString %>" SelectCommand="SELECT  
 	                Facturas.FacturaId,
 		            Facturas.NumeroCuota,
-					Facturas.ContratoId,
 		            isnull(Facturas.Mora,0) AS Mora,
 		            Facturas.TotalCuota, 
 		            Facturas.FechaGenerada 
@@ -117,11 +116,10 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="textGrip"></label>
                     <div class="col-md-4">
-                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="555px" CellSpacing="5" Height="208px" OnRowDataBound="GridView1_RowDataBound" ShowFooter="True" DataKeyNames="FacturaId" DataSourceID="SadiConnectionString" EnableViewState="False">
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="555px" Height="208px" OnRowDataBound="GridView1_RowDataBound" ShowFooter="True" DataKeyNames="FacturaId" DataSourceID="SadiConnectionString" EnableViewState="False" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal">
                             <Columns>
                                 <asp:BoundField DataField="FacturaId" HeaderText="FacturaId" InsertVisible="False" ReadOnly="True" SortExpression="FacturaId" />
                                 <asp:BoundField DataField="NumeroCuota" HeaderText="NumeroCuota" SortExpression="NumeroCuota" />
-                                <asp:BoundField DataField="ContratoId" HeaderText="ContratoId" SortExpression="ContratoId" />
                                 <asp:BoundField DataField="Mora" HeaderText="Mora" ReadOnly="True" SortExpression="Mora" />
                                 <asp:BoundField DataField="TotalCuota" HeaderText="TotalCuota" SortExpression="TotalCuota" />
                                 <asp:BoundField DataField="FechaGenerada" HeaderText="FechaGenerada" SortExpression="FechaGenerada" />
@@ -131,6 +129,15 @@
                                  </ItemTemplate>
                              </asp:TemplateField>
                             </Columns>
+                            <FooterStyle BackColor="White" ForeColor="#333333" />
+                            <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
+                            <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" />
+                            <RowStyle BackColor="White" ForeColor="#333333" />
+                            <SelectedRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White" />
+                            <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                            <SortedAscendingHeaderStyle BackColor="#487575" />
+                            <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                            <SortedDescendingHeaderStyle BackColor="#275353" />
                         </asp:GridView>
                        
                         
