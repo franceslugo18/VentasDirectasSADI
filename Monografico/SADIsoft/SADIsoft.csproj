@@ -99,6 +99,7 @@
     <Content Include="vw\CrearFactura.aspx" />
     <Content Include="vw\haber.aspx" />
     <Content Include="vw\INDEX.aspx" />
+    <Content Include="vw\InquilinoDetalle.aspx" />
     <Content Include="vw\javascrip.aspx" />
     <Content Include="vw\LoginCambioResp.aspx" />
     <Content Include="vw\PaginaPrincipal.aspx" />
@@ -266,6 +267,13 @@
     </Compile>
     <Compile Include="vw\INDEX.aspx.designer.cs">
       <DependentUpon>INDEX.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\InquilinoDetalle.aspx.cs">
+      <DependentUpon>InquilinoDetalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\InquilinoDetalle.aspx.designer.cs">
+      <DependentUpon>InquilinoDetalle.aspx</DependentUpon>
     </Compile>
     <Compile Include="vw\javascrip.aspx.cs">
       <DependentUpon>javascrip.aspx</DependentUpon>

@@ -10,7 +10,7 @@
 namespace SADIsoft.vw {
     
     
-    public partial class Administracion {
+    public partial class InquilinoDetalle {
         
         /// <summary>
         /// Control form1.
@@ -22,84 +22,84 @@ namespace SADIsoft.vw {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Control GridView1.
+        /// Control TextBox1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
         
         /// <summary>
-        /// Control DataSorucesInquilinosHoy.
+        /// Control TextBox2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource DataSorucesInquilinosHoy;
+        protected global::System.Web.UI.WebControls.TextBox TextBox2;
         
         /// <summary>
-        /// Control GridView2.
+        /// Control TextBox3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView2;
+        protected global::System.Web.UI.WebControls.TextBox TextBox3;
         
         /// <summary>
-        /// Control DataSourceInquilinosMoraHoy.
+        /// Control TextBox4.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource DataSourceInquilinosMoraHoy;
+        protected global::System.Web.UI.WebControls.TextBox TextBox4;
         
         /// <summary>
-        /// Control HyperLink1.
+        /// Control TextBox5.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.WebControls.TextBox TextBox5;
         
         /// <summary>
-        /// Control GridView3.
+        /// Control TextBox6.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView3;
+        protected global::System.Web.UI.WebControls.TextBox TextBox6;
         
         /// <summary>
-        /// Control DataSoruceContratosProximoMes.
+        /// Control TextBox8.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource DataSoruceContratosProximoMes;
+        protected global::System.Web.UI.WebControls.TextBox TextBox8;
         
         /// <summary>
-        /// Control GridView4.
+        /// Control TextBox7.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView4;
+        protected global::System.Web.UI.WebControls.TextBox TextBox7;
         
         /// <summary>
-        /// Control ContratosActualizados.
+        /// Control Button1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource ContratosActualizados;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

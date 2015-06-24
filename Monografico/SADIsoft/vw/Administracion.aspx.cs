@@ -11,7 +11,20 @@ namespace SADIsoft.vw
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
+
+        protected void GridView3_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            string codigo = "18";
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                int ID = Convert.ToInt32(DataBinder.Eval(e.Row.DataItem, "ContratoId"));
+                HyperLink hyp = (HyperLink)e.Row.FindControl("hyp");
+                hyp.NavigateUrl = "/vw/InquilinoDetalle.aspx?ContId=" + ID ;
+            }
+        }
+
+        
     }
 }

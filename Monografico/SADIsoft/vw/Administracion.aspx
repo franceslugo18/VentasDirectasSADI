@@ -71,10 +71,11 @@ INNER JOIN Contratos ON Facturas.ContratoId = Contratos.ContratoId
 INNER JOIN Clientes ON Contratos.ClienteId = Clientes.ClienteId
 WHERE Facturas.FechaGenerada = DATEADD(dd,-6,CONVERT(DATE,GETDATE())) AND  Facturas.Estado = 0 AND Facturas.isMoraAplicada = 1"></asp:SqlDataSource>
         <br />
+        <asp:HyperLink ID="HyperLink1" runat="server">HyperLink</asp:HyperLink>
         <br />
         Contratos que vencen el proximo mes<br />
         <br />
-        <asp:GridView ID="GridView3" runat="server" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ContratoId" DataSourceID="DataSoruceContratosProximoMes" ForeColor="#333333" GridLines="None">
+        <asp:GridView ID="GridView3" runat="server" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="ContratoId" DataSourceID="DataSoruceContratosProximoMes" ForeColor="#333333" GridLines="None" OnRowDataBound="GridView3_RowDataBound">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField DataField="Nombre" HeaderText="Nombre" ReadOnly="True" SortExpression="Nombre" />
@@ -83,6 +84,11 @@ WHERE Facturas.FechaGenerada = DATEADD(dd,-6,CONVERT(DATE,GETDATE())) AND  Factu
                 <asp:BoundField DataField="actualizacion" HeaderText="Tipo de Actualizacion" ReadOnly="True" SortExpression="actualizacion" />
                 <asp:BoundField DataField="Telefono1" HeaderText="Telefono 1" SortExpression="Telefono1" />
                 <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+                <asp:TemplateField>
+                    <ItemTemplate>
+                        <asp:HyperLink ID="hyp" runat="server" Text="Detalles"></asp:HyperLink>
+                    </ItemTemplate>
+                </asp:TemplateField>    
             </Columns>
             <EditRowStyle BackColor="#7C6F57" />
             <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
