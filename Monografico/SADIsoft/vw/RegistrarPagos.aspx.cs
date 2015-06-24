@@ -14,6 +14,8 @@ namespace SADIsoft.vw
     public partial class RegistrarPagos : System.Web.UI.Page
     {
         protected List<int> facturas;
+        protected int pagoId;
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -104,6 +106,14 @@ namespace SADIsoft.vw
             }
         }
 
+        public int PagoId
+        {
+            get
+            {
+                return pagoId;
+            }
+        }
+
         public void PagarFacturas()
         {
 
@@ -126,12 +136,14 @@ namespace SADIsoft.vw
             }
 
 
-            RealizarPagoControlador.PagarFacturas(facturas);
+            pagoId = RealizarPagoControlador.PagarFacturas(facturas);
 
             if (facturas.Capacity != 0)
             {
                 
-               Server.Transfer("/vw/CrearFactura.aspx");
+               //Server.Transfer("/vw/CrearFactura.aspx");
+                Session["pagoId"] = pagoId;
+                Response.Redirect("/vw/CrearFactura.aspx");
             }
             else
             {

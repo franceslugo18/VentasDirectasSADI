@@ -38,11 +38,11 @@ namespace SADIsoft.Controller
 
 
 
-        public static void PagarFacturas(List<int> facturas)
+        public static int PagarFacturas(List<int> facturas)
         {
             try
             {
-                FacturaDA.PagarFacturas(facturas);
+                return FacturaDA.PagarFacturas(facturas);
             }
             catch (Exception ex)
             {

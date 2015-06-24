@@ -70,8 +70,8 @@
                 <asp:Button ID="Button1" runat="server" Text="Generar Contrato" name="singlebutton" class="btn btn-primary" OnClick="Button1_Click"/>
             </div>
         </div>
-        <rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Verdana" Font-Size="8pt" ProcessingMode="Remote" ShowParameterPrompts="False" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="734px" SizeToReportContent="false" >
-            <ServerReport ReportPath="InmobiliariaReport/ContratoAlquiler.rcl" />
+        <rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Verdana" Font-Size="8pt" ProcessingMode="Remote" ShowParameterPrompts="False" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="734px" >
+            <ServerReport ReportPath="InmobiliariaReport/ContratoAlquiler.rdl" />
         </rsweb:ReportViewer>
 
         <asp:ScriptManager ID="ScriptManager1" runat="server">

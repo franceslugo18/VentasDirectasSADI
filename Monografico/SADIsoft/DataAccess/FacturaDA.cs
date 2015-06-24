@@ -112,7 +112,7 @@ namespace SADIsoft.DataAccess
         }
 
 
-        internal static void PagarFacturas(List<int> facturas)
+        internal static int PagarFacturas(List<int> facturas)
         {
             conn = Conexion.Conectar();
             com = new SqlCommand();
@@ -120,15 +120,32 @@ namespace SADIsoft.DataAccess
             com.CommandText = "SP_PagarFactura";
 
             com.Connection = conn;
-
-
-            foreach (int fact in facturas)
+            int pagoId = 0;
+            if (insertarPago())
             {
-                com.Parameters.Add("@FacturaId", SqlDbType.Int).Value = fact;
-                com.ExecuteNonQuery();
-                com.Parameters.Clear();
-            }
 
+                foreach (int fact in facturas)
+                {
+                    com.Parameters.Add("@FacturaId", SqlDbType.Int).Value = fact;
+                    pagoId = Convert.ToInt32(com.ExecuteScalar());
+                    com.Parameters.Clear();
+                }
+            }
+            return pagoId;
+        }
+
+        private static bool insertarPago()
+        {
+            SqlConnection cn = Conexion.Conectar();
+            string query = string.Format(@"INSERT INTO Pagos(FechaDePago) VALUES (GETDATE())");
+            SqlCommand cm = new SqlCommand(query,cn);
+
+            if (cm.ExecuteNonQuery() != 0)
+            {
+                cn.Close();
+                return true;
+            }
+            return false;
         }
 
 

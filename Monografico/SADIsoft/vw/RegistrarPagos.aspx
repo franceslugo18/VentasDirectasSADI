@@ -92,7 +92,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="text"></label>
                 <div class="col-md-4">
-                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Realizar pago" name="singlebutton" class="btn btn-primary" ViewStateMode="Disabled" />
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" method="post" action="\vw\CrearFactura.aspx" Text="Realizar pago" name="singlebutton" class="btn btn-primary" ViewStateMode="Disabled" />
                     <br />
                     <asp:Label ID="Label1" runat="server" ForeColor="Red"></asp:Label>
                 </div>
