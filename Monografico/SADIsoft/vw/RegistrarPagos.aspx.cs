@@ -13,19 +13,12 @@ namespace SADIsoft.vw
 {
     public partial class RegistrarPagos : System.Web.UI.Page
     {
+        protected List<int> facturas;
         protected void Page_Load(object sender, EventArgs e)
         {
 
-
-            
-               
-            
-
+            Label1.Text = "";
         }
-
-
-        
-
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -45,8 +38,6 @@ namespace SADIsoft.vw
                 DropDownList1.DataBind();
                 //ListItem item = new ListItem("--Seleccione---");
                 //DropDownList1.Items.Insert(0,item);
-
-                        
 
             }
             catch (Exception ex)
@@ -103,11 +94,23 @@ namespace SADIsoft.vw
 
         }
 
-        private void PagarFacturas()
+        
+
+        public List<int> Facturas
+        {
+            get
+            {
+                return facturas;
+            }
+        }
+
+        public void PagarFacturas()
         {
 
 
-            List<int> facturas = new List<int>();
+            facturas = new List<int>();
+
+
             foreach (GridViewRow row in GridView1.Rows)
             {
 
@@ -122,13 +125,27 @@ namespace SADIsoft.vw
                 }
             }
 
+
             RealizarPagoControlador.PagarFacturas(facturas);
 
+            if (facturas.Capacity != 0)
+            {
+                
+               Server.Transfer("/vw/CrearFactura.aspx");
+            }
+            else
+            {
+                Label1.Text = "* Debe seleccionar por lo menos una factura";
+            }
+
         }
+
+        
 
         protected void Button1_Click1(object sender, EventArgs e)
         {
             PagarFacturas();
+
         }
 
         protected void Checked_change(object sender, EventArgs e)

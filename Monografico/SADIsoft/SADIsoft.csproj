@@ -65,6 +65,7 @@
     <Content Include="App_Data\PostgradoDB_log.ldf">
       <DependentUpon>PostgradoDB.mdf</DependentUpon>
     </Content>
+    <Content Include="vw\Administracion.aspx" />
     <Content Include="vw\ContratoAlquiler.aspx" />
     <Content Include="vw\ContratoLitis.aspx" />
     <Content Include="Default.aspx" />
@@ -95,6 +96,7 @@
     <Content Include="vw\AdministracionResp.aspx" />
     <Content Include="vw\BuscarPPP.aspx" />
     <Content Include="vw\CambiarContrasena.aspx" />
+    <Content Include="vw\CrearFactura.aspx" />
     <Content Include="vw\haber.aspx" />
     <Content Include="vw\INDEX.aspx" />
     <Content Include="vw\javascrip.aspx" />
@@ -114,6 +116,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Code\Validacion.cs" />
+    <Compile Include="vw\Administracion.aspx.cs">
+      <DependentUpon>Administracion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\Administracion.aspx.designer.cs">
+      <DependentUpon>Administracion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="vw\ContratoAlquiler.aspx.cs">
       <DependentUpon>ContratoAlquiler.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -237,6 +246,13 @@
       <DependentUpon>CambiarContrasena.aspx</DependentUpon>
     </Compile>
     <Compile Include="vw\ControlExtensions.cs" />
+    <Compile Include="vw\CrearFactura.aspx.cs">
+      <DependentUpon>CrearFactura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\CrearFactura.aspx.designer.cs">
+      <DependentUpon>CrearFactura.aspx</DependentUpon>
+    </Compile>
     <Compile Include="vw\haber.aspx.cs">
       <DependentUpon>haber.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

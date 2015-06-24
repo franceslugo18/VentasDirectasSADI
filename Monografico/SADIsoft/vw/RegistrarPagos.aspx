@@ -67,21 +67,6 @@
                                 <asp:ControlParameter ControlID="txtCedula" Name="Cedula" PropertyName="Text" />
                             </SelectParameters>
                         </asp:SqlDataSource>
-                        <asp:SqlDataSource ID="SadiConnectionString" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString %>" SelectCommand="SELECT  
-	                Facturas.FacturaId,
-		            Facturas.NumeroCuota,
-		            isnull(Facturas.Mora,0) AS Mora,
-		            Facturas.TotalCuota, 
-		            Facturas.FechaGenerada 
-		 
-		        FROM Facturas INNER JOIN Contratos ON Facturas.ContratoId = Contratos.ContratoId
-                              INNER JOIN Clientes ON Contratos.ClienteId = Clientes.ClienteId
-					   
-               WHERE Facturas.ContratoId = @ContratoId and Facturas.Estado = 0">
-                            <SelectParameters>
-                                <asp:ControlParameter ControlID="DropDownList1" Name="ContratoId" PropertyName="SelectedValue" />
-                            </SelectParameters>
-                        </asp:SqlDataSource>
                     </div>
                 </div>
 
@@ -107,7 +92,9 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="text"></label>
                 <div class="col-md-4">
-                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Realizar pago" name="singlebutton" class="btn btn-primary" />
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Realizar pago" name="singlebutton" class="btn btn-primary" ViewStateMode="Disabled" />
+                    <br />
+                    <asp:Label ID="Label1" runat="server" ForeColor="Red"></asp:Label>
                 </div>
             </div>
          
@@ -116,7 +103,7 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="textGrip"></label>
                     <div class="col-md-4">
-                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="555px" Height="208px" OnRowDataBound="GridView1_RowDataBound" ShowFooter="True" DataKeyNames="FacturaId" DataSourceID="SadiConnectionString" EnableViewState="False" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal">
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="555px" Height="208px" OnRowDataBound="GridView1_RowDataBound" ShowFooter="True" DataKeyNames="FacturaId" DataSourceID="SadiConnectionString" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal">
                             <Columns>
                                 <asp:BoundField DataField="FacturaId" HeaderText="FacturaId" InsertVisible="False" ReadOnly="True" SortExpression="FacturaId" />
                                 <asp:BoundField DataField="NumeroCuota" HeaderText="NumeroCuota" SortExpression="NumeroCuota" />
@@ -139,6 +126,24 @@
                             <SortedDescendingCellStyle BackColor="#E5E5E5" />
                             <SortedDescendingHeaderStyle BackColor="#275353" />
                         </asp:GridView>
+                       
+                        
+
+                        <asp:SqlDataSource ID="SadiConnectionString" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString %>" SelectCommand="SELECT  
+	                Facturas.FacturaId,
+		            Facturas.NumeroCuota,
+		            isnull(Facturas.Mora,0) AS Mora,
+		            Facturas.TotalCuota, 
+		            Facturas.FechaGenerada 
+		 
+		        FROM Facturas INNER JOIN Contratos ON Facturas.ContratoId = Contratos.ContratoId
+                              INNER JOIN Clientes ON Contratos.ClienteId = Clientes.ClienteId
+					   
+               WHERE Facturas.ContratoId = @ContratoId and Facturas.Estado = 0">
+                            <SelectParameters>
+                                <asp:ControlParameter ControlID="DropDownList1" Name="ContratoId" PropertyName="SelectedValue" />
+                            </SelectParameters>
+                        </asp:SqlDataSource>
                        
                         
 
