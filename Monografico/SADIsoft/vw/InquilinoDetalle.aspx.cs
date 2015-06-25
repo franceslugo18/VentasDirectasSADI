@@ -11,16 +11,19 @@ namespace SADIsoft.vw
 {
     public partial class InquilinoDetalle : System.Web.UI.Page
     {
+
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SadiConnectionString"].ConnectionString);
+        SqlCommand com;
+        int id = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(Request.QueryString["ContId"]);
-           
+            try
+            {
+                id = Convert.ToInt32(Request.QueryString["ContId"]);
 
-            
 
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SadiConnectionString"].ConnectionString);
-            conn.Open();
-            string query = string.Format(@" 
+                conn.Open();
+                string query = string.Format(@" 
              
 
  SELECT 
@@ -44,26 +47,52 @@ namespace SADIsoft.vw
 	INNER JOIN Propietarios ON Propietarios.PropietarioId = Inmuebles.PropietarioId			   
  WHERE Contratos.ContratoId = {0}", id);
 
-            SqlCommand com = new SqlCommand(query,conn);
-            SqlDataReader dr = com.ExecuteReader();
-            while (dr.Read())
-            {
-                TextBox1.Text = dr["NombreInquilino"].ToString();
-                TextBox2.Text = dr["DireccionInmueble"].ToString();
-                TextBox3.Text = dr["NombrePropietario"].ToString();
-                TextBox4.Text = dr["CuotaMensual"].ToString();
-                TextBox5.Text = Convert.ToDouble(dr["FacturasConMoras"]).ToString();
-                TextBox6.Text = Convert.ToDouble(dr["FacturasPendientes"]).ToString();
-                TextBox7.Text = dr["Actualizacion"].ToString();
-                TextBox8.Text = dr["TotalFacturas"].ToString();
+                com = new SqlCommand(query, conn);
+                SqlDataReader dr = com.ExecuteReader();
+                while (dr.Read())
+                {
+                    TextBox1.Text = dr["NombreInquilino"].ToString();
+                    TextBox2.Text = dr["DireccionInmueble"].ToString();
+                    TextBox3.Text = dr["NombrePropietario"].ToString();
+                    TextBox4.Text = dr["CuotaMensual"].ToString();
+                    TextBox5.Text = Convert.ToDouble(dr["FacturasConMoras"]).ToString();
+                    TextBox6.Text = Convert.ToDouble(dr["FacturasPendientes"]).ToString();
+                    TextBox7.Text = dr["Actualizacion"].ToString();
+                    TextBox8.Text = dr["TotalFacturas"].ToString();
+                    TextBox9.Text = dr["TotalFacturas"].ToString();
+                }
+                dr.Close();
+                conn.Close();
             }
-            dr.Close();
-            conn.Close();
+            catch (Exception ex)
+            {
+                Response.Write(ex.ToString());
+            }
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
+      
 
+        protected void Button1_Click1(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                string query;
+                if (TextBox7.Text.Equals("Automatica"))
+                {
+                    query = string.Format("UPDATE Contratos SET ActualizarAutom = 0 WHERE ContratoId = {0}",id);
+                }
+                else
+                {
+                    query = string.Format("UPDATE Contratos SET ActualizarAutom = 1 WHERE ContratoId = {0}",id);
+                }
+                com = new SqlCommand(query, conn);
+                com.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Response.Write(ex.ToString());
+            }
         }
     }
 }
