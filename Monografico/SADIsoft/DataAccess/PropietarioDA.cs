@@ -90,7 +90,7 @@ namespace SADIsoft.DataAccess
             try
             {
                 conn = Conexion.Conectar();
-                string query = string.Format(@"SELECT P.Telefono1, P.Telefono2, P.Direccion, U.NombreUsuario FROM Propietarios AS P INNER JOIN Usuarios AS U ON 
+                string query = string.Format(@"SELECT P.Nombre, P.Apellido, P.Cedula,P.Telefono1, P.Telefono2, P.Direccion, U.NombreUsuario FROM Propietarios AS P INNER JOIN Usuarios AS U ON 
                 P.UsuarioId = U.UsuarioId WHERE P.PropietarioId = {0}", idPropietario);
 
                 com = new SqlCommand(query, conn);
@@ -102,6 +102,9 @@ namespace SADIsoft.DataAccess
                 while (dr.Read())
                 {
 
+                    p.Nombre = dr["Nombre"].ToString();
+                    p.Apellido = dr["Apellido"].ToString();
+                    p.Cedula = dr["Cedula"].ToString();
                     p.Telefono1 = dr["Telefono1"].ToString();
                     p.Telefono2 = dr["Telefono2"].ToString();
                     p.Email = dr["NombreUsuario"].ToString();
@@ -122,7 +125,7 @@ namespace SADIsoft.DataAccess
         //-----------------------------------------------------------------------------------------
         // Actualiza los datos del propietario, retiornando una cadena con el Id y los telefonos
         //-----------------------------------------------------------------------------------------
-        public static string ActualizarPropietarioDB(int id, string tel1, string tel2, string direccion, string email)
+        public static string ActualizarPropietarioDB(int id, string nom, string apell, string ced, string tel1, string tel2, string direccion, string email)
         {
             try
             {
@@ -133,6 +136,9 @@ namespace SADIsoft.DataAccess
                 com.CommandText = "USP_Actualizar_Propietario";
 
                 com.Parameters.Add("@PropietarioId", SqlDbType.Int).Value = id;
+                com.Parameters.Add("@Nombre", SqlDbType.VarChar).Value = nom;
+                com.Parameters.Add("@Apellido", SqlDbType.VarChar).Value = apell;
+                com.Parameters.Add("@Cedula", SqlDbType.VarChar).Value = ced;
                 com.Parameters.Add("@Tel1", SqlDbType.VarChar).Value = tel1;
                 com.Parameters.Add("@Tel2", SqlDbType.VarChar).Value = tel2;
                 com.Parameters.Add("@Direccion", SqlDbType.VarChar).Value = direccion;
@@ -174,7 +180,7 @@ namespace SADIsoft.DataAccess
                 List<Propietario> lista = new List<Propietario>();
 
                 conn = Conexion.Conectar();
-                string query = string.Format(@"SElECT PropietarioId, Nombre + ' ' + Apellido AS Nombre	FROM Propietarios");
+                string query = string.Format(@"SElECT PropietarioId, Nombre + ' ' + Apellido AS Nombre	FROM Propietarios WHERE isEliminado = 0");
                 com = new SqlCommand(query, conn);
                 dr = com.ExecuteReader();
 
@@ -239,5 +245,19 @@ namespace SADIsoft.DataAccess
                 throw ex;
             }
         }
+
+        public static int EliminarPropietarioDB(int idPropietario) 
+        {
+            conn = Conexion.Conectar();
+            com = new SqlCommand();
+            com.CommandType = CommandType.StoredProcedure;
+            com.Connection = conn;
+            com.CommandText = "USP_Eliminar_Propietario";
+            com.Parameters.Add("@idPropietario", SqlDbType.Int).Value = idPropietario;
+            int respuesta = Convert.ToInt32(com.ExecuteScalar());
+
+            return respuesta;
+        }
+
     }
 }

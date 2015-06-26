@@ -23,11 +23,11 @@ namespace SADI.Controller
             }
         }
 
-        public static string ActualizarPropietario(int id, string tel1, string tel2, string dir, string email)
+        public static string ActualizarPropietario(int id, string nom, string apell, string ced, string tel1, string tel2, string dir, string email)
         {
             try
             {
-                string s = PropietarioDA.ActualizarPropietarioDB(id, tel1, tel2, dir, email);
+                string s = PropietarioDA.ActualizarPropietarioDB(id, nom, apell, ced, tel1, tel2, dir, email);
                     
 
                 return s;
@@ -43,6 +43,20 @@ namespace SADI.Controller
         internal static List<object> ListaPropietarios()
         {
             return PropietarioDA.ListaPropietariosDB();
+        }
+
+
+        public static int EliminarPropietario(int idPropietario) 
+        {
+            try
+            {
+                return PropietarioDA.EliminarPropietarioDB(idPropietario);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+               
         }
     }
 }

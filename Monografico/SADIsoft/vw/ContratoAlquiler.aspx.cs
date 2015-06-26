@@ -111,5 +111,10 @@ namespace SADIsoft.vw
         {
             //string a = GridView1.SelectedDataKey.Value.ToString();
         }
+
+        protected void ddlCliente1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

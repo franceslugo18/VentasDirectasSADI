@@ -47,6 +47,34 @@
             <!-- Form Name -->
             <legend>Mantenimiento Propietarios</legend>
 
+
+             <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textCalle">Nombre</label>
+                <div class="col-md-4">
+                    <asp:TextBox ID="txtNombreP" runat="server" type="text" class="form-control input-md" placeholder="Nombre" ></asp:TextBox>
+                   
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textCalle">Apellido</label>
+                <div class="col-md-4">
+                    <asp:TextBox ID="txtApellidoP" runat="server" type="text" class="form-control input-md" placeholder="Apelllido"></asp:TextBox>
+                   
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textCalle">Cedula</label>
+                <div class="col-md-4">
+                    <asp:TextBox ID="txtCedulaP" runat="server" type="text" class="form-control input-md" placeholder="Cedula" ></asp:TextBox>
+                   
+                </div>
+            </div>
+
               <!-- Text input-->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textTele">Telefono 1</label>
@@ -88,13 +116,40 @@
                     <asp:Label ID="Label1" runat="server"></asp:Label>
                 </div>
             </div>
+
              <!-- Button -->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="btnRegistrarr"></label>
                 <div class="col-md-4">
-                    <asp:Button ID="btnActualizarP" runat="server" Text="Actualizar" class="btn btn-primary" OnClick="btnActualizarP_Click"/>
+                    <asp:Button ID="btnNuevoPropietario" runat="server" Text="Nuevo" class="btn btn-primary" OnClick="btnNuevoPropietario_Click" Width="86px" />
                 </div>
             </div>
+
+             <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="btnRegistrarr"></label>
+                <div class="col-md-4">
+                    <asp:Button ID="btnRegistrarPropietario" runat="server" Text="Registrar" class="btn btn-primary" Enabled="False" OnClick="btnRegistrarPropietario_Click" Width="82px" />
+                    <asp:Label ID="Label2" runat="server" ForeColor="Red" Text="* La cedula no es valida" Visible="False"></asp:Label>
+                </div>
+            </div>
+
+             <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="btnRegistrarr"></label>
+                <div class="col-md-4">
+                    <asp:Button ID="btnActualizarPropietario" runat="server" Text="Actualizar" class="btn btn-primary" Enabled="False" OnClick="btnActualizarPropietario_Click" Width="82px" />
+                </div>
+            </div>
+
+             <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="btnRegistrarr"></label>
+                <div class="col-md-4">
+                    <asp:Button ID="btnEliminarPropietario" runat="server" Text="Eliminar" class="btn btn-primary" Enabled="False" OnClick="btnEliminarPropietario_Click" Width="82px" />
+                </div>
+            </div>
+
 
 
               <!-- Text input-->
@@ -137,9 +192,13 @@ CASE
 	WHEN(U.Estado = 1) THEN 'Activo' ELSE 'Inactivo' END Estado 
 
 FROM Propietarios AS P LEFT JOIN Usuarios AS U ON P.UsuarioId = U.UsuarioId
+WHERE P.isEliminado = 0
 " UpdateCommand="USP_Actualizar_Propietario" UpdateCommandType="StoredProcedure">
                     <UpdateParameters>
                         <asp:Parameter Name="PropietarioID" Type="Int32" />
+                        <asp:Parameter Name="Nombre" Type="String" />
+                        <asp:Parameter Name="Apellido" Type="String" />
+                        <asp:Parameter Name="Cedula" Type="String" />
                         <asp:Parameter Name="Tel1" Type="String" />
                         <asp:Parameter Name="Tel2" Type="String" />
                         <asp:Parameter Name="Direccion" Type="String" />

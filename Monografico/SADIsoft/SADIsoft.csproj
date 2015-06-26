@@ -109,6 +109,7 @@
     <Content Include="vw\MantenimientoCli.aspx" />
     <Content Include="vw\MantenimientoContratos.aspx" />
     <Content Include="vw\MantenimientoInm.aspx" />
+    <Content Include="vw\MantenimientoUsr.aspx" />
     <Content Include="vw\PaginaPrincipal.aspx" />
     <Content Include="vw\PagosXperiodos.aspx" />
     <Content Include="vw\PIvote.aspx" />
@@ -354,6 +355,13 @@
     </Compile>
     <Compile Include="vw\MantenimientoInm.aspx.designer.cs">
       <DependentUpon>MantenimientoInm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\MantenimientoUsr.aspx.cs">
+      <DependentUpon>MantenimientoUsr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\MantenimientoUsr.aspx.designer.cs">
+      <DependentUpon>MantenimientoUsr.aspx</DependentUpon>
     </Compile>
     <Compile Include="vw\PaginaPrincipal.aspx.cs">
       <DependentUpon>PaginaPrincipal.aspx</DependentUpon>

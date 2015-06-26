@@ -170,7 +170,7 @@
                     <asp:GridView ID="GridView1" CssClass="grip2" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="770px" DataKeyNames="InmuebleId">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
-                            <asp:CommandField ShowSelectButton="True" />
+                            <asp:BoundField DataField="Nombre" HeaderText="Nombre" ReadOnly="True" SortExpression="Nombre" />
                             <asp:BoundField DataField="PrecioAlquiler" HeaderText="PrecioAlquiler" SortExpression="PrecioAlquiler" />
                             <asp:BoundField DataField="Depositos" HeaderText="Depositos" SortExpression="Depositos" />
                             <asp:BoundField DataField="Observaciones" HeaderText="Observaciones" SortExpression="Observaciones" />
@@ -191,7 +191,11 @@
                         <SortedDescendingHeaderStyle BackColor="#4870BE" />
                     </asp:GridView>
 
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString %>" SelectCommand="SELECT [PrecioAlquiler], [Depositos], [Observaciones], [NumeroPlantas], [Habitaciones], [Banos], [InmuebleId] FROM [Inmuebles]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString %>" SelectCommand="SELECT Propietarios.Nombre + ' ' + Propietarios.Apellido AS Nombre, PrecioAlquiler, Depositos, Observaciones, NumeroPlantas, Habitaciones, Banos, InmuebleId FROM Inmuebles INNER JOIN Propietarios ON Inmuebles.PropietarioId = Propietarios.PropietarioId WHERE Inmuebles.isEliminado = @isEliminado ORDER BY Nombre">
+                        <SelectParameters>
+                            <asp:Parameter DefaultValue="0" Name="isEliminado" Type="String" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
 
                 </div>
             </div>

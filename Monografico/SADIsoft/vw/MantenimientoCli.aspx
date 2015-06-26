@@ -46,6 +46,33 @@
             <!-- Form Name -->
             <legend>Mantenimiento Clientes</legend>
 
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textCalle">Nombre</label>
+                <div class="col-md-4">
+                    <asp:TextBox ID="txtNombre1" runat="server" type="text" class="form-control input-md" placeholder="Nombre" required ></asp:TextBox>
+                   
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textCalle">Apellido</label>
+                <div class="col-md-4">
+                    <asp:TextBox ID="txtApellido1" runat="server" type="text" class="form-control input-md" placeholder="Apelllido" required ></asp:TextBox>
+                   
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textCalle">Cedula</label>
+                <div class="col-md-4">
+                    <asp:TextBox ID="txtCedula1" runat="server" type="text" class="form-control input-md" placeholder="Cedula" required ></asp:TextBox>
+                   
+                </div>
+            </div>
+
               <!-- Text input-->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textTele">Telefono 1</label>
@@ -78,11 +105,40 @@
                    
                 </div>
             </div>
+
+                        <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="btnRegistrarr"></label>
+                <div class="col-md-4">
+                    <asp:Button ID="Button1" runat="server" Text="Nuevo" class="btn btn-primary" OnClick="Button2_Click" Width="86px"/>
+                &nbsp;&nbsp;
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="btnRegistrarr"></label>
+                <div class="col-md-4">
+                    <asp:Button ID="btnRegistrar" runat="server" Text="Registrar" class="btn btn-primary" OnClick="btnRegistrar_Click" Enabled="False" Width="82px"/>
+                &nbsp;&nbsp;
+                </div>
+            </div>
+
              <!-- Button -->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="btnRegistrarr"></label>
                 <div class="col-md-4">
-                    <asp:Button ID="btnActualizarCl" runat="server" Text="Actualizar" class="btn btn-primary" OnClick="btnActualizarCl_Click"/>
+                    <asp:Button ID="btnActualizarCl" runat="server" Text="Actualizar" class="btn btn-primary" OnClick="btnActualizarCl_Click" Enabled="False" Width="82px"/>
+                &nbsp;&nbsp;
+                </div>
+            </div>
+
+                         <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="btnRegistrarr"></label>
+                <div class="col-md-4">
+                    <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-primary" OnClick="btnEliminar_Click" Width="82px" Enabled="False"/>
+                &nbsp;&nbsp;
                 </div>
             </div>
             
@@ -93,7 +149,6 @@
                        <AlternatingRowStyle BackColor="White" />
                        <Columns>
                            <asp:CommandField ShowSelectButton="True" />
-                           <asp:ButtonField   ButtonType="Link"  Text="Delete" /> 
                            <asp:BoundField DataField="ClienteId" HeaderText="ClienteId" SortExpression="ClienteId" InsertVisible="False" ReadOnly="True" />
                            <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
                            <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
@@ -113,7 +168,11 @@
                        <SortedDescendingCellStyle BackColor="#D4DFE1" />
                        <SortedDescendingHeaderStyle BackColor="#15524A" />
                     </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString %>" SelectCommand="SELECT * FROM Clientes"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString %>" SelectCommand="SELECT [ClienteId], [Nombre], [Apellido], [Cedula], [Telefono1], [Telefono2], [Email] FROM [Clientes] WHERE ([isEliminado] = @isEliminado)">
+                        <SelectParameters>
+                            <asp:Parameter DefaultValue="0" Name="isEliminado" Type="String" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
                 </div>
             </div>
 

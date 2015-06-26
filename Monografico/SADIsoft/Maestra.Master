@@ -119,7 +119,7 @@
             <a href="#demo1" class="list-group-item list-group-item-success" id="pp" data-toggle="collapse" data-parent="#MainMenu">Propietarios</a>
             <div class="collapse" id="demo1">
                 <a href="#SubMenu1" class="list-group-item" data-toggle="collapse" data-parent="#SubMenu1"><i class="fa fa-caret-down"></i></a>
-                <a href="/vw/RegistrarPropietarios.aspx" class="list-group-item">Agregar</a>
+                
                 <a href="/vw/MantenimientoPro.aspx" class="list-group-item">Mantenimiento</a>
                
             </div>
@@ -133,7 +133,7 @@
 
             <a href="#demo3" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Cliente</a>
             <div class="collapse" id="demo3">
-                <a href="/vw/RegistrarClientes.aspx" class="list-group-item">Agregar</a>
+                
                 <a href="/vw/MantenimientoCli.aspx" class="list-group-item">Mantenimiento</a>
                 
             </div>
@@ -154,8 +154,8 @@
 
             <a href="#demo7" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Usuarios</a>
             <div class="collapse" id="demo7">
-                <a href="/vw/GananciasXmes.aspx" class="list-group-item">Registrar Usuario</a>
-                <a href="/vw/PagosXperiodos.aspx" class="list-group-item">Mantenimiento Usuarios</a>
+                <a href="/vw/RegistroUsuario.aspx" class="list-group-item">Mantenimiento</a>
+                
  
            
             </div>

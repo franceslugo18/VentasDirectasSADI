@@ -168,7 +168,7 @@ namespace SADIsoft.prueba
 	                INNER JOIN Municipios AS M ON D.MunicipioId = M.MunicipioId
 
 	                INNER JOIN Sectores AS S ON D.SectorId = S.SectorId WHERE (I.isDisponible = 1) AND ((@Provincia is null) OR (P.Nombre = @Provincia)) AND ((@Municipio is null) OR (M.Nombre = @Municipio)) AND ((@Sector is null) OR (S.Nombre = @Sector))
-                                                          AND ((@Precio1 is null) OR (I.PrecioAlquiler >= @Precio1)) AND ((@Precio2 is null) OR (I.PrecioAlquiler <= @Precio2)) AND ((@Tipo is null) OR (TipoInmueble = @Tipo))");
+                                                          AND ((@Precio1 is null) OR (I.PrecioAlquiler >= @Precio1)) AND ((@Precio2 is null) OR (I.PrecioAlquiler <= @Precio2)) AND ((@Tipo is null) OR (TipoInmueble = @Tipo)) AND I.isEliminado = 0");
                 com.CommandType = CommandType.Text;
 
                 if (provincia == "-Seleccione-")

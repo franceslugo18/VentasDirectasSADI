@@ -16,7 +16,7 @@ namespace SADIsoft.vw
 
         protected void btn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/vw/RegistrarPropietarios.aspx");
+            Response.Redirect("/vw/MantenimientoPro.aspx");
         }
     }
 }

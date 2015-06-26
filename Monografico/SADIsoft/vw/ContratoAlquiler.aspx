@@ -15,7 +15,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textNunicio">Seleccione Cliente</label>
                 <div class="col-md-4">
-                    <asp:DropDownList ID="ddlCliente1" runat="server" class="form-control">
+                    <asp:DropDownList ID="ddlCliente1" runat="server" class="form-control" OnSelectedIndexChanged="ddlCliente1_SelectedIndexChanged">
                     </asp:DropDownList>
                 &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddlCliente1" ErrorMessage="Debe seleccionar un Cliente" ForeColor="Red" InitialValue="0"></asp:RequiredFieldValidator>
                 </div>

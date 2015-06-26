@@ -126,14 +126,14 @@ namespace SADIsoft.DataAccess
         //------------------------------------------------
         // 
         //------------------------------------------------
-        public static bool RegistrarUsuarioDB(string email)
+        public static bool RegistrarUsuarioDB(string email, int tipo)
         {
             try
             {
                 conn = Conexion.Conectar();
 
-                string query = string.Format(@"INSERT INTO Usuarios(NombreUsuario, RandomPass, Tipo, Estado) VALUES ('{0}','{1}',1,0)",
-                    email, Usuario.EnviarEmailUsuario(email));
+                string query = string.Format(@"INSERT INTO Usuarios(NombreUsuario, RandomPass, Tipo, Estado) VALUES ('{0}','{1}',{2},0)",
+                    email, Usuario.EnviarEmailUsuario(email),tipo);
                 com = new SqlCommand(query, conn);
 
                 int i = com.ExecuteNonQuery();

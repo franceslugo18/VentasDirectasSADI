@@ -8,11 +8,11 @@ namespace SADI.Controller
 {
     public class RegistrarUsuariosControlador
     {
-        public  static bool RegistrarUsuario(string email)
+        public  static bool RegistrarUsuario(string email, int tipo)
         {
             try
             {
-                if (UsuarioDA.RegistrarUsuarioDB(email)) return true;
+                if (UsuarioDA.RegistrarUsuarioDB(email, tipo)) return true;
 
                 return false;
             }
