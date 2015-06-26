@@ -13,7 +13,14 @@ namespace SADIsoft.propietarios_registrados
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Usuario"] == null)
+                Response.Redirect("~/LoginResponse.aspx");
 
+            if (Convert.ToInt32(Session["Tipo"]) == 3)
+            {
+                Response.Redirect("~/LoginResponse.aspx");
+
+            }
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)

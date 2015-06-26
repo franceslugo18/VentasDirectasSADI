@@ -14,7 +14,7 @@ namespace SADIsoft
         {
             if (Session["Usuario"] == null)
                 Response.Redirect("/LoginResponse.aspx");
-            Response.Write(Session["Usuario"]);
+            
         }
 
         protected void btnCambioContrase_Click(object sender, EventArgs e)

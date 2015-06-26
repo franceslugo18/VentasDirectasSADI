@@ -14,6 +14,15 @@ namespace SADIsoft.vw
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Usuario"] == null)
+                Response.Redirect("~/LoginResponse.aspx");
+
+            if (Convert.ToInt32(Session["Tipo"]) == 0)
+            {
+                Response.Redirect("~/LoginResponse.aspx");
+
+            }
+            
             Label1.Visible = false;
             if (!IsPostBack)
             {

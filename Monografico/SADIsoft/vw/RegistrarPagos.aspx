@@ -104,7 +104,7 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="textGrip"></label>
                     <div class="col-md-4">
-                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="555px" Height="208px" OnRowDataBound="GridView1_RowDataBound" ShowFooter="True" DataKeyNames="FacturaId" DataSourceID="SadiConnectionString" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal">
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="555px" Height="208px" OnRowDataBound="GridView1_RowDataBound" ShowFooter="True" DataKeyNames="FacturaId" DataSourceID="SadiConnectionString" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal" EnableViewState="False">
                             <Columns>
                                 <asp:BoundField DataField="FacturaId" HeaderText="Factura ID" InsertVisible="False" ReadOnly="True" SortExpression="FacturaId" />
                                 <asp:BoundField DataField="NumeroCuota" HeaderText="Numero de Cuota" SortExpression="NumeroCuota" />

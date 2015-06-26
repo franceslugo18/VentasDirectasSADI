@@ -18,6 +18,14 @@ namespace SADIsoft.vw
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Usuario"] == null)
+                Response.Redirect("~/LoginResponse.aspx");
+
+            if (Convert.ToInt32(Session["Tipo"]) == 3)
+            {
+                Response.Redirect("~/LoginResponse.aspx");
+
+            }
 
             Label1.Text = "";
         }
@@ -157,7 +165,7 @@ namespace SADIsoft.vw
         protected void Button1_Click1(object sender, EventArgs e)
         {
             PagarFacturas();
-
+            GridView1.DataBind();
         }
 
         protected void Checked_change(object sender, EventArgs e)

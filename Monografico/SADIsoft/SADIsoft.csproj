@@ -109,6 +109,7 @@
     <Content Include="vw\PaginaPrincipal.aspx" />
     <Content Include="vw\PagosXperiodos.aspx" />
     <Content Include="vw\PIvote.aspx" />
+    <Content Include="vw\PropietarioCuenta.aspx" />
     <Content Include="vw\PropietariosPerido.aspx" />
     <Content Include="vw\PropietariosReg.aspx" />
     <Content Include="vw\RegistrarClientes.aspx" />
@@ -343,6 +344,13 @@
     </Compile>
     <Compile Include="vw\PIvote.aspx.designer.cs">
       <DependentUpon>PIvote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\PropietarioCuenta.aspx.cs">
+      <DependentUpon>PropietarioCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\PropietarioCuenta.aspx.designer.cs">
+      <DependentUpon>PropietarioCuenta.aspx</DependentUpon>
     </Compile>
     <Compile Include="vw\PropietariosPerido.aspx.cs">
       <DependentUpon>PropietariosPerido.aspx</DependentUpon>

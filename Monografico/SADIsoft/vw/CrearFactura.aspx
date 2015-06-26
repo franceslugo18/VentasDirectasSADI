@@ -17,6 +17,9 @@
     
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Ver Recibo" UseSubmitBehavior="False" />
     
+    &nbsp;&nbsp;
+        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Volver a la pagina anterior" />
+    
     </form>
 
 </asp:Content>

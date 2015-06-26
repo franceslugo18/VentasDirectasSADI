@@ -12,7 +12,14 @@ namespace SADIsoft.registrar_usuario
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Usuario"] == null)
+                Response.Redirect("~/LoginResponse.aspx");
 
+            if (Convert.ToInt32(Session["Tipo"]) != 1)
+            {
+                Response.Redirect("~/LoginResponse.aspx");
+
+            }
         }
 
         protected void btnRegistrarUsuario_Click(object sender, EventArgs e)

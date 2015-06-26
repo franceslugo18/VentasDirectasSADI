@@ -11,10 +11,17 @@ namespace SADIsoft.vw
 {
     public partial class CrearFactura : System.Web.UI.Page
     {
-        int pagoId = 0;
+        
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (Session["Usuario"] == null)
+                Response.Redirect("~/LoginResponse.aspx");
+
+            if (Convert.ToInt32(Session["Tipo"]) == 3)
+            {
+                Response.Redirect("~/LoginResponse.aspx");
+
+            }
             //if (!IsPostBack)
                 //pagoId = PreviousPage.PagoId;
             
@@ -64,6 +71,11 @@ namespace SADIsoft.vw
             // Set the report parameters for the report
             ReportViewer1.ServerReport.SetParameters(
                 new ReportParameter[] { PagoId });
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/vw/RegistrarPagos.aspx");
         }
     }
 }

@@ -41,7 +41,7 @@
                         <asp:BoundField DataField="InmuebleId" HeaderText="Inmueble ID" InsertVisible="False" ReadOnly="True" SortExpression="InmuebleId" />
                         <asp:BoundField DataField="TipoInmueble" HeaderText="Tipo de Inmueble" ReadOnly="True" SortExpression="TipoInmueble" />
                         <asp:BoundField DataField="Direccion" HeaderText="Direccion" ReadOnly="True" SortExpression="Direccion" />
-                        <asp:ImageField DataImageUrlField="foto1" DataImageUrlFormatString="/Image/{0}" HeaderText="Foto">
+                        <asp:ImageField DataImageUrlField="foto1" DataImageUrlFormatString="/Images/{0}" HeaderText="Foto">
                             <ControlStyle Height="100px" Width="100px" />
                         </asp:ImageField>
                     </Columns>
