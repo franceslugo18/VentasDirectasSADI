@@ -67,24 +67,6 @@ namespace SADIsoft.registrar_inmueble {
         protected global::System.Web.UI.WebControls.TextBox txtNumero1;
         
         /// <summary>
-        /// Control rbAlquiler1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbAlquiler1;
-        
-        /// <summary>
-        /// Control rbVenta1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbVenta1;
-        
-        /// <summary>
         /// Control txtPrecioAlquiler1.
         /// </summary>
         /// <remarks>
@@ -101,15 +83,6 @@ namespace SADIsoft.registrar_inmueble {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlDepositos1;
-        
-        /// <summary>
-        /// Control txtPrecioVenta1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrecioVenta1;
         
         /// <summary>
         /// Control ddlNiveles1.

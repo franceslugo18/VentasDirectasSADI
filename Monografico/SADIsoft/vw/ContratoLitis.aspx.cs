@@ -14,6 +14,7 @@ namespace SADIsoft.vw
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Label1.Visible = false;
             if (!IsPostBack)
             {
                 CargarPropietarios();
@@ -50,18 +51,26 @@ namespace SADIsoft.vw
             //Response.Redirect("/vw/ContratoLitisGenerado.aspx");
             try
             {
+                if (GridView1.SelectedIndex != -1)
+                {
+                    Label1.Visible = false;
 
-                GenerarContratoLitisControlador.guardarContrato(GridView1.SelectedDataKey.Value.ToString(), DateTime.Now);
+                    GenerarContratoLitisControlador.guardarContrato(GridView1.SelectedDataKey.Value.ToString(), DateTime.Now);
 
-                ReportParameter InmuebleId = new ReportParameter();
-                InmuebleId.Name = "InmuebleId";
-                InmuebleId.Values.Add(GridView1.SelectedDataKey.Value.ToString());
+                    ReportParameter InmuebleId = new ReportParameter();
+                    InmuebleId.Name = "InmuebleId";
+                    InmuebleId.Values.Add(GridView1.SelectedDataKey.Value.ToString());
 
-                Session["Idinmueble"] = GridView1.SelectedDataKey.Value.ToString();
+                    Session["Idinmueble"] = GridView1.SelectedDataKey.Value.ToString();
 
-                // Set the report parameters for the report
-                ReportViewer1.ServerReport.SetParameters(
-                    new ReportParameter[] {InmuebleId });
+                    // Set the report parameters for the report
+                    ReportViewer1.ServerReport.SetParameters(
+                        new ReportParameter[] { InmuebleId });
+                }
+                else
+                {
+                    Label1.Visible = true;
+                }
 
             }
             catch (Exception ex)

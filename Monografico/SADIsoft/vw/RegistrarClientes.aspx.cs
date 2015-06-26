@@ -22,12 +22,11 @@ namespace SADIsoft.registrar_cliente
                 string nombre = txtNombre1.Text;
                 string apellido = txtApellido1.Text;
                 string cedula = txtCedula1.Text;
-                string direccion = txtDireccion1.Text;
                 string tel1 = txtTelefonos1.Text;
                 string tel2 = txtTelefonos2.Text;
                 string email = txtEmail1.Text;
 
-                RegistrarClienteControlador.RegistrarCliente(nombre, apellido, cedula, direccion, tel1, tel2, email);
+                RegistrarClienteControlador.RegistrarCliente(nombre, apellido, cedula, tel1, tel2, email);
             }
             catch(Exception ex)
             {

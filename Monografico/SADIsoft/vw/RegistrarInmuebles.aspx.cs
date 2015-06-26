@@ -22,20 +22,7 @@ namespace SADIsoft.registrar_inmueble
    
             }
 
-            if (rbAlquiler1.Checked == true)
-            {
-                txtPrecioAlquiler1.Enabled = true;
-                txtPrecioVenta1.Enabled = false;
-                ddlDepositos1.Enabled = true;
-
-            }
-            else
-            {
-                txtPrecioAlquiler1.Enabled = false;
-                txtPrecioVenta1.Enabled = true;
-                ddlDepositos1.Enabled = false;
-            }
-
+            
             if (cbMarquesina1.Checked == true)
             {
                 ddlCapacidadMarquesina1.Enabled = true;
@@ -111,15 +98,7 @@ namespace SADIsoft.registrar_inmueble
             string calle = txtCalle1.Text;
             string numero = txtNumero1.Text;
             bool tipo;
-            if (rbAlquiler1.Checked)
-            {
-                tipo = true;
-            }
-            else
-            {
-                tipo = false;
-            }
-
+            
             decimal precioAlquiler = 0.0m;
             if (txtPrecioAlquiler1.Text != "")
             {
@@ -131,12 +110,7 @@ namespace SADIsoft.registrar_inmueble
                 depositos = Convert.ToInt32(ddlDepositos1.SelectedValue);
             }
 
-            decimal precioVenta = 0.0m;
-            if (txtPrecioVenta1.Text != "")
-            {
-                precioVenta = Convert.ToDecimal(txtPrecioVenta1.Text);
-            }
-
+            
             int niveles = Convert.ToInt32(ddlNiveles1.SelectedValue);
 
             bool sotano = cbSotano1.Checked;
@@ -158,12 +132,12 @@ namespace SADIsoft.registrar_inmueble
             string comentarios = txtComentarios1.Text;
 
             bool tipoInmueble = false;
-            if (rbAlquiler1.Checked) tipoInmueble = true;
+            
 
             try
             {
                 int inmuebleId = RegistrarInmuebleControlador.RegistrarInmueble(propietarioId, provinciaId, municipioId, sectorId, calle, numero,
-                    tipo, precioAlquiler, depositos, precioVenta, niveles, tipoInmueble, sotano, piscina, marquesina, capacidad, comentarios,
+                    true, precioAlquiler, depositos, 0, niveles, tipoInmueble, sotano, piscina, marquesina, capacidad, comentarios,
                     nombreFoto1, nombreFoto2, nombreFoto3, nombreFoto4, habitaciones, banos);
 
 

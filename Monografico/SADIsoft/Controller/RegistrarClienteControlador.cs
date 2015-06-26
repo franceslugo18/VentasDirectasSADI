@@ -10,11 +10,11 @@ namespace SADI.Controller
 {
     public class RegistrarClienteControlador
     {
-        public static void RegistrarCliente(string nombre, string apellido, string cedula, string direccion, string tel1, string tel2, string email)
+        public static void RegistrarCliente(string nombre, string apellido, string cedula, string tel1, string tel2, string email)
         {
             try
             {
-                Cliente cliente = new Cliente(nombre,apellido,cedula,direccion,tel1,tel2,email);
+                Cliente cliente = new Cliente(nombre,apellido,cedula,tel1,tel2,email);
                 ClienteDA.RegistrarClienteDA(cliente);
 
             }
