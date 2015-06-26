@@ -17,13 +17,13 @@
             
             width:350px;
         }
+        #cedu {
+            margin-top:8px;
+        }
        
     </style>
 </asp:Content>
-
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
         <form id="Form1" runat="server" class="form-horizontal">
 
@@ -32,10 +32,10 @@
             <legend>Registrar Pagos</legend>
              <!-- Text input-->
             <div id="centrado">
-                <div class="form-group">
+                <div class="form-group" id="cedu">
                     <label class="col-md-4 control-label" for="textCedula">Introduzca Cedula</label>
                     <div class="col-md-4">
-                        <asp:TextBox ID="txtCedula"  runat="server" type="text" class="form-control input-md" placeholder="Introducir Cedula"></asp:TextBox>
+                        <asp:TextBox ID="txtCedula"  runat="server" type="text" class="form-control input-md" placeholder="Cedula"></asp:TextBox>
                     </div>
                 </div>
                 <!-- Button -->

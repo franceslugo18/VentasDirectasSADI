@@ -97,13 +97,19 @@
     <Content Include="vw\BuscarPPP.aspx" />
     <Content Include="vw\CambiarContrasena.aspx" />
     <Content Include="vw\CrearFactura.aspx" />
+    <Content Include="vw\GananciasXmes.aspx" />
     <Content Include="vw\haber.aspx" />
     <Content Include="vw\INDEX.aspx" />
+    <Content Include="vw\InmueblesPropietarios.aspx" />
     <Content Include="vw\InquilinoDetalle.aspx" />
     <Content Include="vw\javascrip.aspx" />
     <Content Include="vw\LoginCambioResp.aspx" />
+    <Content Include="vw\MantenimientoCli.aspx" />
+    <Content Include="vw\MantenimientoInm.aspx" />
     <Content Include="vw\PaginaPrincipal.aspx" />
+    <Content Include="vw\PagosXperiodos.aspx" />
     <Content Include="vw\PIvote.aspx" />
+    <Content Include="vw\PropietariosPerido.aspx" />
     <Content Include="vw\PropietariosReg.aspx" />
     <Content Include="vw\RegistrarClientes.aspx" />
     <Content Include="vw\RegistrarInmuebles.aspx" />
@@ -254,6 +260,13 @@
     <Compile Include="vw\CrearFactura.aspx.designer.cs">
       <DependentUpon>CrearFactura.aspx</DependentUpon>
     </Compile>
+    <Compile Include="vw\GananciasXmes.aspx.cs">
+      <DependentUpon>GananciasXmes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\GananciasXmes.aspx.designer.cs">
+      <DependentUpon>GananciasXmes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="vw\haber.aspx.cs">
       <DependentUpon>haber.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -267,6 +280,13 @@
     </Compile>
     <Compile Include="vw\INDEX.aspx.designer.cs">
       <DependentUpon>INDEX.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\InmueblesPropietarios.aspx.cs">
+      <DependentUpon>InmueblesPropietarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\InmueblesPropietarios.aspx.designer.cs">
+      <DependentUpon>InmueblesPropietarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="vw\InquilinoDetalle.aspx.cs">
       <DependentUpon>InquilinoDetalle.aspx</DependentUpon>
@@ -289,6 +309,20 @@
     <Compile Include="vw\LoginCambioResp.aspx.designer.cs">
       <DependentUpon>LoginCambioResp.aspx</DependentUpon>
     </Compile>
+    <Compile Include="vw\MantenimientoCli.aspx.cs">
+      <DependentUpon>MantenimientoCli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\MantenimientoCli.aspx.designer.cs">
+      <DependentUpon>MantenimientoCli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\MantenimientoInm.aspx.cs">
+      <DependentUpon>MantenimientoInm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\MantenimientoInm.aspx.designer.cs">
+      <DependentUpon>MantenimientoInm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="vw\PaginaPrincipal.aspx.cs">
       <DependentUpon>PaginaPrincipal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -296,12 +330,26 @@
     <Compile Include="vw\PaginaPrincipal.aspx.designer.cs">
       <DependentUpon>PaginaPrincipal.aspx</DependentUpon>
     </Compile>
+    <Compile Include="vw\PagosXperiodos.aspx.cs">
+      <DependentUpon>PagosXperiodos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\PagosXperiodos.aspx.designer.cs">
+      <DependentUpon>PagosXperiodos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="vw\PIvote.aspx.cs">
       <DependentUpon>PIvote.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="vw\PIvote.aspx.designer.cs">
       <DependentUpon>PIvote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\PropietariosPerido.aspx.cs">
+      <DependentUpon>PropietariosPerido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\PropietariosPerido.aspx.designer.cs">
+      <DependentUpon>PropietariosPerido.aspx</DependentUpon>
     </Compile>
     <Compile Include="vw\PropietariosReg.aspx.cs">
       <DependentUpon>PropietariosReg.aspx</DependentUpon>

@@ -20,7 +20,7 @@
             var username = '<%= Session["Usuario"] %>';
             if (username == "admin") {
                 document.getElementById('MainMenu').style.display = "inline";
-                document.getElementById('MainMenu').style.width = "300px";
+                document.getElementById('MainMenu').style.width = "250px";
                 document.getElementById('MainMenu').style.marginLeft = "5px";
                 document.getElementById('MainMenu').style.marginTop = "50px";
                 document.getElementById('MainMenu').style.cssFloat = "left";
@@ -28,7 +28,7 @@
                 document.getElementById('cuerpo').style.cssFloat = "right";
                 document.getElementById('cuerpo').style.marginRight = "10px";
                 document.getElementById('cuerpo').style.marginTop = "50px";
-                document.getElementById('cuerpo').style.width = "900px";
+                document.getElementById('cuerpo').style.width = "1000px";
 
                 document.getElementById('singlebutton').value = 'Salir';
 
@@ -64,16 +64,7 @@
             border-top-left-radius: 25px;
             border-top-right-radius: 25px;
         }
-        #cuerpo2 
-        {
-            border:solid 1px;
-            width:750px;
-            height:900px;
-            float:right;
-            margin-right:200px;
-            
 
-        }
         #cuerpo 
         {
             border:solid 1px;
@@ -123,43 +114,44 @@
             <div class="collapse" id="demo1">
                 <a href="#SubMenu1" class="list-group-item" data-toggle="collapse" data-parent="#SubMenu1"><i class="fa fa-caret-down"></i></a>
                 <a href="/vw/RegistrarPropietarios.aspx" class="list-group-item">Agregar</a>
-                <a href="javascript:;" class="list-group-item">Actualizar</a>
-                <a href="javascript:;" class="list-group-item">Eliminar</a>
-                <a href="/vw/PropietariosReg.aspx" class="list-group-item">Ver</a>
+                <a href="/vw/PropietariosReg.aspx" class="list-group-item">Mantenimiento</a>
+               
             </div>
 
             <a href="#demo2" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Inmueble</a>
             <div class="collapse" id="demo2">
                 <a href="/vw/RegistrarInmuebles.aspx" class="list-group-item">Agregar</a>
-                <a href="" class="list-group-item">Actualizar</a>
-                <a href="" class="list-group-item">Eliminar</a>
-                <a href="javascript:;" class="list-group-item">Ver</a>
+                <a href="/vw/MantenimientoInm.aspx" class="list-group-item">Mantenimiento</a>
+                
             </div>
 
             <a href="#demo3" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Cliente</a>
             <div class="collapse" id="demo3">
                 <a href="/vw/RegistrarClientes.aspx" class="list-group-item">Agregar</a>
-                <a href="" class="list-group-item">Actualizar</a>
-                <a href="" class="list-group-item">Eliminar</a>
-                <a href="javascript:;" class="list-group-item">Ver</a>
+                <a href="/vw/MantenimientoCli.aspx" class="list-group-item">Mantenimiento</a>
+                
             </div>
 
             <a href="#demo4" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Contratos</a>
             <div class="collapse" id="demo4">
-                <a href="" class="list-group-item">Contrato Litis</a>
-                <a href="" class="list-group-item">General Contrato Alquiler</a>
-                <a href="" class="list-group-item">Ver</a>
+                <a href="/vw/ContratoLitis.aspx" class="list-group-item">Contrato Litis</a>
+                <a href="/vw/ContratoAlquiler.aspx" class="list-group-item">Contrato Alquiler</a>
+               
             </div>
 
             <a href="#demo5" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Pagos</a>
             <div class="collapse" id="demo5">
-                <a href="" class="list-group-item">Realizar pagos</a>
-                <a href="" class="list-group-item">Estado Inquilino</a>
+                <a href="/vw/RegistrarPagos.aspx" class="list-group-item">Realizar pagos</a>
+                
             </div>
 
             <a href="#demo6" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Reportes</a>
             <div class="collapse" id="demo6">
-                <a href="" class="list-group-item">Reporte Por Mes</a>
+                <a href="/vw/GananciasXmes.aspx" class="list-group-item">Ganancias Por Periodo</a>
+                <a href="/vw/PagosXperiodos.aspx" class="list-group-item">Pagos Por Periodo</a>
+                <a href="/vw/PropietariosPerido.aspx" class="list-group-item">Propietarios  Periodo</a>
+                <a href="/vw/InmueblesPropietarios.aspx" class="list-group-item">Inmuebles Propietarios</a>
+           
             </div>
 
         </div>
@@ -169,13 +161,6 @@
     <div id="cuerpo">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
-    </div>
-
-    <div id="cuerpo2">
-
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-        </asp:ContentPlaceHolder>
-    </div>
-    
+    </div>    
 </body>
 </html>

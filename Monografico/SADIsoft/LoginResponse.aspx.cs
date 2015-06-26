@@ -30,7 +30,7 @@ namespace SADIsoft
                     {
                         Session["Usuario"] = usuario;
                         Response.Write("Logeado");
-                        Response.Redirect("LoginCambioResp.aspx");
+                        Response.Redirect("/vw/LoginCambioResp.aspx");
                     }
                     else
                     {
