@@ -46,9 +46,9 @@ namespace SADIsoft
                         Session["Tipo"] = tipo;
 
                         if (tipo == 1)
-                            Response.Redirect("/vw/AdministracionResp.aspx");
+                            Response.Redirect("/vw/Administracion.aspx");
                         if (tipo == 2)
-                            Response.Redirect("/vw/AdministracionResp.aspx");
+                            Response.Redirect("/vw/Administracion.aspx");
                         if (tipo == 3)
                             Response.Redirect("/vw/PropietarioCuenta.aspx");
                     }

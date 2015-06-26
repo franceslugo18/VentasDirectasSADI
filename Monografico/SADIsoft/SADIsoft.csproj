@@ -98,7 +98,7 @@
     <Content Include="vw\CambiarContrasena.aspx" />
     <Content Include="vw\CrearFactura.aspx" />
     <Content Include="vw\GananciasXmes.aspx" />
-    <Content Include="vw\haber.aspx" />
+    <Content Include="vw\Default.aspx" />
     <Content Include="vw\INDEX.aspx" />
     <Content Include="vw\InmueblesPropietarios.aspx" />
     <Content Include="vw\InquilinoDetalle.aspx" />
@@ -267,12 +267,12 @@
     <Compile Include="vw\GananciasXmes.aspx.designer.cs">
       <DependentUpon>GananciasXmes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="vw\haber.aspx.cs">
-      <DependentUpon>haber.aspx</DependentUpon>
+    <Compile Include="vw\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="vw\haber.aspx.designer.cs">
-      <DependentUpon>haber.aspx</DependentUpon>
+    <Compile Include="vw\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="vw\INDEX.aspx.cs">
       <DependentUpon>INDEX.aspx</DependentUpon>
