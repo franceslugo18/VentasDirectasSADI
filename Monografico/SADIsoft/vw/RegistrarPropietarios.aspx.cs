@@ -21,12 +21,7 @@ namespace SADIsoft.registrar_propietarios
             }
             
             if (Convert.ToInt32(Session["Tipo"]) == 3)
-                Response.Redirect("/LoginResponse.aspx");
-
-
-
-            
-
+                Response.Redirect("/LoginResponse.aspx");     
 
         }
         
@@ -55,8 +50,10 @@ namespace SADIsoft.registrar_propietarios
 
                     RegistrarPropietarioControlador.RegistrarPropietario(nombre, apellido, cedula, direccion, telefono1, telefono2, email);
                     
-                    Response.Write("Propietario registrado con exito");
-                    Response.Redirect("/propietarios registrados/PropietariosReg.aspx");
+                    //Response.Write("Propietario registrado con exito");
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Almacenado Correctamente !!')", true);
+                    Response.Redirect("/vw/PropiCorectamente.aspx");
+
                // }
                // else
                // {

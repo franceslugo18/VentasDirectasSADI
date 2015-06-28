@@ -38,6 +38,7 @@ namespace SADIsoft.DataAccess
 
                 Provincia item = new Provincia();
                 item.Nombre = "-Seleccione-";
+                item.ProvinciaId = 0;
                 lista.Insert(0, item);
 
                 conn.Close();

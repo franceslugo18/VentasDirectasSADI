@@ -31,15 +31,15 @@
                         <asp:TextBox ID="textUsuarios" runat="server" type="text" class="form-control" placeholder="Email" required autofocus ></asp:TextBox>
                         <asp:TextBox ID="textContrase" runat="server" type="password" class="form-control" placeholder="Password" required ></asp:TextBox>
                         <asp:Button ID="btnIniciar" runat="server" class="btn btn-lg btn-primary btn-block" Text
-                            ="Iniciar Seccion" OnClick="btnIniciar_Click"/>
+                            ="Iniciar Sesión" OnClick="btnIniciar_Click"/>
                         <label class="checkbox pull-left">
                             <input type="checkbox" value="remember-me"/>
                                 Recordar Contraseña
                         </label>
-                        <a href="#" class="pull-right need-help">SADI </a><span class="clearfix"></span>
+                        <a href="/vw/Default.aspx" class="pull-right need-help">SADI </a><span class="clearfix"></span>
                     </form>
                 </div>
-                <a href="#" class="text-center new-account">Create an account </a>
+                
             </div>
         </div>
     </div>

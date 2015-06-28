@@ -25,14 +25,14 @@ namespace SADIsoft.vw
                 Response.Redirect("~/LoginResponse.aspx");
 
             }
+           
+                try
+                {
+                   id =Convert.ToInt32 (Session["DetalleId"]);
 
-            try
-            {
-                id = Convert.ToInt32(Request.QueryString["ContId"]);
 
-
-                conn.Open();
-                string query = string.Format(@" 
+                    conn.Open();
+                    string query = string.Format(@" 
              
 
  SELECT 
@@ -56,27 +56,28 @@ namespace SADIsoft.vw
 	INNER JOIN Propietarios ON Propietarios.PropietarioId = Inmuebles.PropietarioId			   
  WHERE Contratos.ContratoId = {0}", id);
 
-                com = new SqlCommand(query, conn);
-                SqlDataReader dr = com.ExecuteReader();
-                while (dr.Read())
-                {
-                    TextBox1.Text = dr["NombreInquilino"].ToString();
-                    TextBox2.Text = dr["DireccionInmueble"].ToString();
-                    TextBox3.Text = dr["NombrePropietario"].ToString();
-                    TextBox4.Text = dr["CuotaMensual"].ToString();
-                    TextBox5.Text = Convert.ToDouble(dr["FacturasConMoras"]).ToString();
-                    TextBox6.Text = Convert.ToDouble(dr["FacturasPendientes"]).ToString();
-                    TextBox7.Text = dr["Actualizacion"].ToString();
-                    TextBox8.Text = dr["TotalFacturas"].ToString();
-                    TextBox9.Text = dr["TotalFacturas"].ToString();
+                    com = new SqlCommand(query, conn);
+                    SqlDataReader dr = com.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        TextBox1.Text = dr["NombreInquilino"].ToString();
+                        TextBox2.Text = dr["DireccionInmueble"].ToString();
+                        TextBox3.Text = dr["NombrePropietario"].ToString();
+                        TextBox4.Text = dr["CuotaMensual"].ToString();
+                        TextBox5.Text = Convert.ToDouble(dr["FacturasConMoras"]).ToString();
+                        TextBox6.Text = Convert.ToDouble(dr["FacturasPendientes"]).ToString();
+                        TextBox7.Text = dr["Actualizacion"].ToString();
+                        TextBox8.Text = dr["TotalFacturas"].ToString();
+                        TextBox9.Text = dr["TotalFacturas"].ToString();
+                    }
+                    dr.Close();
+                    conn.Close();
                 }
-                dr.Close();
-                conn.Close();
-            }
-            catch (Exception ex)
-            {
-                Response.Write(ex.ToString());
-            }
+                catch (Exception ex)
+                {
+                    Response.Write(ex.ToString());
+                }
+       
         }
 
       
@@ -97,11 +98,14 @@ namespace SADIsoft.vw
                 }
                 com = new SqlCommand(query, conn);
                 com.ExecuteNonQuery();
+                Response.Redirect("/vw/InquilinoDetalle.aspx");
+                
             }
             catch (Exception ex)
             {
                 Response.Write(ex.ToString());
             }
+
         }
     }
 }

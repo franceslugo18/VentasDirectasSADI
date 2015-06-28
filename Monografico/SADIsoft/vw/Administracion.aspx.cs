@@ -29,7 +29,8 @@ namespace SADIsoft.vw
             {
                 int ID = Convert.ToInt32(DataBinder.Eval(e.Row.DataItem, "ContratoId"));
                 HyperLink hyp = (HyperLink)e.Row.FindControl("hyp");
-                hyp.NavigateUrl = "/vw/InquilinoDetalle.aspx?ContId=" + ID ;
+                hyp.NavigateUrl = "/vw/detalle.aspx?ContId=" + ID ;
+                
             }
         }
 

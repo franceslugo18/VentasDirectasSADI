@@ -36,6 +36,7 @@ namespace SADIsoft.DataAccess
 
             Municipio item = new Municipio();
             item.Nombre = "-Seleccione-";
+            item.MunicipioId = 0;
 
             lista.Insert(0, item);
 

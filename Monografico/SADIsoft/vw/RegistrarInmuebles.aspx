@@ -11,7 +11,8 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textPripietario">Seleccione el Propietario</label>
                 <div class="col-md-4">
-                    <asp:DropDownList ID="ddlPropietario1" runat="server" class="form-control" OnSelectedIndexChanged="ddlPropietario1_SelectedIndexChanged"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlPropietario1" runat="server" class="form-control" OnSelectedIndexChanged="ddlPropietario1_SelectedIndexChanged" required></asp:DropDownList>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ddlPropietario1" ErrorMessage="* Seleccione un propietario" InitialValue="0" ForeColor="Red"></asp:RequiredFieldValidator>
                 </div>
             </div>
             <!-- Text input-->
@@ -23,7 +24,8 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textProvincia">Provincia</label>
                 <div class="col-md-4"> 
-                    <asp:DropDownList ID="ddlProvincia1" runat="server" class="form-control" OnSelectedIndexChanged="ddlProvincia1_SelectedIndexChanged" AutoPostBack="True" ViewStateMode="Enabled" ></asp:DropDownList>
+                    <asp:DropDownList ID="ddlProvincia1" runat="server" class="form-control" OnSelectedIndexChanged="ddlProvincia1_SelectedIndexChanged"  AutoPostBack="True" ViewStateMode="Enabled" required ></asp:DropDownList>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="* Este campo es requerido" ControlToValidate="ddlProvincia1" ForeColor="Red" InitialValue="0"></asp:RequiredFieldValidator>
                 </div>
             </div>
 
@@ -31,7 +33,8 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textNunicio">Municipio</label>
                 <div class="col-md-4"> 
-                    <asp:DropDownList ID="ddlMunicipio1" runat="server" class="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlMunicipio1_SelectedIndexChanged"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlMunicipio1" runat="server" class="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlMunicipio1_SelectedIndexChanged" required></asp:DropDownList>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="* Este campo es requerido" ControlToValidate="ddlMunicipio1" ForeColor="Red" InitialValue="0"></asp:RequiredFieldValidator>
                 </div>
             </div>
 
@@ -39,7 +42,8 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textSector">Sector</label>
                 <div class="col-md-4"> 
-                    <asp:DropDownList ID="ddlSector1" runat="server" class="form-control" AutoPostBack="True"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlSector1" runat="server" class="form-control" AutoPostBack="True" required></asp:DropDownList>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="* Este campo es requerido" ControlToValidate="ddlSector1" ForeColor="Red" InitialValue="0"></asp:RequiredFieldValidator>
                 </div>
             </div>
 
@@ -76,7 +80,6 @@
                 <label class="col-md-4 control-label" for="textDeposito">Depositos</label>
                 <div class="col-md-4"> 
                     <asp:DropDownList ID="ddlDepositos1" runat="server" class="form-control">
-                        <asp:ListItem>-Seleccione-</asp:ListItem>
                         <asp:ListItem>1</asp:ListItem>
                         <asp:ListItem>2</asp:ListItem>
                         <asp:ListItem>3</asp:ListItem>
@@ -90,8 +93,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textNiveles">Niveles</label>
                 <div class="col-md-4"> 
-                    <asp:DropDownList ID="ddlNiveles1" runat="server" class="form-control">
-                        <asp:ListItem>-Seleccione-</asp:ListItem>
+                    <asp:DropDownList ID="ddlNiveles1" runat="server" class="form-control" required>
                         <asp:ListItem>1</asp:ListItem>
                         <asp:ListItem>2</asp:ListItem>
                         <asp:ListItem>3</asp:ListItem>
@@ -113,7 +115,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textHabitaciones">Habitaciones</label>
                 <div class="col-md-4"> 
-                    <asp:DropDownList ID="ddlHabitaciones1" runat="server" class="form-control">
+                    <asp:DropDownList ID="ddlHabitaciones1" runat="server" class="form-control" required>
                         <asp:ListItem>1</asp:ListItem>
                         <asp:ListItem>2</asp:ListItem>
                         <asp:ListItem>3</asp:ListItem>
@@ -128,7 +130,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textBanios">Baños</label>
                 <div class="col-md-4"> 
-                    <asp:DropDownList ID="ddlBanos1" runat="server" class="form-control">
+                    <asp:DropDownList ID="ddlBanos1" runat="server" class="form-control" required>
                         <asp:ListItem>1</asp:ListItem>
                         <asp:ListItem>2</asp:ListItem>
                         <asp:ListItem>3</asp:ListItem>
@@ -147,7 +149,7 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="textNombre">Cantidad Vehiculos</label>
                         <div class="col-md-4">
-                            <asp:DropDownList ID="ddlCapacidadMarquesina1" runat="server" class="form-control" Width="280px">
+                            <asp:DropDownList ID="ddlCapacidadMarquesina1" runat="server" class="form-control" Width="280px" required>
                                 <asp:ListItem >-Seleccione-</asp:ListItem>
                                 <asp:ListItem>1</asp:ListItem>
                                 <asp:ListItem>2</asp:ListItem>
@@ -176,7 +178,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="filebutton">Imagen 1</label>
                 <div class="col-md-4">
-                    <asp:FileUpload ID="FileUpload1" runat="server" class="input-file" type="file" />
+                    <asp:FileUpload ID="FileUpload1" runat="server" class="input-file" type="file" required />
                 </div>
             </div>
 
@@ -184,7 +186,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="filebutton">Imagen 2</label>
                 <div class="col-md-4">
-                    <asp:FileUpload ID="FileUpload2" runat="server" class="input-file" type="file" />
+                    <asp:FileUpload ID="FileUpload2" runat="server" class="input-file" type="file" required />
                 </div>
             </div>
 
@@ -192,7 +194,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="filebutton">Imagen 3</label>
                 <div class="col-md-4">
-                    <asp:FileUpload ID="FileUpload3" runat="server" class="input-file" type="file" />
+                    <asp:FileUpload ID="FileUpload3" runat="server" class="input-file" type="file" required />
                 </div>
             </div>
 
@@ -200,7 +202,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="filebutton">Imagen 4</label>
                 <div class="col-md-4">
-                    <asp:FileUpload ID="FileUpload4" runat="server" class="input-file" type="file" />
+                    <asp:FileUpload ID="FileUpload4" runat="server" class="input-file" type="file" required />
                 </div>
             </div>
 
@@ -215,5 +217,6 @@
 
 
         </fieldset>
+        
     </form>
 </asp:Content>

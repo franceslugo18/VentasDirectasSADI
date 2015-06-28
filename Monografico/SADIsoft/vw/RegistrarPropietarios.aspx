@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Maestra.Master" AutoEventWireup="true" CodeBehind="RegistrarPropietarios.aspx.cs" Inherits="SADIsoft.registrar_propietarios.RegistrarPropietarios" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -40,7 +41,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textDireccion">Direccion</label>
                 <div class="col-md-4"> 
-                    <asp:TextBox ID="txtDireccionP" runat="server" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtDireccionP" runat="server" class="form-control" required ></asp:TextBox>
                 </div>
             </div>
 
@@ -49,7 +50,7 @@
                 <label class="col-md-4 control-label" for="textCalle">Telefono 1</label>
                 <div class="col-md-4">
                     <asp:TextBox ID="txtTelefonos1P" runat="server" type="text" class="form-control input-md" placeholder="Telefono1" required ></asp:TextBox>
-                   
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="Debe de Introducir un numero de telefono valido" ControlToValidate="txtTelefonos1P" ForeColor="Red" ValidationExpression="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]"></asp:RegularExpressionValidator>
                 </div>
             </div>
 
@@ -58,7 +59,7 @@
                 <label class="col-md-4 control-label" for="textCalle">Telefono 2</label>
                 <div class="col-md-4">
                     <asp:TextBox ID="txtTelefonos2P" runat="server" type="text" class="form-control input-md" placeholder="Telefono Opcional" ></asp:TextBox>
-                   
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Debe de introducir un numero valido" ControlToValidate="txtTelefonos2P" ForeColor="Red" ValidationExpression="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]"></asp:RegularExpressionValidator>
                 </div>
             </div>
 
@@ -82,6 +83,8 @@
 
 
         </fieldset>
+        
+        
         
     </form>
 

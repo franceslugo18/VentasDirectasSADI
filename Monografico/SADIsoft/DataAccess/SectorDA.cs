@@ -36,6 +36,7 @@ namespace SADIsoft.DataAccess
 
             Sector item = new Sector();
             item.Nombre = "-Seleccione-";
+            item.SectorId = 0;
 
             lista.Insert(0, item);
 

@@ -5,15 +5,18 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace SADIsoft.prueba
+namespace SADIsoft.vw
 {
-    public partial class INDEX : System.Web.UI.Page
+    public partial class PropiCorectamente : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session.Abandon();
-            Response.Cookies.Add(new HttpCookie("ASP.NET_SessionId", ""));
-            Response.Redirect("/vw/Default.aspx");
+
+        }
+
+        protected void btn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/vw/RegistrarPropietarios.aspx");
         }
     }
 }

@@ -158,7 +158,7 @@ namespace SADIsoft.registrar_inmueble
                 FileUpload4.PostedFile.SaveAs(Server.MapPath("~/Images/") + nombreFoto4);
                 
 
-                Response.Redirect("/Default.aspx");
+                Response.Redirect("/vw/RegistroIn.aspx");
             }
             catch (Exception ex)
             {

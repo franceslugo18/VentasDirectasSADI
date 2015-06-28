@@ -69,6 +69,10 @@
         {
             border:solid 1px;
         }
+        #me 
+        {
+            margin-left:50px;
+        }
    
 
     </style>
@@ -92,11 +96,13 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul id="Lista" class="nav navbar-nav">
                     <li class="active"><a href="/inicio/index.aspx" />Inicio <span class="sr-only">(current)</span></a></li>
+                    <li><a href="/vw/Contactos.aspx">Contacto</a></li>
+                    <li><a href="/vw/QuienesSomos.aspx">Nosotros</a></li>
                  </ul>   
                  <form class="navbar-form navbar-right">
                 <div class="form-group">
 
-                    <input id="singlebutton" type="button" name="singlebutton" class="btn btn-success" value="Iniciar Seccion" onclick="Login();" />
+                    <input id="singlebutton" type="button" name="singlebutton" class="btn btn-success" value="Iniciar Sesión" onclick="Login();" />
 
                 </div>
             </form>
@@ -108,13 +114,13 @@
 
     <div id="MainMenu">
         <div class="list-group panel">
-            <label>Menu Admin</label>
+            <label id="me">Menu</label>
 
             <a href="#demo1" class="list-group-item list-group-item-success" id="pp" data-toggle="collapse" data-parent="#MainMenu">Propietarios</a>
             <div class="collapse" id="demo1">
                 <a href="#SubMenu1" class="list-group-item" data-toggle="collapse" data-parent="#SubMenu1"><i class="fa fa-caret-down"></i></a>
                 <a href="/vw/RegistrarPropietarios.aspx" class="list-group-item">Agregar</a>
-                <a href="/vw/PropietariosReg.aspx" class="list-group-item">Mantenimiento</a>
+                <a href="/vw/MantenimientoPro.aspx" class="list-group-item">Mantenimiento</a>
                
             </div>
 

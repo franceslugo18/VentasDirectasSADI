@@ -22,8 +22,8 @@
      }
      #anuncio
      {
-         width:350px;
-         height:250px;
+         width:450px;
+         height:350px;
         
          float:right;        
          margin-right:5px;  
@@ -75,6 +75,21 @@
         background-color:aqua;
        
     }
+     #tipo 
+     {
+         width:200px;
+
+     }
+     #aci
+     {
+         width:200px;
+
+     }
+     #dire 
+     {
+         width:200px;
+
+     }
 
 
  </style>
@@ -97,7 +112,7 @@
             <!-- Text input-->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textImueble">Tipo Imueble</label>
-                <div class="col-md-4">
+                <div class="col-md-4" id="tipo">
                     <asp:DropDownList ID="ddlTipo" runat="server" class="form-control">
                         <asp:ListItem>-Seleccione-</asp:ListItem>
                         <asp:ListItem>Vivienda</asp:ListItem>
@@ -110,7 +125,7 @@
             <div class="form-group">
                 <br />
                 <label class="col-md-4 control-label" for="textNiveles">Accion</label>
-                <div class="col-md-4">
+                <div class="col-md-4" id="aci">
                     <asp:DropDownList ID="ddlAccion" runat="server" class="form-control">
                         <asp:ListItem>-Seleccione-</asp:ListItem>
                         <asp:ListItem>Alquiler</asp:ListItem>
@@ -123,7 +138,7 @@
             <div class="form-group">
                 <br />
                 <label class="col-md-4 control-label" for="textNiveles">Direccion</label>
-                <div class="col-md-4">
+                <div class="col-md-4" id="dire">
                     <asp:DropDownList ID="DropDownList2" runat="server" class="form-control">
                         <asp:ListItem>-Seleccione-</asp:ListItem>
                         <asp:ListItem>Villlas Agricolas</asp:ListItem>
@@ -147,16 +162,16 @@
     <div id="CUERPO">
         
         <asp:Label ID="numero" runat="server" Text="" CssClass="numero"></asp:Label>
-        <asp:GridView ID="GridView1" CssClass="gridView" runat="server" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowDataBound="OnRowDataBound" AllowPaging="True" AutoGenerateColumns="False" Width="547px">
+        <asp:GridView ID="GridView1" CssClass="gridView" runat="server" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowDataBound="OnRowDataBound" AllowPaging="True" AutoGenerateColumns="False" Width="647px">
         </asp:GridView>
 
         
     </div>
 
     <div id="anuncio">
-       <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="350" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+       <div class="fb-page" data-href="https://www.facebook.com/facebook" data-width="550" data-height="350" data-hide-cover="true" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div></div>
     </div>
     <div id="articulo">
-        <div class="fb-page" data-href="https://www.facebook.com/facebook" data-width="650" data-height="350" data-hide-cover="true" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div></div>
+        
     </div>
 </form>

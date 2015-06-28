@@ -66,6 +66,7 @@
       <DependentUpon>PostgradoDB.mdf</DependentUpon>
     </Content>
     <Content Include="vw\Administracion.aspx" />
+    <Content Include="vw\Contactos.aspx" />
     <Content Include="vw\ContratoAlquiler.aspx" />
     <Content Include="vw\ContratoLitis.aspx" />
     <Content Include="Default.aspx" />
@@ -97,6 +98,7 @@
     <Content Include="vw\BuscarPPP.aspx" />
     <Content Include="vw\CambiarContrasena.aspx" />
     <Content Include="vw\CrearFactura.aspx" />
+    <Content Include="vw\detalle.aspx" />
     <Content Include="vw\GananciasXmes.aspx" />
     <Content Include="vw\Default.aspx" />
     <Content Include="vw\INDEX.aspx" />
@@ -109,13 +111,16 @@
     <Content Include="vw\PaginaPrincipal.aspx" />
     <Content Include="vw\PagosXperiodos.aspx" />
     <Content Include="vw\PIvote.aspx" />
+    <Content Include="vw\PropiCorectamente.aspx" />
     <Content Include="vw\PropietarioCuenta.aspx" />
     <Content Include="vw\PropietariosPerido.aspx" />
-    <Content Include="vw\PropietariosReg.aspx" />
+    <Content Include="vw\MantenimientoPro.aspx" />
+    <Content Include="vw\QuienesSomos.aspx" />
     <Content Include="vw\RegistrarClientes.aspx" />
     <Content Include="vw\RegistrarInmuebles.aspx" />
     <Content Include="vw\RegistrarPagos.aspx" />
     <Content Include="vw\RegistrarPropietarios.aspx" />
+    <Content Include="vw\RegistroIn.aspx" />
     <Content Include="vw\RegistroUsuario.aspx" />
     <Content Include="vw\WebUserControl1.ascx" />
     <Content Include="Web.config">
@@ -130,6 +135,13 @@
     </Compile>
     <Compile Include="vw\Administracion.aspx.designer.cs">
       <DependentUpon>Administracion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\Contactos.aspx.cs">
+      <DependentUpon>Contactos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\Contactos.aspx.designer.cs">
+      <DependentUpon>Contactos.aspx</DependentUpon>
     </Compile>
     <Compile Include="vw\ContratoAlquiler.aspx.cs">
       <DependentUpon>ContratoAlquiler.aspx</DependentUpon>
@@ -261,6 +273,13 @@
     <Compile Include="vw\CrearFactura.aspx.designer.cs">
       <DependentUpon>CrearFactura.aspx</DependentUpon>
     </Compile>
+    <Compile Include="vw\detalle.aspx.cs">
+      <DependentUpon>detalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\detalle.aspx.designer.cs">
+      <DependentUpon>detalle.aspx</DependentUpon>
+    </Compile>
     <Compile Include="vw\GananciasXmes.aspx.cs">
       <DependentUpon>GananciasXmes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -345,6 +364,13 @@
     <Compile Include="vw\PIvote.aspx.designer.cs">
       <DependentUpon>PIvote.aspx</DependentUpon>
     </Compile>
+    <Compile Include="vw\PropiCorectamente.aspx.cs">
+      <DependentUpon>PropiCorectamente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\PropiCorectamente.aspx.designer.cs">
+      <DependentUpon>PropiCorectamente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="vw\PropietarioCuenta.aspx.cs">
       <DependentUpon>PropietarioCuenta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -359,12 +385,19 @@
     <Compile Include="vw\PropietariosPerido.aspx.designer.cs">
       <DependentUpon>PropietariosPerido.aspx</DependentUpon>
     </Compile>
-    <Compile Include="vw\PropietariosReg.aspx.cs">
-      <DependentUpon>PropietariosReg.aspx</DependentUpon>
+    <Compile Include="vw\MantenimientoPro.aspx.cs">
+      <DependentUpon>MantenimientoPro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="vw\PropietariosReg.aspx.designer.cs">
-      <DependentUpon>PropietariosReg.aspx</DependentUpon>
+    <Compile Include="vw\MantenimientoPro.aspx.designer.cs">
+      <DependentUpon>MantenimientoPro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\QuienesSomos.aspx.cs">
+      <DependentUpon>QuienesSomos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\QuienesSomos.aspx.designer.cs">
+      <DependentUpon>QuienesSomos.aspx</DependentUpon>
     </Compile>
     <Compile Include="vw\RegistrarClientes.aspx.cs">
       <DependentUpon>RegistrarClientes.aspx</DependentUpon>
@@ -393,6 +426,13 @@
     </Compile>
     <Compile Include="vw\RegistrarPropietarios.aspx.designer.cs">
       <DependentUpon>RegistrarPropietarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\RegistroIn.aspx.cs">
+      <DependentUpon>RegistroIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\RegistroIn.aspx.designer.cs">
+      <DependentUpon>RegistroIn.aspx</DependentUpon>
     </Compile>
     <Compile Include="vw\RegistroUsuario.aspx.cs">
       <DependentUpon>RegistroUsuario.aspx</DependentUpon>
