@@ -41,7 +41,7 @@
                 <label class="col-md-4 control-label" for="textCalle">Telefono 1</label>
                 <div class="col-md-4">
                     <asp:TextBox ID="txtTelefonos1" runat="server" type="text" class="form-control input-md" placeholder="Telefono1" required ></asp:TextBox>
-                   
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Debe De Introducir Un Numero valido" ControlToValidate="txtTelefonos1" ForeColor="Red" ValidationExpression="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]"></asp:RegularExpressionValidator>
                 </div>
             </div>
 
@@ -49,7 +49,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textCalle">Telefono 2</label>
                 <div class="col-md-4">
-                    <asp:TextBox ID="txtTelefonos2" runat="server" type="text" class="form-control input-md" placeholder="Telefono Opcional" required ></asp:TextBox>
+                    <asp:TextBox ID="txtTelefonos2" runat="server" type="text" class="form-control input-md" placeholder="Telefono Opcional"  ></asp:TextBox>
                    
                 </div>
             </div>
@@ -58,8 +58,8 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textCalle">Email</label>
                 <div class="col-md-4">
-                    <asp:TextBox ID="txtEmail1" runat="server" type="text" class="form-control input-md" placeholder="Email" required ></asp:TextBox>
-                   
+                    <asp:TextBox ID="txtEmail1" runat="server" type="text" class="form-control input-md" placeholder="Email"  ></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="Debe de Introducir Un Email Valido" ControlToValidate="txtEmail1" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                 </div>
             </div>
 

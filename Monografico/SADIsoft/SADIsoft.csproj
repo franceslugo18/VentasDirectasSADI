@@ -120,6 +120,7 @@
     <Content Include="vw\RegistrarInmuebles.aspx" />
     <Content Include="vw\RegistrarPagos.aspx" />
     <Content Include="vw\RegistrarPropietarios.aspx" />
+    <Content Include="vw\RegistroCCorrectamente.aspx" />
     <Content Include="vw\RegistroIn.aspx" />
     <Content Include="vw\RegistroUsuario.aspx" />
     <Content Include="vw\WebUserControl1.ascx" />
@@ -426,6 +427,13 @@
     </Compile>
     <Compile Include="vw\RegistrarPropietarios.aspx.designer.cs">
       <DependentUpon>RegistrarPropietarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\RegistroCCorrectamente.aspx.cs">
+      <DependentUpon>RegistroCCorrectamente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\RegistroCCorrectamente.aspx.designer.cs">
+      <DependentUpon>RegistroCCorrectamente.aspx</DependentUpon>
     </Compile>
     <Compile Include="vw\RegistroIn.aspx.cs">
       <DependentUpon>RegistroIn.aspx</DependentUpon>

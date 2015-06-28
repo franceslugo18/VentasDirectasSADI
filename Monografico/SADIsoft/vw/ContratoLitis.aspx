@@ -7,7 +7,7 @@
         <form id="form1" runat="server" class="form-horizontal">
         <fieldset>
              <!-- Form Name -->
-            <legend>Contrato Litis</legend>
+            <legend>Crear Contrato De Cuota Litis</legend>
 
                <!-- Text input-->
             <div class="form-group">

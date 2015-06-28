@@ -34,6 +34,7 @@ namespace SADIsoft.registrar_cliente
                 string email = txtEmail1.Text;
 
                 RegistrarClienteControlador.RegistrarCliente(nombre, apellido, cedula, tel1, tel2, email);
+                Response.Redirect("/vw/RegistroCCorrectamente.aspx");
             }
             catch(Exception ex)
             {

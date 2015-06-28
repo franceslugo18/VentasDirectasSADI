@@ -8,7 +8,7 @@
     <form id="form1" runat="server" class="form-horizontal">
         <fieldset>
             <!-- Form Name -->
-            <legend>Contrato Alquiler</legend>
+            <legend>Crear Contrato De Alquiler</legend>
         </fieldset>
 
            <!-- Text input-->
