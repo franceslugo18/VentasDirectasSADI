@@ -13,6 +13,17 @@ namespace SADIsoft.vw
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Usuario"] == null)
+                Response.Redirect("~/LoginResponse.aspx");
+
+            int tipo = Convert.ToInt32(Session["Tipo"]);
+            if (tipo == 3)
+            {
+                Response.Redirect("~/LoginResponse.aspx");
+
+            }
+            
+            Label1.Visible = false;
             if (!IsPostBack)
             {
                 CargarClientes();
@@ -52,27 +63,43 @@ namespace SADIsoft.vw
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            int inmId = Convert.ToInt32(GridView1.SelectedDataKey.Value);
-            int cliId = Convert.ToInt32(ddlCliente1.SelectedValue);
-            int diaP = Convert.ToInt32(txtDia.Text);
+            try
+            {
+                if (GridView1.SelectedIndex != -1)
+                {
+                    Label1.Visible = false;
 
-            Controller.GenerarContratoAlquilerControlador.guardarContrato(inmId, cliId, diaP, DateTime.Now);
+                    int inmId = Convert.ToInt32(GridView1.SelectedDataKey.Value);
+                    int cliId = Convert.ToInt32(ddlCliente1.SelectedValue);
+                    int diaP = Convert.ToInt32(txtDia.Text);
 
-            ReportParameter InmuebleId = new ReportParameter();
-            InmuebleId.Name = "InmuebleId";
-            InmuebleId.Values.Add(inmId.ToString());
+                    Controller.GenerarContratoAlquilerControlador.guardarContrato(inmId, cliId, diaP, DateTime.Now);
 
-            ReportParameter ClienteId = new ReportParameter();
-            ClienteId.Name = "ClienteId";
-            ClienteId.Values.Add(cliId.ToString());
+                    ReportParameter InmuebleId = new ReportParameter();
+                    InmuebleId.Name = "InmuebleId";
+                    InmuebleId.Values.Add(inmId.ToString());
 
-            ReportParameter DiaPago = new ReportParameter();
-            DiaPago.Name = "DiaPago";
-            DiaPago.Values.Add(diaP.ToString());
+                    ReportParameter ClienteId = new ReportParameter();
+                    ClienteId.Name = "ClienteId";
+                    ClienteId.Values.Add(cliId.ToString());
 
-            // Set the report parameters for the report
-            ReportViewer1.ServerReport.SetParameters(
-                new ReportParameter[] { InmuebleId, ClienteId, DiaPago });
+                    ReportParameter DiaPago = new ReportParameter();
+                    DiaPago.Name = "DiaPago";
+                    DiaPago.Values.Add(diaP.ToString());
+
+                    // Set the report parameters for the report
+                    ReportViewer1.ServerReport.SetParameters(
+                        new ReportParameter[] { InmuebleId, ClienteId, DiaPago });
+                }
+                else
+                {
+                    Label1.Visible = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Response.Write(ex.ToString());
+            }
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)

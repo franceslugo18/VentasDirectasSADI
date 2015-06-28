@@ -61,15 +61,7 @@
                 </div>
             </div>
 
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textTipo">Tipo</label>
-                <div class="col-md-4"> 
-                    <asp:RadioButton ID="rbAlquiler1" runat="server" GroupName="tipo" Text="Alquiler" AutoPostBack="True" />
-                    <asp:RadioButton ID="rbVenta1" runat="server" GroupName="tipo" Text="Venta" AutoPostBack="True" />
-                </div>
-            </div>
-
+            
             <!-- Text input-->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textAlquilerP">Precio Alquiler</label>
@@ -93,15 +85,7 @@
                 </div>
             </div>
 
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textPrecioV">Precio Venta</label>
-                <div class="col-md-4">
-                    <asp:TextBox ID="txtPrecioVenta1" runat="server" type="text" class="form-control input-md" placeholder="Precio Venta" required ></asp:TextBox>
-                   
-                </div>
-            </div>
-
+            
             <!-- Text input-->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textNiveles">Niveles</label>

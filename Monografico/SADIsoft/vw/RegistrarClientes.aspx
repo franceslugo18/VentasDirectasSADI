@@ -35,15 +35,7 @@
                 </div>
             </div>
 
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textCalle">Direccion</label>
-                <div class="col-md-4">
-                    <asp:TextBox ID="txtDireccion1" runat="server" type="text" class="form-control input-md" placeholder="Direccion" required ></asp:TextBox>
-                   
-                </div>
-            </div>
-
+            
             <!-- Text input-->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textCalle">Telefono 1</label>

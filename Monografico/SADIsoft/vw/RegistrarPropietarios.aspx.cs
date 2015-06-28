@@ -14,14 +14,13 @@ namespace SADIsoft.registrar_propietarios
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Response.Write(Session["Usuario"]);
-            Response.Write(Session["Tipo"]);
-
+            
             if (Session["Usuario"] == null)
             {
                 Response.Redirect("/LoginResponse.aspx");
             }
-            else if (Convert.ToInt32(Session["Tipo"]) == 3)
+            
+            if (Convert.ToInt32(Session["Tipo"]) == 3)
                 Response.Redirect("/LoginResponse.aspx");
 
 

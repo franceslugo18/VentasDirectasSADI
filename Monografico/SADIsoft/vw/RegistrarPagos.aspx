@@ -36,13 +36,14 @@
                     <label class="col-md-4 control-label" for="textCedula">Introduzca Cedula</label>
                     <div class="col-md-4">
                         <asp:TextBox ID="txtCedula"  runat="server" type="text" class="form-control input-md" placeholder="Cedula"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtCedula" ErrorMessage="La cedula debe tener 11 numeros" ForeColor="Red">Ingrese cedula</asp:RequiredFieldValidator>
                     </div>
                 </div>
                 <!-- Button -->
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="btnBUscar"></label>
                     <div class="col-md-4">
-                        <asp:Button ID="btnBuscar" runat="server" Text="BUscar" class="btn btn-primary" OnClick="btnBuscar_Click" />
+                        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" class="btn btn-primary" OnClick="btnBuscar_Click" />
                     </div>
                 </div>
 
@@ -103,14 +104,14 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="textGrip"></label>
                     <div class="col-md-4">
-                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="555px" Height="208px" OnRowDataBound="GridView1_RowDataBound" ShowFooter="True" DataKeyNames="FacturaId" DataSourceID="SadiConnectionString" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal">
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Width="555px" Height="208px" OnRowDataBound="GridView1_RowDataBound" ShowFooter="True" DataKeyNames="FacturaId" DataSourceID="SadiConnectionString" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal" EnableViewState="False">
                             <Columns>
-                                <asp:BoundField DataField="FacturaId" HeaderText="FacturaId" InsertVisible="False" ReadOnly="True" SortExpression="FacturaId" />
-                                <asp:BoundField DataField="NumeroCuota" HeaderText="NumeroCuota" SortExpression="NumeroCuota" />
+                                <asp:BoundField DataField="FacturaId" HeaderText="Factura ID" InsertVisible="False" ReadOnly="True" SortExpression="FacturaId" />
+                                <asp:BoundField DataField="NumeroCuota" HeaderText="Numero de Cuota" SortExpression="NumeroCuota" />
                                 <asp:BoundField DataField="Mora" HeaderText="Mora" ReadOnly="True" SortExpression="Mora" />
-                                <asp:BoundField DataField="TotalCuota" HeaderText="TotalCuota" SortExpression="TotalCuota" />
-                                <asp:BoundField DataField="FechaGenerada" HeaderText="FechaGenerada" SortExpression="FechaGenerada" />
-                            <asp:TemplateField>
+                                <asp:BoundField DataField="TotalCuota" HeaderText="Total de Cuota" SortExpression="TotalCuota" />
+                                <asp:BoundField DataField="FechaGenerada" HeaderText="Fecha Generada" SortExpression="FechaGenerada" />
+                            <asp:TemplateField HeaderText="Seleccione">
                                 <ItemTemplate>
                                     <asp:CheckBox ID="chkMarca" runat="server" AutoPostBack="true" OnCheckedChanged="Checked_change" />
                                  </ItemTemplate>

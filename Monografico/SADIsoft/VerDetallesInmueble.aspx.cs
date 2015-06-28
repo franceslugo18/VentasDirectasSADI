@@ -15,6 +15,14 @@ namespace SADIsoft
         {
             try
             {
+                if (Session["Usuario"] == null)
+                    Response.Redirect("~/LoginResponse.aspx");
+
+                if (Convert.ToInt32(Session["Tipo"]) == 3)
+                {
+                    Response.Redirect("~/LoginResponse.aspx");
+
+                }
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SadiConnectionString"].ConnectionString);
                 con.Open();
                 SqlCommand com = new SqlCommand();
