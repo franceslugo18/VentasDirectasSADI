@@ -20,8 +20,8 @@ namespace SADIsoft.DataAccess
             try
             {
                 conn = Conexion.Conectar();
-                string query = string.Format(@"INSERT INTO Clientes(nombre,apellido,cedula,direccion,telefono1,telefono2,Email) 
-                VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", cliente.Nombre, cliente.Apellido, cliente.Cedula, cliente.Direccion, cliente.Tel1, cliente.Tel2,cliente.Email);
+                string query = string.Format(@"INSERT INTO Clientes(nombre,apellido,cedula,telefono1,telefono2,Email) 
+                VALUES('{0}','{1}','{2}','{3}','{4}','{5}')", cliente.Nombre, cliente.Apellido, cliente.Cedula, cliente.Tel1, cliente.Tel2,cliente.Email);
                 com = new SqlCommand(query, conn);
 
                 int i = com.ExecuteNonQuery();
@@ -49,6 +49,7 @@ namespace SADIsoft.DataAccess
                 }
                 Cliente item = new Cliente();
                 item.Nombre = "- Seleccione -";
+                item.ClienteId = 0;
                 lista.Insert(0, item);
 
                 dr.Close();
@@ -69,5 +70,7 @@ namespace SADIsoft.DataAccess
 
             return cliente;
         }
+
+        
     }
 }

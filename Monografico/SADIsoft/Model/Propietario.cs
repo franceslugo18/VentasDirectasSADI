@@ -60,7 +60,7 @@ namespace SADI.Model
         public string Telefono1 { get; set; }
         public string Telefono2 { get; set; }
         public string Email { get; set; }
-        public string Contrasena { get; set; }
+        
 
     }
 

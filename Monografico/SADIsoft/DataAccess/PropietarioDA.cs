@@ -184,6 +184,7 @@ namespace SADIsoft.DataAccess
                 }
                 Propietario item = new Propietario();
                 item.Nombre = "- Seleccione -";
+                item.PropietarioId = 0;
                 lista.Insert(0, item);
 
                 dr.Close();

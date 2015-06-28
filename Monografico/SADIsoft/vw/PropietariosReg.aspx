@@ -1,5 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Maestra.Master" AutoEventWireup="true" CodeBehind="PropietariosReg.aspx.cs" Inherits="SADIsoft.propietarios_registrados.PropietariosReg" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        #centra 
+        {
+            margin-left:5px;
+        }
+    </style>
+
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form class="form-horizontal" runat="server">
@@ -58,15 +66,16 @@
 
 
               <!-- Text input-->
-            <div class="form-group">
-                <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" DataKeyNames="PropietarioId" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" AutoGenerateSelectButton="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+            <div class="form-group" id="centra">
+                <div class="col-md-4">
+                <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" DataKeyNames="PropietarioId" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" AutoGenerateSelectButton="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="900px">
                     <AlternatingRowStyle BackColor="#CCCCCC" />
                     <Columns>
-                        <asp:BoundField DataField="PropietarioId" HeaderText="PropietarioId" InsertVisible="False" ReadOnly="True" SortExpression="PropietarioId" />
                         <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
                         <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
                         <asp:BoundField DataField="Cedula" HeaderText="Cedula" SortExpression="Cedula" />
-                        <asp:BoundField DataField="Direccion" HeaderText="Direccion" SortExpression="Direccion" />
+                        <asp:BoundField DataField="Direccion" HeaderText="Direccion" SortExpression="Direccion" >
+                        </asp:BoundField>
                         <asp:BoundField DataField="Telefono1" HeaderText="Telefono1" SortExpression="Telefono1" />
                         <asp:BoundField DataField="Telefono2" HeaderText="Telefono2" SortExpression="Telefono2" />
                         <asp:BoundField DataField="NombreUsuario" HeaderText="NombreUsuario" SortExpression="NombreUsuario" />
@@ -94,7 +103,7 @@
                         <asp:Parameter Name="Email" Type="String" />
                     </UpdateParameters>
                 </asp:SqlDataSource>
-
+                </div>
             </div>
 
             

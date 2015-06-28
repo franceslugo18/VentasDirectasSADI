@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -363,4 +364,461 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7081EE64-1D61-4585-BDA7-96BC3305F2DD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SADIsoft</RootNamespace>
+    <AssemblyName>SADIsoft</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\PostgradoDB.mdf" />
+    <Content Include="App_Data\PostgradoDB_log.ldf">
+      <DependentUpon>PostgradoDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="vw\Administracion.aspx" />
+    <Content Include="vw\ContratoAlquiler.aspx" />
+    <Content Include="vw\ContratoLitis.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="imagenes\edi.jpg" />
+    <Content Include="imagenes\imagen1.jpg" />
+    <Content Include="imagenes\imagen2.jpg" />
+    <Content Include="imagenes\imagen3.jpg" />
+    <Content Include="imagenes\imagen4.jpg" />
+    <Content Include="imagenes\imagen5.jpg" />
+    <Content Include="Images\1079-4\1079-1.jpg" />
+    <Content Include="Images\1079-4\1079-2.jpg" />
+    <Content Include="Images\1079-4\1079-3.jpg" />
+    <Content Include="Images\1079-4\1079-4.jpg" />
+    <Content Include="Images\1088-5\1088-1.jpg" />
+    <Content Include="Images\1088-5\1088-2.jpg" />
+    <Content Include="Images\1088-5\1088-3.jpg" />
+    <Content Include="Images\1088-5\1088-4.jpg" />
+    <Content Include="LoginResponse.aspx" />
+    <Content Include="logo\iconolo.png" />
+    <Content Include="logo\lo.jpg" />
+    <Content Include="Propietarios.aspx" />
+    <Content Include="prueba\PRUEBA.aspx" />
+    <Content Include="prueba\WebForm1.aspx" />
+    <Content Include="RegistrarPagos.aspx" />
+    <Content Include="stilo\estilos.css" />
+    <Content Include="stilo\Maestra.css" />
+    <Content Include="VerDetallesInmueble.aspx" />
+    <Content Include="vw\AdministracionResp.aspx" />
+    <Content Include="vw\BuscarPPP.aspx" />
+    <Content Include="vw\CambiarContrasena.aspx" />
+    <Content Include="vw\CrearFactura.aspx" />
+    <Content Include="vw\GananciasXmes.aspx" />
+    <Content Include="vw\Default.aspx" />
+    <Content Include="vw\INDEX.aspx" />
+    <Content Include="vw\InmueblesPropietarios.aspx" />
+    <Content Include="vw\InquilinoDetalle.aspx" />
+    <Content Include="vw\javascrip.aspx" />
+    <Content Include="vw\LoginCambioResp.aspx" />
+    <Content Include="vw\MantenimientoCli.aspx" />
+    <Content Include="vw\MantenimientoInm.aspx" />
+    <Content Include="vw\PaginaPrincipal.aspx" />
+    <Content Include="vw\PagosXperiodos.aspx" />
+    <Content Include="vw\PIvote.aspx" />
+    <Content Include="vw\PropietarioCuenta.aspx" />
+    <Content Include="vw\PropietariosPerido.aspx" />
+    <Content Include="vw\PropietariosReg.aspx" />
+    <Content Include="vw\RegistrarClientes.aspx" />
+    <Content Include="vw\RegistrarInmuebles.aspx" />
+    <Content Include="vw\RegistrarPagos.aspx" />
+    <Content Include="vw\RegistrarPropietarios.aspx" />
+    <Content Include="vw\RegistroUsuario.aspx" />
+    <Content Include="vw\WebUserControl1.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\Validacion.cs" />
+    <Compile Include="vw\Administracion.aspx.cs">
+      <DependentUpon>Administracion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\Administracion.aspx.designer.cs">
+      <DependentUpon>Administracion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\ContratoAlquiler.aspx.cs">
+      <DependentUpon>ContratoAlquiler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\ContratoAlquiler.aspx.designer.cs">
+      <DependentUpon>ContratoAlquiler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\ContratoLitis.aspx.cs">
+      <DependentUpon>ContratoLitis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\ContratoLitis.aspx.designer.cs">
+      <DependentUpon>ContratoLitis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\GenerarContratoAlquilerControlador.cs" />
+    <Compile Include="Controller\GenerarContratoLitis.cs" />
+    <Compile Include="Controller\RealizarPagoControlador.cs" />
+    <Compile Include="DataAccess\ClienteDA.cs" />
+    <Compile Include="DataAccess\Conexion.cs" />
+    <Compile Include="DataAccess\ContratoDA.cs" />
+    <Compile Include="DataAccess\DireccionDA.cs" />
+    <Compile Include="DataAccess\FacturaDA.cs" />
+    <Compile Include="DataAccess\InmuebleDA.cs" />
+    <Compile Include="DataAccess\MunicipioDA.cs" />
+    <Compile Include="DataAccess\PropietarioDA.cs" />
+    <Compile Include="DataAccess\ProvinciaDA.cs" />
+    <Compile Include="DataAccess\SectorDA.cs" />
+    <Compile Include="DataAccess\UsuarioDA.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginResponse.aspx.cs">
+      <DependentUpon>LoginResponse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginResponse.aspx.designer.cs">
+      <DependentUpon>LoginResponse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maestra.Master.cs">
+      <DependentUpon>Maestra.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maestra.Master.designer.cs">
+      <DependentUpon>Maestra.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Cliente.cs" />
+    <Compile Include="Controller\RegistrarClienteControlador.cs" />
+    <Compile Include="Model\Contrato.cs" />
+    <Compile Include="Model\Facturas.cs" />
+    <Compile Include="Model\Inmueble.cs" />
+    <Compile Include="Controller\LoginControlador.cs" />
+    <Compile Include="Controller\MantenimientoPropietarioControlador.cs" />
+    <Compile Include="Controller\RegistrarInmuebleControlador.cs" />
+    <Compile Include="Controller\RegistrarPropietarioControlador.cs" />
+    <Compile Include="Controller\RegistrarUsuariosControlador.cs" />
+    <Compile Include="Model\Direccion.cs" />
+    <Compile Include="Model\Municipio.cs" />
+    <Compile Include="Model\Propietario.cs" />
+    <Compile Include="Model\Provincia.cs" />
+    <Compile Include="Model\Sector.cs" />
+    <Compile Include="Model\Usuario.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Propietarios.aspx.cs">
+      <DependentUpon>Propietarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Propietarios.aspx.designer.cs">
+      <DependentUpon>Propietarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="prueba\PRUEBA.aspx.cs">
+      <DependentUpon>PRUEBA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="prueba\PRUEBA.aspx.designer.cs">
+      <DependentUpon>PRUEBA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="prueba\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="prueba\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrarPagos.aspx.cs">
+      <DependentUpon>RegistrarPagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrarPagos.aspx.designer.cs">
+      <DependentUpon>RegistrarPagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VerDetallesInmueble.aspx.cs">
+      <DependentUpon>VerDetallesInmueble.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VerDetallesInmueble.aspx.designer.cs">
+      <DependentUpon>VerDetallesInmueble.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\AdministracionResp.aspx.cs">
+      <DependentUpon>AdministracionResp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\AdministracionResp.aspx.designer.cs">
+      <DependentUpon>AdministracionResp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\BuscarPPP.aspx.cs">
+      <DependentUpon>BuscarPPP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\BuscarPPP.aspx.designer.cs">
+      <DependentUpon>BuscarPPP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\CambiarContrasena.aspx.cs">
+      <DependentUpon>CambiarContrasena.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\CambiarContrasena.aspx.designer.cs">
+      <DependentUpon>CambiarContrasena.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\ControlExtensions.cs" />
+    <Compile Include="vw\CrearFactura.aspx.cs">
+      <DependentUpon>CrearFactura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\CrearFactura.aspx.designer.cs">
+      <DependentUpon>CrearFactura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\GananciasXmes.aspx.cs">
+      <DependentUpon>GananciasXmes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\GananciasXmes.aspx.designer.cs">
+      <DependentUpon>GananciasXmes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\INDEX.aspx.cs">
+      <DependentUpon>INDEX.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\INDEX.aspx.designer.cs">
+      <DependentUpon>INDEX.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\InmueblesPropietarios.aspx.cs">
+      <DependentUpon>InmueblesPropietarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\InmueblesPropietarios.aspx.designer.cs">
+      <DependentUpon>InmueblesPropietarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\InquilinoDetalle.aspx.cs">
+      <DependentUpon>InquilinoDetalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\InquilinoDetalle.aspx.designer.cs">
+      <DependentUpon>InquilinoDetalle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\javascrip.aspx.cs">
+      <DependentUpon>javascrip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\javascrip.aspx.designer.cs">
+      <DependentUpon>javascrip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\LoginCambioResp.aspx.cs">
+      <DependentUpon>LoginCambioResp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\LoginCambioResp.aspx.designer.cs">
+      <DependentUpon>LoginCambioResp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\MantenimientoCli.aspx.cs">
+      <DependentUpon>MantenimientoCli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\MantenimientoCli.aspx.designer.cs">
+      <DependentUpon>MantenimientoCli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\MantenimientoInm.aspx.cs">
+      <DependentUpon>MantenimientoInm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\MantenimientoInm.aspx.designer.cs">
+      <DependentUpon>MantenimientoInm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\PaginaPrincipal.aspx.cs">
+      <DependentUpon>PaginaPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\PaginaPrincipal.aspx.designer.cs">
+      <DependentUpon>PaginaPrincipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\PagosXperiodos.aspx.cs">
+      <DependentUpon>PagosXperiodos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\PagosXperiodos.aspx.designer.cs">
+      <DependentUpon>PagosXperiodos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\PIvote.aspx.cs">
+      <DependentUpon>PIvote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\PIvote.aspx.designer.cs">
+      <DependentUpon>PIvote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\PropietarioCuenta.aspx.cs">
+      <DependentUpon>PropietarioCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\PropietarioCuenta.aspx.designer.cs">
+      <DependentUpon>PropietarioCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\PropietariosPerido.aspx.cs">
+      <DependentUpon>PropietariosPerido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\PropietariosPerido.aspx.designer.cs">
+      <DependentUpon>PropietariosPerido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\PropietariosReg.aspx.cs">
+      <DependentUpon>PropietariosReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\PropietariosReg.aspx.designer.cs">
+      <DependentUpon>PropietariosReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\RegistrarClientes.aspx.cs">
+      <DependentUpon>RegistrarClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\RegistrarClientes.aspx.designer.cs">
+      <DependentUpon>RegistrarClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\RegistrarInmuebles.aspx.cs">
+      <DependentUpon>RegistrarInmuebles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\RegistrarInmuebles.aspx.designer.cs">
+      <DependentUpon>RegistrarInmuebles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\RegistrarPagos.aspx.cs">
+      <DependentUpon>RegistrarPagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\RegistrarPagos.aspx.designer.cs">
+      <DependentUpon>RegistrarPagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\RegistrarPropietarios.aspx.cs">
+      <DependentUpon>RegistrarPropietarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\RegistrarPropietarios.aspx.designer.cs">
+      <DependentUpon>RegistrarPropietarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\RegistroUsuario.aspx.cs">
+      <DependentUpon>RegistroUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\RegistroUsuario.aspx.designer.cs">
+      <DependentUpon>RegistroUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\WebUserControl1.ascx.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\WebUserControl1.ascx.designer.cs">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Maestra.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49196</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49196/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+>>>>>>> frances
 </Project>
