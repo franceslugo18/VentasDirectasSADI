@@ -82,7 +82,7 @@
               <!-- Text input-->
             <div class="form-group" id="centra">
                 <div class="col-md-4">
-                   <asp:GridView ID="GridView1" runat="server" CssClass="grip1" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="652px">
+                   <asp:GridView ID="GridView1" runat="server" CssClass="grip1" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="652px" DataKeyNames="ClienteId">
                        <AlternatingRowStyle BackColor="White" />
                        <Columns>
                            <asp:CommandField ShowSelectButton="True" />
@@ -101,7 +101,7 @@
                        <SortedDescendingCellStyle BackColor="#D4DFE1" />
                        <SortedDescendingHeaderStyle BackColor="#15524A" />
                     </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString %>" SelectCommand="SELECT [Telefono1], [Email], [Direccion] FROM [Clientes]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString %>" SelectCommand="SELECT [Telefono1], [Email], [Direccion], [ClienteId] FROM [Clientes]"></asp:SqlDataSource>
                 </div>
             </div>
 

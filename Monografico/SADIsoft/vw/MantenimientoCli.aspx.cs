@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SADI.Model;
+using SADIsoft.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -23,7 +25,22 @@ namespace SADIsoft.vw
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            try
+            {
+                int idCliente = Convert.ToInt32(GridView1.SelectedDataKey.Value);
+                //txtTelefonops1.Text = idPropietario.ToString();
 
+                Cliente clie = mantenimientoClienteControlador.BuscarPorId(idCliente);
+
+                txtTelefonops1.Text = clie.Tel1;
+                TextEmail.Text = clie.Email;
+                
+
+            }
+            catch (Exception ex)
+            {
+                Response.Write(ex.ToString());
+            }
         }
     }
 }

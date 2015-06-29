@@ -70,6 +70,36 @@ namespace SADIsoft.DataAccess
 
             return cliente;
         }
+        public static Cliente BuscarPorIdDB(int idCliente)
+        {
+            try
+            {
+                conn = Conexion.Conectar();
+                string query = string.Format(@"SELECT * FROM Clientes  WHERE ClienteId = {0}", idCliente);
+
+                com = new SqlCommand(query, conn);
+                dr = com.ExecuteReader();
+
+                Cliente cli = new Cliente();
+
+
+                while (dr.Read())
+                {
+
+                    cli.Tel1 = dr["Telefono1"].ToString();
+                    cli.Email = dr["Email"].ToString();
+                    
+
+                }
+                conn.Close();
+                dr.Close();
+                return cli;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         
     }
