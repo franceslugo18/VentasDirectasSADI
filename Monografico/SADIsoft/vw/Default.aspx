@@ -46,7 +46,7 @@
                     <h2></h2>
                     <div class="carousel-caption">
                         <img src="/imagenes/imagen4.jpg" class="img-thumbnail" />
-                        <h3>maximisa tus ingresos de todos tus inmuebles</h3>
+                        <h3>maximiza tus ingresos de todos tus inmuebles</h3>
                         <p>Ingresos 100% de ganancia en todos tus ingresos.</p>
                     </div>
                 </div>
