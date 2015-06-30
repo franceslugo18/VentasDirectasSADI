@@ -154,9 +154,11 @@
 
                       <!-- Text input-->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="textImueble">Precio por debajo de:</label>
+                <label class="col-md-4 control-label" for="textImueble">Precio entre:</label>
                 <div class="col-md-4" id="Div3">
                     <asp:TextBox ID="txtPrecioDebajo" runat="server" class="form-control"> </asp:TextBox>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="txtPrecioDebajo0" runat="server" class="form-control"> </asp:TextBox>
                 </div>
             </div>
             <br />

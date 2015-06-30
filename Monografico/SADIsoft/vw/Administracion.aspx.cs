@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SADI.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -19,7 +20,10 @@ namespace SADIsoft.vw
                 Response.Redirect("~/LoginResponse.aspx");
                                     
             }
+
             
+            
+
         }
 
         protected void GridView3_RowDataBound(object sender, GridViewRowEventArgs e)

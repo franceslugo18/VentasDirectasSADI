@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" runat="server">
-    Cancelar Contrato
+    Contratos Activos
     <br/>
     <br/>
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" DataKeyNames="ContratoId" DataSourceID="SqlDataSource1" ForeColor="Black">
@@ -24,13 +24,15 @@
         <SortedAscendingHeaderStyle BackColor="#808080" />
         <SortedDescendingCellStyle BackColor="#CAC9C9" />
         <SortedDescendingHeaderStyle BackColor="#383838" />
-        </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString %>" SelectCommand="SELECT C.ContratoId, ISNULL(C.ContratoAnteriorId,0), C.Fecha, Cl.Nombre + ' ' + Cl.Apellido AS NombreCli,Cl.Cedula 
+    </asp:GridView>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString %>" SelectCommand="SELECT C.ContratoId, ISNULL(C.ContratoAnteriorId,0), C.Fecha, Cl.Nombre + ' ' + Cl.Apellido AS NombreCli,Cl.Cedula 
 FROM Contratos AS C INNER JOIN Clientes AS Cl ON C.ClienteId = Cl.ClienteId
 WHERE isActivo = 1
 "></asp:SqlDataSource>
+        <br />
+        <br />
     <asp:Button ID="Button1" runat="server" Text="Cancelar Contrato" OnClick="Button1_Click" />
 
-    </form>
+</form>
 
 </asp:Content>

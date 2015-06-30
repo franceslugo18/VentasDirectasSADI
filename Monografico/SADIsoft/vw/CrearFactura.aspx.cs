@@ -35,7 +35,7 @@ namespace SADIsoft.vw
                 ReportViewer1.ServerReport.ReportPath = "/InmobiliariaReport/Pago";
                 ReportViewer1.ServerReport.Refresh();
 
-               // PasarParametro();
+               
                 
 
 
@@ -62,17 +62,7 @@ namespace SADIsoft.vw
                 new ReportParameter[] { PagoId });
         }
 
-        public void PasarParametro()
-        {
-            ReportParameter PagoId = new ReportParameter();
-            PagoId.Name = "PagoId";
-            PagoId.Values.Add(Session["pagoId"].ToString());
-
-            // Set the report parameters for the report
-            ReportViewer1.ServerReport.SetParameters(
-                new ReportParameter[] { PagoId });
-        }
-
+        
         protected void Button2_Click(object sender, EventArgs e)
         {
             Response.Redirect("/vw/RegistrarPagos.aspx");

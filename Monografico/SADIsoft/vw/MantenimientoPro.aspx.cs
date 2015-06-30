@@ -21,6 +21,9 @@ namespace SADIsoft.propietarios_registrados
                 Response.Redirect("~/LoginResponse.aspx");
 
             }
+
+            //GridView1.DataSource = MantenimientoPropietarioControlador.ListaPropietarios();
+            //GridView1.DataBind();
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)

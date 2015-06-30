@@ -210,6 +210,34 @@ namespace SADIsoft.DataAccess
         }
 
 
-     
+
+
+        internal static List<object> ListaPropietariosDB()
+        {
+            try
+            {
+                conn = Conexion.Conectar();
+                com = new SqlCommand();
+                com.Connection = conn;
+                com.CommandType = CommandType.Text;
+                com.CommandText = "SELECT * FROM VW_Lista_Propietarios";
+                dr = com.ExecuteReader();
+
+                List<object> lista = new List<object>();
+
+                while (dr.Read())
+                {
+                    lista.Add(dr);
+                }
+                dr.Close();
+                conn.Close();
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

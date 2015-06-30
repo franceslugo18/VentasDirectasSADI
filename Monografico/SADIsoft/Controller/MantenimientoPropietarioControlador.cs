@@ -37,5 +37,12 @@ namespace SADI.Controller
                 throw ex;
             }
         }
+
+
+
+        internal static List<object> ListaPropietarios()
+        {
+            return PropietarioDA.ListaPropietariosDB();
+        }
     }
 }

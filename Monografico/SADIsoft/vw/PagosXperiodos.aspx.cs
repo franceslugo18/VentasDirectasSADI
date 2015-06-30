@@ -9,16 +9,22 @@ namespace SADIsoft.vw
 {
     public partial class PagosXperiodos : System.Web.UI.Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Usuario"] == null)
-                Response.Redirect("~/LoginResponse.aspx");
+            
+ 
 
-            if (Convert.ToInt32(Session["Tipo"]) == 3)
-            {
-                Response.Redirect("~/LoginResponse.aspx");
+            ReportViewer1.ProcessingMode = Microsoft.Reporting.WebForms.ProcessingMode.Remote;
+            ReportViewer1.ServerReport.ReportServerUrl = new System.Uri("http://localhost/Reportserver");
+            
+        }
 
-            }
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string reporte = DropDownList1.SelectedValue.ToString();
+            ReportViewer1.ServerReport.ReportPath = string.Format(@"/InmobiliariaReport/{0}", reporte);
+            ReportViewer1.ServerReport.Refresh();
         }
     }
 }

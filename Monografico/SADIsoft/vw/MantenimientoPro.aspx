@@ -100,23 +100,21 @@
               <!-- Text input-->
             <div class="form-group" id="centra">
                 <div class="col-md-4">
-                <asp:GridView ID="GridView1" runat="server" AllowPaging="True" CssClass="grip" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" DataKeyNames="PropietarioId" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" AutoGenerateSelectButton="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="900px">
-                    <AlternatingRowStyle BackColor="#CCCCCC" />
+                <asp:GridView ID="GridView1" runat="server" AllowPaging="True" CssClass="grip" AllowSorting="True" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" DataKeyNames="PropietarioId" DataSourceID="SqlDataSource1" ForeColor="Black" AutoGenerateSelectButton="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="900px" CellSpacing="2">
                     <Columns>
-                        <asp:ButtonField   ButtonType="Link"  Text="Delete" /> 
-                        <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
-                        <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
-                        <asp:BoundField DataField="Cedula" HeaderText="Cedula" SortExpression="Cedula" />
-                        <asp:BoundField DataField="Direccion" HeaderText="Direccion" SortExpression="Direccion" >
-                        </asp:BoundField>
-                        <asp:BoundField DataField="Telefono1" HeaderText="Telefono1" SortExpression="Telefono1" />
-                        <asp:BoundField DataField="Telefono2" HeaderText="Telefono2" SortExpression="Telefono2" />
-                        <asp:BoundField DataField="NombreUsuario" HeaderText="NombreUsuario" SortExpression="NombreUsuario" />
-                        <asp:BoundField DataField="Estado" HeaderText="Estado" SortExpression="Estado" />
+                        <asp:BoundField DataField="PropietarioId" HeaderText="PropietarioId" InsertVisible="False" ReadOnly="True" SortExpression="PropietarioId" />
+                        <asp:BoundField DataField="Nombre" HeaderText="Nombre" ReadOnly="True" SortExpression="Nombre" />
+                        <asp:BoundField DataField="Cedula" HeaderText="Cedula" ReadOnly="True" SortExpression="Cedula" />
+                        <asp:BoundField DataField="Direccion" HeaderText="Direccion" SortExpression="Direccion" />
+                        <asp:BoundField DataField="Telefono1" HeaderText="Telefono1" ReadOnly="True" SortExpression="Telefono1" />
+                        <asp:BoundField DataField="Telefono2" HeaderText="Telefono2" ReadOnly="True" SortExpression="Telefono2" />
+                        <asp:BoundField DataField="Email" HeaderText="Email" ReadOnly="True" SortExpression="Email" />
+                        <asp:BoundField DataField="Estado" HeaderText="Estado" ReadOnly="True" SortExpression="Estado" />
                     </Columns>
                     <FooterStyle BackColor="#CCCCCC" />
                     <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                    <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
+                    <RowStyle BackColor="White" />
                     <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
                     <SortedAscendingCellStyle BackColor="#F1F1F1" />
                     <SortedAscendingHeaderStyle BackColor="#808080" />
@@ -127,7 +125,19 @@
        
        
 
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SadiConnectionString %>" SelectCommand="SELECT P.PropietarioId, P.Nombre, P.Apellido, P.Cedula, P.Direccion, P.Telefono1, P.Telefono2, U.NombreUsuario, U.Estado FROM Propietarios AS P LEFT JOIN Usuarios AS U ON P.UsuarioId = U.UsuarioId" UpdateCommand="USP_Actualizar_Propietario" UpdateCommandType="StoredProcedure">
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString %>" SelectCommand="SELECT 
+P.PropietarioId, 
+P.Nombre + ' ' + P.Apellido AS Nombre,
+SUBSTRING(P.Cedula,0,4) + '-' +  SUBSTRING(P.Cedula,4,7) + '-' + SUBSTRING(P.Cedula,8,1) AS Cedula, 
+P.Direccion, 
+ISNULL(SUBSTRING(P.Telefono1,0,4) + '-' + SUBSTRING(P.Telefono1,4,3) + '-' + SUBSTRING(P.Telefono1,7,4),'N/A') AS Telefono1,
+ISNULL(SUBSTRING(P.Telefono2,0,4) + '-' + SUBSTRING(P.Telefono2,4,3) + '-' + SUBSTRING(p.Telefono2,7,4),'N/A') AS Telefono2, 
+ISNULL(U.NombreUsuario,'') AS Email, 
+CASE 
+	WHEN(U.Estado = 1) THEN 'Activo' ELSE 'Inactivo' END Estado 
+
+FROM Propietarios AS P LEFT JOIN Usuarios AS U ON P.UsuarioId = U.UsuarioId
+" UpdateCommand="USP_Actualizar_Propietario" UpdateCommandType="StoredProcedure">
                     <UpdateParameters>
                         <asp:Parameter Name="PropietarioID" Type="Int32" />
                         <asp:Parameter Name="Tel1" Type="String" />

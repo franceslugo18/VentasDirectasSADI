@@ -114,7 +114,7 @@
 
     <div id="MainMenu">
         <div class="list-group panel">
-            <label id="me">Menu</label>
+       
 
             <a href="#demo1" class="list-group-item list-group-item-success" id="pp" data-toggle="collapse" data-parent="#MainMenu">Propietarios</a>
             <div class="collapse" id="demo1">
@@ -142,6 +142,7 @@
             <div class="collapse" id="demo4">
                 <a href="/vw/ContratoLitis.aspx" class="list-group-item">Contrato Litis</a>
                 <a href="/vw/ContratoAlquiler.aspx" class="list-group-item">Contrato Alquiler</a>
+                <a href="/vw/MantenimientoContratos.aspx" class="list-group-item">Mantenimiento Contratos</a>
                
             </div>
 
@@ -151,20 +152,11 @@
                 
             </div>
 
-            <a href="#demo6" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Usuarios</a>
-            <div class="collapse" id="Div1">
-                <a href="/vw/GananciasXmes.aspx" class="list-group-item">Registrar Usuario</a>
-                <a href="/vw/PagosXperiodos.aspx" class="list-group-item">Mantenimiento Usuarios</a>
- 
-           
-            </div>
 
             <a href="#demo6" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Reportes</a>
             <div class="collapse" id="demo6">
-                <a href="/vw/GananciasXmes.aspx" class="list-group-item">Ganancias Por Periodo</a>
-                <a href="/vw/PagosXperiodos.aspx" class="list-group-item">Pagos Por Periodo</a>
-                <a href="/vw/PropietariosPerido.aspx" class="list-group-item">Propietarios  Periodo</a>
-                <a href="/vw/InmueblesPropietarios.aspx" class="list-group-item">Inmuebles Propietarios</a>
+                <a href="/vw/PagosXperiodos.aspx" class="list-group-item">Reportes</a>
+
            
             </div>
 
