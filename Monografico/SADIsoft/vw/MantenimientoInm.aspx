@@ -1,5 +1,43 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Maestra.Master" AutoEventWireup="true" CodeBehind="MantenimientoInm.aspx.cs" Inherits="SADIsoft.vw.MantenimientoInm" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        #centra {
+            margin-left: 5px;
+        }
+           /*Estilo general para el gridView*/
+    .grip2 {
+        margin:0 auto;
+        font-size:11px;
+        text-align:center;
+        border:hidden;
+    }
+    /*Selecciona las filas pares y las colorea*/
+    .grip2 tr:nth-child(even)
+    {
+        background-color: #a9c673;
+    }
+    /*Selecciona las filas impares y las colorea*/
+    .grip2 tr:nth-child(odd)
+    {
+        background-color: #fff;
+    }
+    /*Estilo para las casillas del gridView*/
+    .grip2 td {
+        padding-left:3px;
+        padding-right:3px;
+        border:hidden;
+    }
+    .gridViewHeader{
+        height:35px;
+    }
+     /*Estilo para las Cabezeras del gridView*/
+    .grip2 th {
+        padding-left:3px;
+        padding-right:3px;
+        border:hidden;
+    }
+    </style>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="Form1" class="form-horizontal" runat="server">
@@ -7,59 +45,6 @@
             <!-- Form Name -->
             <legend>Mantenimiento Inmubles</legend>
             
-             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textPripietario">Seleccione el Propietario</label>
-                <div class="col-md-4">
-                    <asp:DropDownList ID="ddlPropietario1" runat="server" class="form-control" ></asp:DropDownList>
-                </div>
-            </div>
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textDireccion">Direccion</label>
-            </div>
-
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textProvincia">Provincia</label>
-                <div class="col-md-4"> 
-                    <asp:DropDownList ID="ddlProvincia1" runat="server" class="form-control" AutoPostBack="True" ViewStateMode="Enabled" ></asp:DropDownList>
-                </div>
-            </div>
-
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textNunicio">Municipio</label>
-                <div class="col-md-4"> 
-                    <asp:DropDownList ID="ddlMunicipio1" runat="server" class="form-control" AutoPostBack="True" ></asp:DropDownList>
-                </div>
-            </div>
-
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textSector">Sector</label>
-                <div class="col-md-4"> 
-                    <asp:DropDownList ID="ddlSector1" runat="server" class="form-control" AutoPostBack="True"></asp:DropDownList>
-                </div>
-            </div>
-
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textCalle">Calle</label>
-                <div class="col-md-4">
-                    <asp:TextBox ID="txtCalle1" runat="server" type="text" class="form-control input-md" placeholder="Calle" required ></asp:TextBox>
-                   
-                </div>
-            </div>
-
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textNumero">Numero</label>
-                <div class="col-md-4">
-                    <asp:TextBox ID="txtNumero1" runat="server" type="text" class="form-control input-md" placeholder="Numero" required ></asp:TextBox>
-                   
-                </div>
-            </div>
 
             <!-- Text input-->
             <div class="form-group">
@@ -227,7 +212,37 @@
                     <asp:Button ID="btnRegistrar1" runat="server" Text="Aptualizar" class="btn btn-primary" />
                 </div>
             </div>
+               <!-- Text input-->
+            <div class="form-group" id="centra">
+                <div class="col-md-4">
+                    <asp:GridView ID="GridView1" CssClass="grip2" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="InmuebleId" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="770px">
+                        <AlternatingRowStyle BackColor="White" />
+                        <Columns>
+                            <asp:CommandField ShowSelectButton="True" />
+                            <asp:BoundField DataField="InmuebleId" HeaderText="InmuebleId" InsertVisible="False" ReadOnly="True" SortExpression="InmuebleId" />
+                            <asp:BoundField DataField="PrecioVenta" HeaderText="PrecioVenta" SortExpression="PrecioVenta" />
+                            <asp:BoundField DataField="PrecioAlquiler" HeaderText="PrecioAlquiler" SortExpression="PrecioAlquiler" />
+                            <asp:BoundField DataField="DireccionId" HeaderText="DireccionId" SortExpression="DireccionId" />
+                            <asp:CheckBoxField DataField="TipoInmueble" HeaderText="TipoInmueble" SortExpression="TipoInmueble" />
+                            <asp:BoundField DataField="Habitaciones" HeaderText="Habitaciones" SortExpression="Habitaciones" />
+                            <asp:BoundField DataField="PropietarioId" HeaderText="PropietarioId" SortExpression="PropietarioId" />
+                        </Columns>
+                        <EditRowStyle BackColor="#2461BF" />
+                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                        <RowStyle BackColor="#EFF3FB" />
+                        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                        <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                        <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                        <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                    </asp:GridView>
 
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString %>" SelectCommand="SELECT [InmuebleId], [PrecioVenta], [PrecioAlquiler], [DireccionId], [TipoInmueble], [Habitaciones], [PropietarioId] FROM [Inmuebles]"></asp:SqlDataSource>
+
+                </div>
+            </div>
 
 
         </fieldset>
