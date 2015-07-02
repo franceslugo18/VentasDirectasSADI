@@ -23,7 +23,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-md-4 col-md-offset-4">
-                <h1 class="text-center login-title">Iniciar Seccion en SADI</h1>
+                <h1 class="text-center login-title">Iniciar Sesión Casas RD</h1>
                 <div class="account-wall">
                     <img class="profile-img" src="/logo/lo.jpg"
                         alt=""/>
@@ -36,7 +36,7 @@
                             <input type="checkbox" value="remember-me"/>
                                 Recordar Contraseña
                         </label>
-                        <a href="/vw/Default.aspx" class="pull-right need-help">SADI </a><span class="clearfix"></span>
+                        <a href="/vw/Default.aspx" class="pull-right need-help">CASAS RD </a><span class="clearfix"></span>
                     </form>
                 </div>
                 

@@ -3,12 +3,13 @@
      
      #BUSCADOR
      {
-         width:425px;
-         height:350px;
-         margin:auto;
+         width:400px;
+         height:333px;
          float:right;  
          margin-right:5px;
-        
+         margin-left: auto;
+         margin-top: auto;
+         margin-bottom: auto;
      }
 
      #CUERPO
@@ -75,11 +76,12 @@
         background-color:aqua;
        
     }
-     #tipo 
+     #tipo,div1,div2,div3,div4,div5 
      {
          width:200px;
 
      }
+
      #aci
      {
          width:200px;
@@ -89,6 +91,14 @@
      {
          width:200px;
 
+     }
+
+
+     #Div1 {
+         width: 200px;
+     }
+     #Div2 {
+         width: 200px;
      }
 
 
@@ -104,55 +114,81 @@
 <form runat="server">
     <div id="BUSCADOR">
 
-       <fieldset>
+       <fieldset style="height: 484px">
 
             <!-- Form Name -->
             <legend>Buscar</legend>
 
             <!-- Text input-->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="textImueble">Tipo Imueble</label>
+                <label class="col-md-4 control-label" for="textImueble">Provincia</label>
                 <div class="col-md-4" id="tipo">
-                    <asp:DropDownList ID="ddlTipo" runat="server" class="form-control">
-                        <asp:ListItem>-Seleccione-</asp:ListItem>
-                        <asp:ListItem>Vivienda</asp:ListItem>
-                        <asp:ListItem>Local</asp:ListItem>
+                    <asp:DropDownList ID="ddlTipo" runat="server" class="form-control" AutoPostBack="True">
+                        <asp:ListItem Value="0">- Seleccione -</asp:ListItem>
                     </asp:DropDownList>
                 </div>
             </div>
             <br />
-            <!-- Text input-->
+           <br />
+
+           <!-- Text input-->
             <div class="form-group">
-                <br />
-                <label class="col-md-4 control-label" for="textNiveles">Accion</label>
-                <div class="col-md-4" id="aci">
-                    <asp:DropDownList ID="ddlAccion" runat="server" class="form-control">
-                        <asp:ListItem>-Seleccione-</asp:ListItem>
-                        <asp:ListItem>Alquiler</asp:ListItem>
-                        <asp:ListItem>Venta</asp:ListItem>
+                <label class="col-md-4 control-label" for="textImueble">Municipio</label>
+                <div class="col-md-4" id="Div1">
+                    <asp:DropDownList ID="DropDownList1" runat="server" class="form-control" AutoPostBack="True">
+                        <asp:ListItem Value="0">- Seleccione - </asp:ListItem>
                     </asp:DropDownList>
                 </div>
             </div>
+            <br />
            <br />
-            <!-- Text input-->
+
+           <!-- Text input-->
             <div class="form-group">
-                <br />
-                <label class="col-md-4 control-label" for="textNiveles">Direccion</label>
-                <div class="col-md-4" id="dire">
-                    <asp:DropDownList ID="DropDownList2" runat="server" class="form-control">
-                        <asp:ListItem>-Seleccione-</asp:ListItem>
-                        <asp:ListItem>Villlas Agricolas</asp:ListItem>
+                <label class="col-md-4 control-label" for="textImueble">Sector</label>
+                <div class="col-md-4" id="Div2">
+                    <asp:DropDownList ID="DropDownList3" runat="server" class="form-control" AutoPostBack="True">
+                        <asp:ListItem Value="0">- Seleccione -</asp:ListItem>
                     </asp:DropDownList>
                 </div>
             </div>
+            <br />
            <br />
+
+                      <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textImueble">Precio por debajo de:</label>
+                <div class="col-md-4" id="Div3">
+                    <asp:TextBox ID="txtPrecioDebajo" runat="server" class="form-control"> </asp:TextBox>
+                </div>
+            </div>
+            <br />
+           <br />
+
+           <div class="form-group">
+                
+                <div class="col-md-4" id="Div4">
+            <asp:RadioButton ID="RadioButton1" runat="server" text=" Vivienda"/>
+                    <br />
+            <asp:RadioButton ID="RadioButton2" runat="server" text=" Local"/>
+
+</div>
+            </div>
+                <div class="col-md-4">
+                    <asp:Button ID="Button1" runat="server" Text="Buscar"  name="singlebutton" class="btn btn-primary" OnClick="Button1_Click"/>
+                </div>
+           <br/>
+           
+           <div class="form-group">
+                
+                <div class="col-md-4" id="Div5">
+
+        </div>
+            </div>
            <br />
             <!-- Button -->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="singlebutton"></label>
-                <div class="col-md-4">
-                    <asp:Button ID="Button1" runat="server" Text="Buscar"  name="singlebutton" class="btn btn-primary" OnClick="Button1_Click"/>
-                </div>
             </div>
 
         </fieldset>

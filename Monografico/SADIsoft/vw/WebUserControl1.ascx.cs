@@ -58,7 +58,7 @@ namespace SADIsoft.prueba
 
                 Label precio = new Label();
                 precio.ID = "precio";
-                precio.Text = (e.Row.DataItem as DataRowView).Row["PrecioAlquiler"].ToString();
+                precio.Text = Convert.ToDecimal((e.Row.DataItem as DataRowView).Row["PrecioAlquiler"]).ToString("#,###.00");
                 e.Row.Cells[2].Controls.Add(precio);
 
                 
