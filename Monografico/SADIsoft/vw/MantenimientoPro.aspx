@@ -103,6 +103,7 @@
                 <asp:GridView ID="GridView1" runat="server" AllowPaging="True" CssClass="grip" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" DataKeyNames="PropietarioId" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" AutoGenerateSelectButton="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="900px">
                     <AlternatingRowStyle BackColor="#CCCCCC" />
                     <Columns>
+                        <asp:ButtonField   ButtonType="Link"  Text="Delete" /> 
                         <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
                         <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
                         <asp:BoundField DataField="Cedula" HeaderText="Cedula" SortExpression="Cedula" />

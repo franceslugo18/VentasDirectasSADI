@@ -22,17 +22,19 @@ namespace SADIsoft.vw
 
             }
         }
+        int idCliente = 0;
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-                int idCliente = Convert.ToInt32(GridView1.SelectedDataKey.Value);
+                idCliente = Convert.ToInt32(GridView1.SelectedDataKey.Value);
                 //txtTelefonops1.Text = idPropietario.ToString();
 
-                Cliente clie = mantenimientoClienteControlador.BuscarPorId(idCliente);
+                Cliente clie = MantenimientoClienteControlador.BuscarPorId(idCliente);
 
                 txtTelefonops1.Text = clie.Tel1;
+                TxtTelefonops2.Text = clie.Tel2;
                 TextEmail.Text = clie.Email;
                 
 
@@ -41,6 +43,14 @@ namespace SADIsoft.vw
             {
                 Response.Write(ex.ToString());
             }
+        }
+
+        protected void btnActualizarCl_Click(object sender, EventArgs e)
+        {
+            int idPropietario = Convert.ToInt32(GridView1.SelectedDataKey.Value);
+
+            MantenimientoClienteControlador.ActualizarCliente(idCliente, txtTelefonops1.Text, TxtTelefonops2.Text, TextEmail.Text);
+
         }
     }
 }

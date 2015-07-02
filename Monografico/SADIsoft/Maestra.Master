@@ -91,7 +91,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">SADI SOFTWARE</a>
+                <a class="navbar-brand" href="#">CASAS RD</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul id="Lista" class="nav navbar-nav">
@@ -151,6 +151,14 @@
                 
             </div>
 
+            <a href="#demo6" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Usuarios</a>
+            <div class="collapse" id="Div1">
+                <a href="/vw/GananciasXmes.aspx" class="list-group-item">Registrar Usuario</a>
+                <a href="/vw/PagosXperiodos.aspx" class="list-group-item">Mantenimiento Usuarios</a>
+ 
+           
+            </div>
+
             <a href="#demo6" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Reportes</a>
             <div class="collapse" id="demo6">
                 <a href="/vw/GananciasXmes.aspx" class="list-group-item">Ganancias Por Periodo</a>
@@ -159,6 +167,8 @@
                 <a href="/vw/InmueblesPropietarios.aspx" class="list-group-item">Inmuebles Propietarios</a>
            
             </div>
+
+
 
         </div>
 

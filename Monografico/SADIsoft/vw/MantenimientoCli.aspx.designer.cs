@@ -31,6 +31,15 @@ namespace SADIsoft.vw {
         protected global::System.Web.UI.WebControls.TextBox txtTelefonops1;
         
         /// <summary>
+        /// Control TxtTelefonops2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtTelefonops2;
+        
+        /// <summary>
         /// Control TextEmail.
         /// </summary>
         /// <remarks>
@@ -38,15 +47,6 @@ namespace SADIsoft.vw {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextEmail;
-        
-        /// <summary>
-        /// Control TextDireccion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextDireccion;
         
         /// <summary>
         /// Control btnActualizarCl.

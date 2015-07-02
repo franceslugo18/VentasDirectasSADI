@@ -57,6 +57,15 @@
 
             <!-- Text input-->
             <div class="form-group">
+                <label class="col-md-4 control-label" for="textTele">Telefono 2</label>
+                <div class="col-md-4">
+                    <asp:TextBox ID="TxtTelefonops2" runat="server" type="text" class="form-control input-md" placeholder="Telefono" ></asp:TextBox>
+                   
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
                 <label class="col-md-4 control-label" for="textEmail">Email</label>
                 <div class="col-md-4">
                     <asp:TextBox ID="TextEmail" runat="server" type="text" class="form-control input-md" placeholder="Email"></asp:TextBox>
@@ -65,9 +74,7 @@
             </div>
             <!-- Text input-->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="textEmail">Direccion</label>
-                <div class="col-md-4">
-                    <asp:TextBox ID="TextDireccion" runat="server" type="text" class="form-control input-md" placeholder="Direccion"></asp:TextBox>
+                &nbsp;<div class="col-md-4">
                    
                 </div>
             </div>
@@ -75,7 +82,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="btnRegistrarr"></label>
                 <div class="col-md-4">
-                    <asp:Button ID="btnActualizarCl" runat="server" Text="Actualizar" class="btn btn-primary"/>
+                    <asp:Button ID="btnActualizarCl" runat="server" Text="Actualizar" class="btn btn-primary" OnClick="btnActualizarCl_Click"/>
                 </div>
             </div>
             
@@ -86,9 +93,14 @@
                        <AlternatingRowStyle BackColor="White" />
                        <Columns>
                            <asp:CommandField ShowSelectButton="True" />
+                           <asp:ButtonField   ButtonType="Link"  Text="Delete" /> 
+                           <asp:BoundField DataField="ClienteId" HeaderText="ClienteId" SortExpression="ClienteId" InsertVisible="False" ReadOnly="True" />
+                           <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                           <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
+                           <asp:BoundField DataField="Cedula" HeaderText="Cedula" SortExpression="Cedula" />
                            <asp:BoundField DataField="Telefono1" HeaderText="Telefono1" SortExpression="Telefono1" />
+                           <asp:BoundField DataField="Telefono2" HeaderText="Telefono2" SortExpression="Telefono2" />
                            <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
-                           <asp:BoundField DataField="Direccion" HeaderText="Direccion" SortExpression="Direccion" />
                        </Columns>
                        <EditRowStyle BackColor="#7C6F57" />
                        <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
@@ -101,7 +113,7 @@
                        <SortedDescendingCellStyle BackColor="#D4DFE1" />
                        <SortedDescendingHeaderStyle BackColor="#15524A" />
                     </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString %>" SelectCommand="SELECT [Telefono1], [Email], [Direccion], [ClienteId] FROM [Clientes]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString %>" SelectCommand="SELECT * FROM Clientes"></asp:SqlDataSource>
                 </div>
             </div>
 

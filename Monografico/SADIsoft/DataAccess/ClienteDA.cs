@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using SADI.Model;
 using SADIsoft.DataAccess;
+using System.Data;
 
 namespace SADIsoft.DataAccess
 {
@@ -87,6 +88,7 @@ namespace SADIsoft.DataAccess
                 {
 
                     cli.Tel1 = dr["Telefono1"].ToString();
+                    cli.Tel2 = dr["Telefono2"].ToString();
                     cli.Email = dr["Email"].ToString();
                     
 
@@ -101,6 +103,27 @@ namespace SADIsoft.DataAccess
             }
         }
 
-        
+
+
+        internal static void ActualizarClienteDB(int id, string tel1, string tel2, string email)
+        {
+            try
+            {
+                conn = Conexion.Conectar();
+                string query = string.Format(@"UPDATE Clientes SET Telefono1 = '{0}', Telefono2 = '{1}', Email = '{2}' WHERE ClienteId = {3}",
+                    tel1,tel2,email,id);
+                com = new SqlCommand(query,conn);
+                com.ExecuteScalar();
+                            
+               
+                conn.Close();
+
+                
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
