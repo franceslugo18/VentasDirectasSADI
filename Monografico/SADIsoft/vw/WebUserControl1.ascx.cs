@@ -79,7 +79,7 @@ namespace SADIsoft.prueba
 
                 SqlCommand com = new SqlCommand();
 
-                com.CommandText = "SELECT * FROM Inmuebles WHERE ((@Tipo is null) OR (Tipo = @Tipo)) AND ((@TipoInmueble is null) OR (TipoInmueble = @TipoInmueble))";
+                com.CommandText = "SELECT * FROM Inmuebles WHERE isDisponible = 1 AND ((@Tipo is null) OR (Tipo = @Tipo)) AND ((@TipoInmueble is null) OR (TipoInmueble = @TipoInmueble))";
                 com.CommandType = CommandType.Text;
 
                 if (tipo != null)
