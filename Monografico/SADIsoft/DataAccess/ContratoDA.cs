@@ -52,5 +52,18 @@ namespace SADIsoft.DataAccess
             int i = com.ExecuteNonQuery();
             conn.Close();
         }
+
+        internal static void CancelarContratoDA(int ContratoId)
+        {
+            conn = Conexion.Conectar();
+            com = new SqlCommand();
+            com.Connection = conn;
+            com.CommandType = CommandType.StoredProcedure;
+            com.CommandText = "USP_Cancelar_Contrato_Alquiler";
+            com.Parameters.Add("@ContratoId", SqlDbType.Int).Value = ContratoId;
+
+            com.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }

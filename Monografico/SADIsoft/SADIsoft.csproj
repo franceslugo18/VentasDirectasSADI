@@ -107,6 +107,7 @@
     <Content Include="vw\javascrip.aspx" />
     <Content Include="vw\LoginCambioResp.aspx" />
     <Content Include="vw\MantenimientoCli.aspx" />
+    <Content Include="vw\MantenimientoContratos.aspx" />
     <Content Include="vw\MantenimientoInm.aspx" />
     <Content Include="vw\PaginaPrincipal.aspx" />
     <Content Include="vw\PagosXperiodos.aspx" />
@@ -130,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Code\Validacion.cs" />
+    <Compile Include="Controller\CancelarContratoAlquilerControlador.cs" />
     <Compile Include="Controller\MantenimientoClienteControlador.cs" />
     <Compile Include="vw\Administracion.aspx.cs">
       <DependentUpon>Administracion.aspx</DependentUpon>
@@ -337,6 +339,13 @@
     </Compile>
     <Compile Include="vw\MantenimientoCli.aspx.designer.cs">
       <DependentUpon>MantenimientoCli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\MantenimientoContratos.aspx.cs">
+      <DependentUpon>MantenimientoContratos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\MantenimientoContratos.aspx.designer.cs">
+      <DependentUpon>MantenimientoContratos.aspx</DependentUpon>
     </Compile>
     <Compile Include="vw\MantenimientoInm.aspx.cs">
       <DependentUpon>MantenimientoInm.aspx</DependentUpon>

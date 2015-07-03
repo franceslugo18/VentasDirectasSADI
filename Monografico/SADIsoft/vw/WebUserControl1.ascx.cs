@@ -156,13 +156,13 @@ namespace SADIsoft.prueba
 
                 com.CommandText = string.Format(@"SELECT P.Nombre AS Provincia, I.Foto1, I.Observaciones, I.PrecioAlquiler, I.InmuebleId  FROM Inmuebles AS I
 
-	INNER JOIN Direcciones AS D ON I.DireccionId = D.DireccionId
+	                INNER JOIN Direcciones AS D ON I.DireccionId = D.DireccionId
 
-	INNER JOIN Provincias AS P ON D.ProvinciaId = P.ProvinciaId
+	                INNER JOIN Provincias AS P ON D.ProvinciaId = P.ProvinciaId
 
-	INNER JOIN Municipios AS M ON D.MunicipioId = M.MunicipioId
+	                INNER JOIN Municipios AS M ON D.MunicipioId = M.MunicipioId
 
-	INNER JOIN Sectores AS S ON D.SectorId = S.SectorId WHERE (I.isDisponible = 1) AND ((@Provincia is null) OR (P.Nombre = @Provincia)) AND ((@Municipio is null) OR (M.Nombre = @Municipio)) AND ((@Sector is null) OR (S.Nombre = @Sector))
+	                INNER JOIN Sectores AS S ON D.SectorId = S.SectorId WHERE (I.isDisponible = 1) AND ((@Provincia is null) OR (P.Nombre = @Provincia)) AND ((@Municipio is null) OR (M.Nombre = @Municipio)) AND ((@Sector is null) OR (S.Nombre = @Sector))
                                                           AND ((@Precio is null) OR (I.PrecioAlquiler <= @Precio)) AND ((@Tipo is null) OR (TipoInmueble = @Tipo))");
                 com.CommandType = CommandType.Text;
 
