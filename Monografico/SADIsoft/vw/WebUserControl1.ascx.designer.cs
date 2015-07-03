@@ -13,31 +13,31 @@ namespace SADIsoft.prueba {
     public partial class WebUserControl1 {
         
         /// <summary>
-        /// Control ddlTipo.
+        /// Control ddlProvincia1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlTipo;
+        protected global::System.Web.UI.WebControls.DropDownList ddlProvincia1;
         
         /// <summary>
-        /// Control DropDownList1.
+        /// Control ddlMunicipio1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMunicipio1;
         
         /// <summary>
-        /// Control DropDownList3.
+        /// Control ddlSector1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList3;
+        protected global::System.Web.UI.WebControls.DropDownList ddlSector1;
         
         /// <summary>
         /// Control txtPrecioDebajo.

@@ -123,8 +123,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textImueble">Provincia</label>
                 <div class="col-md-4" id="tipo">
-                    <asp:DropDownList ID="ddlTipo" runat="server" class="form-control" AutoPostBack="True">
-                        <asp:ListItem Value="0">- Seleccione -</asp:ListItem>
+                    <asp:DropDownList ID="ddlProvincia1" runat="server" class="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlProvincia1_SelectedIndexChanged">
                     </asp:DropDownList>
                 </div>
             </div>
@@ -135,8 +134,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textImueble">Municipio</label>
                 <div class="col-md-4" id="Div1">
-                    <asp:DropDownList ID="DropDownList1" runat="server" class="form-control" AutoPostBack="True">
-                        <asp:ListItem Value="0">- Seleccione - </asp:ListItem>
+                    <asp:DropDownList ID="ddlMunicipio1" runat="server" class="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlMunicipio1_SelectedIndexChanged">
                     </asp:DropDownList>
                 </div>
             </div>
@@ -147,8 +145,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textImueble">Sector</label>
                 <div class="col-md-4" id="Div2">
-                    <asp:DropDownList ID="DropDownList3" runat="server" class="form-control" AutoPostBack="True">
-                        <asp:ListItem Value="0">- Seleccione -</asp:ListItem>
+                    <asp:DropDownList ID="ddlSector1" runat="server" class="form-control" AutoPostBack="True">
                     </asp:DropDownList>
                 </div>
             </div>
@@ -168,9 +165,9 @@
            <div class="form-group">
                 
                 <div class="col-md-4" id="Div4">
-            <asp:RadioButton ID="RadioButton1" runat="server" text=" Vivienda"/>
+            <asp:RadioButton  ID="RadioButton1" runat="server" text=" Vivienda" GroupName="rdb"/>
                     <br />
-            <asp:RadioButton ID="RadioButton2" runat="server" text=" Local"/>
+            <asp:RadioButton  ID="RadioButton2" runat="server" text=" Local" GroupName="rdb"/>
 
 </div>
             </div>
