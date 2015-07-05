@@ -47,8 +47,7 @@ namespace SADIsoft.vw
 
         protected void btnActualizarCl_Click(object sender, EventArgs e)
         {
-            int idPropietario = Convert.ToInt32(GridView1.SelectedDataKey.Value);
-
+            
             MantenimientoClienteControlador.ActualizarCliente(idCliente, txtTelefonops1.Text, TxtTelefonops2.Text, TextEmail.Text);
 
         }

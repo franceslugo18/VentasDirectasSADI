@@ -151,8 +151,8 @@
                 
             </div>
 
-            <a href="#demo6" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Usuarios</a>
-            <div class="collapse" id="Div1">
+            <a href="#demo7" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Usuarios</a>
+            <div class="collapse" id="demo7">
                 <a href="/vw/GananciasXmes.aspx" class="list-group-item">Registrar Usuario</a>
                 <a href="/vw/PagosXperiodos.aspx" class="list-group-item">Mantenimiento Usuarios</a>
  

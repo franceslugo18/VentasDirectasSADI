@@ -38,6 +38,12 @@
     }
     </style>
 
+    <script type="text/javascript">
+        function Mensaje() {
+            alert('Datos Actualizados');
+        }
+    </script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="Form1" class="form-horizontal" runat="server">
@@ -48,118 +54,46 @@
 
             <!-- Text input-->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="textTipo">Tipo</label>
-                <div class="col-md-4"> 
-                    <asp:RadioButton ID="rbAlquiler1" runat="server" GroupName="tipo" Text="Alquiler" AutoPostBack="True" />
-                    <asp:RadioButton ID="rbVenta1" runat="server" GroupName="tipo" Text="Venta" AutoPostBack="True" />
-                </div>
-            </div>
-
-            <!-- Text input-->
-            <div class="form-group">
                 <label class="col-md-4 control-label" for="textAlquilerP">Precio Alquiler</label>
                 <div class="col-md-4">
                     <asp:TextBox ID="txtPrecioAlquiler1" runat="server" type="text" class="form-control input-md" placeholder="Precio Alquiler" required ></asp:TextBox>
                    
                 </div>
             </div>
-
             <!-- Text input-->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="textDeposito">Depositos</label>
-                <div class="col-md-4"> 
-                    <asp:DropDownList ID="ddlDepositos1" runat="server" class="form-control">
-                        <asp:ListItem>-Seleccione-</asp:ListItem>
-                        <asp:ListItem>1</asp:ListItem>
-                        <asp:ListItem>2</asp:ListItem>
-                        <asp:ListItem>3</asp:ListItem>
-                        <asp:ListItem Value="4">4</asp:ListItem>
-                    </asp:DropDownList>
+                <label class="col-md-4 control-label" for="textDepositos">Depositos</label>
+                <div class="col-md-4">
+                    <asp:TextBox ID="TextBox1" runat="server" type="text" class="form-control input-md" placeholder="Depositos" required ></asp:TextBox>
+                   
                 </div>
             </div>
-
             <!-- Text input-->
             <div class="form-group">
-                <label class="col-md-4 control-label" for="textPrecioV">Precio Venta</label>
+                <label class="col-md-4 control-label" for="textNiveles">Niveles</label>
                 <div class="col-md-4">
-                    <asp:TextBox ID="txtPrecioVenta1" runat="server" type="text" class="form-control input-md" placeholder="Precio Venta" required ></asp:TextBox>
+                    <asp:TextBox ID="TextBox2" runat="server" type="text" class="form-control input-md" placeholder="Niveles" required ></asp:TextBox>
+                   
+                </div>
+            </div>
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="texthabitaciones">Habitaciones</label>
+                <div class="col-md-4">
+                    <asp:TextBox ID="TextBox3" runat="server" type="text" class="form-control input-md" placeholder="Habitaciones" required ></asp:TextBox>
+                   
+                </div>
+            </div>
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textbanios">Baños</label>
+                <div class="col-md-4">
+                    <asp:TextBox ID="TextBox4" runat="server" type="text" class="form-control input-md" placeholder="Banios" required ></asp:TextBox>
                    
                 </div>
             </div>
 
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textNiveles">Niveles</label>
-                <div class="col-md-4"> 
-                    <asp:DropDownList ID="ddlNiveles1" runat="server" class="form-control">
-                        <asp:ListItem>-Seleccione-</asp:ListItem>
-                        <asp:ListItem>1</asp:ListItem>
-                        <asp:ListItem>2</asp:ListItem>
-                        <asp:ListItem>3</asp:ListItem>
-                        <asp:ListItem>4</asp:ListItem>
-                    </asp:DropDownList>
-                </div>
-            </div>
-
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textTipoIn">Tipo Inmueble</label>
-                <div class="col-md-4"> 
-                    <asp:RadioButton ID="rbVivienda1" runat="server" GroupName="tipoInmueble" Text="Vivienda" />
-                    <asp:RadioButton ID="rbLocal1" runat="server" GroupName="tipoInmueble" Text="Local Comercial" />
-                </div>
-            </div>
-
-             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textHabitaciones">Habitaciones</label>
-                <div class="col-md-4"> 
-                    <asp:DropDownList ID="ddlHabitaciones1" runat="server" class="form-control">
-                        <asp:ListItem>1</asp:ListItem>
-                        <asp:ListItem>2</asp:ListItem>
-                        <asp:ListItem>3</asp:ListItem>
-                        <asp:ListItem>4</asp:ListItem>
-                        <asp:ListItem>5</asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                    </asp:DropDownList>
-                </div>
-            </div>
-
-             <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textBanios">Baños</label>
-                <div class="col-md-4"> 
-                    <asp:DropDownList ID="ddlBanos1" runat="server" class="form-control">
-                        <asp:ListItem>1</asp:ListItem>
-                        <asp:ListItem>2</asp:ListItem>
-                        <asp:ListItem>3</asp:ListItem>
-                    </asp:DropDownList>
-                </div>
-            </div>
-
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textoption"></label>
-                <div class="col-md-4">
-                    <asp:CheckBox ID="cbSotano1" runat="server" Text="Sotano" />
-                    <asp:CheckBox ID="cbPiscina1" runat="server" Text="Pisina" />
-                    <asp:CheckBox ID="cbMarquesina1" runat="server" Text="Marquesina" />
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" for="textNombre">Cantidad Vehiculos</label>
-                        <div class="col-md-4">
-                            <asp:DropDownList ID="ddlCapacidadMarquesina1" runat="server" class="form-control" Width="280px">
-                                <asp:ListItem >-Seleccione-</asp:ListItem>
-                                <asp:ListItem>1</asp:ListItem>
-                                <asp:ListItem>2</asp:ListItem>
-                                <asp:ListItem>3</asp:ListItem>
-                                <asp:ListItem>4</asp:ListItem>
-                            </asp:DropDownList>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+             
             <!-- Text input-->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textarea">Comentario</label>
@@ -168,6 +102,24 @@
                 </div>
             </div>
 
+            <!-- Multiple Radios -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="radios">Modificar Imagenes</label>
+                <div class="col-md-4">
+                    <div class="radio">
+                        <label for="radios-0">
+                            <asp:RadioButton ID="RadioButton1" GroupName="activa" runat="server" AutoPostBack="True" Checked="True" OnCheckedChanged="RadioButton1_CheckedChanged" />    
+                            Si
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label for="radios-1">
+                            <asp:RadioButton ID="RadioButton2" GroupName="activa" runat="server" AutoPostBack="True" OnCheckedChanged="RadioButton2_CheckedChanged" />  
+                            No
+                        </label>
+                    </div>
+                </div>
+            </div>
             <!-- Text input-->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textfoto1">Fotos</label>
@@ -209,23 +161,23 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="btnRegistrarr"></label>
                 <div class="col-md-4">
-                    <asp:Button ID="btnRegistrar1" runat="server" Text="Aptualizar" class="btn btn-primary" />
+                    <asp:Button ID="btnRegistrar1" runat="server" Text="Aptualizar" class="btn btn-primary" OnClick="btnRegistrar1_Click" />
                 </div>
             </div>
                <!-- Text input-->
             <div class="form-group" id="centra">
                 <div class="col-md-4">
-                    <asp:GridView ID="GridView1" CssClass="grip2" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="InmuebleId" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="770px">
+                    <asp:GridView ID="GridView1" CssClass="grip2" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="770px" DataKeyNames="InmuebleId">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
                             <asp:CommandField ShowSelectButton="True" />
-                            <asp:BoundField DataField="InmuebleId" HeaderText="InmuebleId" InsertVisible="False" ReadOnly="True" SortExpression="InmuebleId" />
-                            <asp:BoundField DataField="PrecioVenta" HeaderText="PrecioVenta" SortExpression="PrecioVenta" />
                             <asp:BoundField DataField="PrecioAlquiler" HeaderText="PrecioAlquiler" SortExpression="PrecioAlquiler" />
-                            <asp:BoundField DataField="DireccionId" HeaderText="DireccionId" SortExpression="DireccionId" />
-                            <asp:CheckBoxField DataField="TipoInmueble" HeaderText="TipoInmueble" SortExpression="TipoInmueble" />
+                            <asp:BoundField DataField="Depositos" HeaderText="Depositos" SortExpression="Depositos" />
+                            <asp:BoundField DataField="Observaciones" HeaderText="Observaciones" SortExpression="Observaciones" />
+                            <asp:BoundField DataField="NumeroPlantas" HeaderText="NumeroPlantas" SortExpression="NumeroPlantas" />
                             <asp:BoundField DataField="Habitaciones" HeaderText="Habitaciones" SortExpression="Habitaciones" />
-                            <asp:BoundField DataField="PropietarioId" HeaderText="PropietarioId" SortExpression="PropietarioId" />
+                            <asp:BoundField DataField="Banos" HeaderText="Banos" SortExpression="Banos" />
+                            <asp:BoundField DataField="InmuebleId" HeaderText="InmuebleId" InsertVisible="False" ReadOnly="True" SortExpression="InmuebleId" />
                         </Columns>
                         <EditRowStyle BackColor="#2461BF" />
                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -239,7 +191,7 @@
                         <SortedDescendingHeaderStyle BackColor="#4870BE" />
                     </asp:GridView>
 
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString %>" SelectCommand="SELECT [InmuebleId], [PrecioVenta], [PrecioAlquiler], [DireccionId], [TipoInmueble], [Habitaciones], [PropietarioId] FROM [Inmuebles]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString %>" SelectCommand="SELECT [PrecioAlquiler], [Depositos], [Observaciones], [NumeroPlantas], [Habitaciones], [Banos], [InmuebleId] FROM [Inmuebles]"></asp:SqlDataSource>
 
                 </div>
             </div>
