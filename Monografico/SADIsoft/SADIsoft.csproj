@@ -133,6 +133,7 @@
     <Compile Include="Code\Validacion.cs" />
     <Compile Include="Controller\CancelarContratoAlquilerControlador.cs" />
     <Compile Include="Controller\MantenimientoClienteControlador.cs" />
+    <Compile Include="Controller\MantenimientoInmuebleControlador.cs" />
     <Compile Include="vw\Administracion.aspx.cs">
       <DependentUpon>Administracion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

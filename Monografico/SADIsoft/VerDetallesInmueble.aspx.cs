@@ -42,7 +42,7 @@ namespace SADIsoft
             }
             catch(Exception ex)
             {
-                Label1.Text = ex.ToString();
+                Response.Write(ex.ToString());
             }
         }
     }

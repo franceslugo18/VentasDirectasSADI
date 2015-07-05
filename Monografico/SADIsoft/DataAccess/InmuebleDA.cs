@@ -13,7 +13,7 @@ namespace SADIsoft.DataAccess
     {
         private static SqlConnection conn;
         private static SqlCommand com;
-
+        private static SqlDataReader dr;
         
         //---------------------------------------------------
         // Inserta un Inmueble en la Base de Datos
@@ -94,6 +94,81 @@ namespace SADIsoft.DataAccess
 
             return inm;
 
+        }
+        public static Inmueble BuscarPorIdDB(int idInmueble)
+        {
+            try
+            {
+                conn = Conexion.Conectar();
+                string query = string.Format(@"SELECT * FROM Inmuebles  WHERE InmuebleId = {0}", idInmueble);
+
+                com = new SqlCommand(query, conn);
+                dr = com.ExecuteReader();
+
+                Inmueble inmu = new Inmueble();
+
+
+                while (dr.Read())
+                {
+
+                    inmu.PrecioAlquiler = Convert.ToDecimal(dr["PrecioAlquiler"].ToString());
+                    inmu.Depositos = Convert.ToInt32(dr["Depositos"].ToString());
+                    inmu.Niveles = Convert.ToInt32(dr["NumeroPlantas"].ToString());
+                    inmu.Habitaciones = Convert.ToInt32(dr["Habitaciones"].ToString());
+                    inmu.Banos = Convert.ToInt32(dr["Banos"].ToString());
+                    inmu.Comentarios = dr["Observaciones"].ToString();
+
+
+                }
+                conn.Close();
+                dr.Close();
+                return inmu;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        internal static void ActualizarInmuebleDB(Decimal PrecioAlquiler, int Depositos, int Niveles,int Habitaciones,int Banios,string Observaciones, int idInmueble)
+        {
+            try
+            {
+                conn = Conexion.Conectar();
+                string query = string.Format(@"UPDATE Inmuebles SET PrecioAlquiler = '{0}', Depositos = '{1}', NumeroPlantas = '{2}', Banos = '{3}', Habitaciones = '{4}', Observaciones = '{5}'  WHERE InmuebleId = {6}",
+                    PrecioAlquiler, Depositos, Niveles, Habitaciones, Banios, Observaciones, idInmueble);
+                com = new SqlCommand(query, conn);
+                com.ExecuteScalar();
+
+
+                conn.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        internal static void ActualizarFotosDB(string foto1, string foto2, string foto3, string foto4, int idInmueble)
+        {
+            try
+            {
+                conn = Conexion.Conectar();
+                string query = string.Format(@"UPDATE Inmuebles SET Foto1 = '{0}', Foto2 = '{1}', Foto3 = '{2}', Foto4 = '{3}' WHERE InmuebleId = {4}",
+                    foto1, foto2, foto3, foto4,idInmueble);
+                com = new SqlCommand(query, conn);
+                com.ExecuteScalar();
+
+
+                conn.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+ 
         }
     }
 }
