@@ -34,7 +34,10 @@ namespace SADIsoft
                 Image3.ImageUrl = "Images\\" + dr["Foto3"].ToString();
                 Image4.ImageUrl = "Images\\" + dr["Foto4"].ToString();
 
-
+                HyperLink1.NavigateUrl = "/Images//" + dr["Foto1"].ToString();
+                HyperLink2.NavigateUrl = "/Images//" + dr["Foto2"].ToString();
+                HyperLink3.NavigateUrl = "/Images//" + dr["Foto3"].ToString();
+                HyperLink4.NavigateUrl = "/Images//" + dr["Foto4"].ToString();
 
 
                 dr.Close();

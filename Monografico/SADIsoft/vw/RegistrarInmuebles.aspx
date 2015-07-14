@@ -1,5 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Maestra.Master" AutoEventWireup="true" CodeBehind="RegistrarInmuebles.aspx.cs" Inherits="SADIsoft.registrar_inmueble.RegistrarInmuebles" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        #re 
+        {
+            margin-left:310px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form class="form-horizontal" runat="server">
@@ -207,7 +213,7 @@
             </div>
 
             <!-- Button -->
-            <div class="form-group">
+            <div class="form-group" id="re">
                 <label class="col-md-4 control-label" for="btnRegistrarr"></label>
                 <div class="col-md-4">
                     <asp:Button ID="btnRegistrar1" runat="server" Text="Registrar" class="btn btn-primary" OnClick="btnRegistrar1_Click" />

@@ -1,10 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Maestra.Master" AutoEventWireup="true" CodeBehind="RegistrarPropietarios.aspx.cs" Inherits="SADIsoft.registrar_propietarios.RegistrarPropietarios" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    
+    <style type="text/css">
+        #regis 
+        {
+            margin-left:210px
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <form class="form-horizontal" runat="server">
+    <form class="form-horizontal" runat="server" id="rr">
         <fieldset>
 
             <!-- Form Name -->
@@ -73,7 +78,7 @@
             </div>
 
            <!-- Button -->
-            <div class="form-group">
+            <div class="form-group" id="regis">
                 <label class="col-md-4 control-label" for="btnRegistrarr"></label>
                 <div class="col-md-4">
                     <asp:Button ID="btnRegistrarPropietario" runat="server" Text="Registrar Propietario" class="btn btn-primary" OnClick="btnRegistrarPropietario_Click"/>

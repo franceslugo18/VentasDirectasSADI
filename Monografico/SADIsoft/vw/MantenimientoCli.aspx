@@ -36,6 +36,9 @@
         padding-right:3px;
         border:hidden;
     }
+        #mandecl {
+            margin-left:320px;
+        }
     </style>
 
 </asp:Content>
@@ -79,7 +82,7 @@
                 </div>
             </div>
              <!-- Button -->
-            <div class="form-group">
+            <div class="form-group" id="mandecl">
                 <label class="col-md-4 control-label" for="btnRegistrarr"></label>
                 <div class="col-md-4">
                     <asp:Button ID="btnActualizarCl" runat="server" Text="Actualizar" class="btn btn-primary" OnClick="btnActualizarCl_Click"/>
@@ -93,7 +96,7 @@
                        <AlternatingRowStyle BackColor="White" />
                        <Columns>
                            <asp:CommandField ShowSelectButton="True" />
-                           <asp:ButtonField   ButtonType="Link"  Text="Delete" /> 
+                           <asp:CommandField ShowDeleteButton="True" />
                            <asp:BoundField DataField="ClienteId" HeaderText="ClienteId" SortExpression="ClienteId" InsertVisible="False" ReadOnly="True" />
                            <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
                            <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
@@ -113,7 +116,7 @@
                        <SortedDescendingCellStyle BackColor="#D4DFE1" />
                        <SortedDescendingHeaderStyle BackColor="#15524A" />
                     </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString %>" SelectCommand="SELECT * FROM Clientes"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PostgradoDBConnectionString %>" SelectCommand="SELECT * FROM [Clientes]"></asp:SqlDataSource>
                 </div>
             </div>
 

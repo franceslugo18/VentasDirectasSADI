@@ -9,8 +9,19 @@
         #cuerpo 
         {
             margin-left:25px;
+            border:none;
         }
+      
     </style>
+    
+    <!--efecto lightbox-->
+
+    <script src="Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery_min.js"></script>
+    <script type="text/javascript" src="js/slimbox2.js"></script>
+    <link rel="stylesheet" href="css/slimbox2.css" type="text/css" media="screen" />
+
+    <!--efecto lightbox-->
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
@@ -21,13 +32,23 @@
             <legend>Detalles Inmuebles</legend>
 
             <div id="imagenes">
-                <asp:Image ID="Image1" runat="server" Height="161px" Width="190px" />
+               
+                <asp:HyperLink ID="HyperLink1" rel="lightbox" runat="server">
+                    <asp:Image ID="Image1" runat="server" Height="161px" Width="190px" />
+                </asp:HyperLink>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Image ID="Image2" runat="server" Height="161px" Width="190px" />
+               
+                <asp:HyperLink ID="HyperLink2" rel="lightbox" runat="server">
+                    <asp:Image ID="Image2" runat="server" Height="161px" Width="190px" />
+                </asp:HyperLink>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Image ID="Image3" runat="server" Height="161px" Width="190px" />
+                <asp:HyperLink ID="HyperLink3" rel="lightbox" runat="server">
+                    <asp:Image ID="Image3" runat="server" Height="161px" Width="190px" />
+                </asp:HyperLink>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Image ID="Image4" runat="server" Height="161px" Width="190px" />
+                <asp:HyperLink ID="HyperLink4" rel="lightbox" runat="server">
+                    <asp:Image ID="Image4" runat="server" Height="161px" Width="190px" />
+                </asp:HyperLink>
 
             </div>
             <div id="cuerpo">
