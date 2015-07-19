@@ -66,6 +66,7 @@
       <DependentUpon>PostgradoDB.mdf</DependentUpon>
     </Content>
     <Content Include="vw\Administracion.aspx" />
+    <Content Include="vw\AdministracionProp.aspx" />
     <Content Include="vw\Contactos.aspx" />
     <Content Include="vw\ContratoAlquiler.aspx" />
     <Content Include="vw\ContratoLitis.aspx" />
@@ -76,14 +77,6 @@
     <Content Include="imagenes\imagen3.jpg" />
     <Content Include="imagenes\imagen4.jpg" />
     <Content Include="imagenes\imagen5.jpg" />
-    <Content Include="Images\1079-4\1079-1.jpg" />
-    <Content Include="Images\1079-4\1079-2.jpg" />
-    <Content Include="Images\1079-4\1079-3.jpg" />
-    <Content Include="Images\1079-4\1079-4.jpg" />
-    <Content Include="Images\1088-5\1088-1.jpg" />
-    <Content Include="Images\1088-5\1088-2.jpg" />
-    <Content Include="Images\1088-5\1088-3.jpg" />
-    <Content Include="Images\1088-5\1088-4.jpg" />
     <Content Include="LoginResponse.aspx" />
     <Content Include="logo\iconolo.png" />
     <Content Include="logo\lo.jpg" />
@@ -141,6 +134,13 @@
     </Compile>
     <Compile Include="vw\Administracion.aspx.designer.cs">
       <DependentUpon>Administracion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vw\AdministracionProp.aspx.cs">
+      <DependentUpon>AdministracionProp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vw\AdministracionProp.aspx.designer.cs">
+      <DependentUpon>AdministracionProp.aspx</DependentUpon>
     </Compile>
     <Compile Include="vw\Contactos.aspx.cs">
       <DependentUpon>Contactos.aspx</DependentUpon>
@@ -478,6 +478,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Maestra.Master" />
+    <None Include="Properties\PublishProfiles\franceslugo18.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -487,6 +488,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

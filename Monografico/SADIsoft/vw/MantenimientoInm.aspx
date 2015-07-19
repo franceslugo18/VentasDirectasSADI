@@ -88,7 +88,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textbanios">Baños</label>
                 <div class="col-md-4">
-                    <asp:TextBox ID="TextBox4" runat="server" type="text" class="form-control input-md" placeholder="Banios" required ></asp:TextBox>
+                    <asp:TextBox ID="TextBox4" runat="server" type="text" class="form-control input-md" placeholder="Baños" required ></asp:TextBox>
                    
                 </div>
             </div>
@@ -161,7 +161,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="btnRegistrarr"></label>
                 <div class="col-md-4">
-                    <asp:Button ID="btnRegistrar1" runat="server" Text="Aptualizar" class="btn btn-primary" OnClick="btnRegistrar1_Click" />
+                    <asp:Button ID="btnRegistrar1" runat="server" Text="Actualizar" class="btn btn-primary" OnClick="btnRegistrar1_Click" />
                 </div>
             </div>
                <!-- Text input-->

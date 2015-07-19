@@ -147,5 +147,29 @@ namespace SADIsoft.DataAccess
             }
         }
 
+
+        public static int ConseguirPropietarioIdDB(string usuario)
+        {
+            conn = Conexion.Conectar();
+            string query = string.Format(@"SELECT PropietarioId FROM Propietarios INNER JOIN Usuarios ON Propietarios.UsuarioId = Usuarios.UsuarioId WHERE NombreUsuario = '{0}'", usuario);
+            com = new SqlCommand(query,conn);
+
+            int propietarioId = Convert.ToInt32(com.ExecuteScalar());
+            conn.Close();
+
+            return propietarioId;
+        }
+
+        internal static string ConseguirPropietarioNombreDB(string usuario)
+        {
+            conn = Conexion.Conectar();
+            string query = string.Format(@"SELECT Propietarios.Nombre + ' ' + Propietarios.Apellido FROM Propietarios INNER JOIN Usuarios ON Propietarios.UsuarioId = Usuarios.UsuarioId WHERE NombreUsuario = '{0}'", usuario);
+            com = new SqlCommand(query, conn);
+
+            string propietarioNombre = com.ExecuteScalar().ToString();
+            conn.Close();
+
+            return propietarioNombre;
+        }
     }
 }

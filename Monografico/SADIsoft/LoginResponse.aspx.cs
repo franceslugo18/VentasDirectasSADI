@@ -50,7 +50,11 @@ namespace SADIsoft
                         if (tipo == 2)
                             Response.Redirect("/vw/Administracion.aspx");
                         if (tipo == 3)
-                            Response.Redirect("/vw/PropietarioCuenta.aspx");
+                        {
+                            Session["PropietarioNombre"] = LoginControlador.ConseguirPropietarioNombre(usuario);
+                            Session["PropietarioId"] = LoginControlador.ConseguirPropietarioId(usuario);
+                            Response.Redirect("/vw/AdministracionProp.aspx");
+                        }
                     }
                     else
                     {

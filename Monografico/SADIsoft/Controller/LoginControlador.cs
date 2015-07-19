@@ -73,6 +73,16 @@ namespace SADI.Controller
         
         }
 
-       
+
+
+        public static int ConseguirPropietarioId(string usuario)
+        {
+            return UsuarioDA.ConseguirPropietarioIdDB(usuario);
+        }
+
+        internal static string ConseguirPropietarioNombre(string usuario)
+        {
+            return UsuarioDA.ConseguirPropietarioNombreDB(usuario);
+        }
     }
 }
