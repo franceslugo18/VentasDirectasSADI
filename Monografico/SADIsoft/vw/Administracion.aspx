@@ -5,28 +5,28 @@
         #inqui 
         {
             width:900px;
-            height:200px;
+            height:400px;
             border:solid 1px;
             margin-left:50px;
         }
         #mora 
         {
             width:900px;
-            height:200px;
+            height:400px;
             border:solid 1px;
             margin-left:50px;
         }
          #vence 
         {
             width:900px;
-            height:200px;
+            height:400px;
             border:solid 1px;
             margin-left:50px;
         }
          #actulizado 
         {
             width:900px;
-            height:200px;
+            height:400px;
             border:solid 1px;
             margin-left:50px;
         }

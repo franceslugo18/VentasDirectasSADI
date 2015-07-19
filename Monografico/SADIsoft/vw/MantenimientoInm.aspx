@@ -36,6 +36,10 @@
         padding-right:3px;
         border:hidden;
     }
+        #man 
+        {
+            margin-left:320px
+        }
     </style>
 
     <script type="text/javascript">
@@ -158,7 +162,7 @@
             </div>
 
             <!-- Button -->
-            <div class="form-group">
+            <div class="form-group" id="man">
                 <label class="col-md-4 control-label" for="btnRegistrarr"></label>
                 <div class="col-md-4">
                     <asp:Button ID="btnRegistrar1" runat="server" Text="Actualizar" class="btn btn-primary" OnClick="btnRegistrar1_Click" />

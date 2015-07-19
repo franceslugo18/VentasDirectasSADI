@@ -37,6 +37,11 @@
         padding-right:3px;
         border:hidden;
     }
+   #actu 
+   {
+       margin-left:310px
+   }
+
     </style>
 
 
@@ -118,7 +123,7 @@
             </div>
 
              <!-- Button -->
-            <div class="form-group">
+            <div class="form-group" id="actu">
                 <label class="col-md-4 control-label" for="btnRegistrarr"></label>
                 <div class="col-md-4">
                     <asp:Button ID="btnNuevoPropietario" runat="server" Text="Nuevo" class="btn btn-primary" OnClick="btnNuevoPropietario_Click" Width="86px" />

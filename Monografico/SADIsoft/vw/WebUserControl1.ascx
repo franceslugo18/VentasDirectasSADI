@@ -153,37 +153,29 @@
            <br />
 
                       <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textImueble">Precio entre:</label>
-                <div class="col-md-4" id="Div3">
-                    <asp:TextBox ID="txtPrecioDebajo" runat="server" class="form-control"> </asp:TextBox>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:TextBox ID="txtPrecioDebajo0" runat="server" class="form-control"> </asp:TextBox>
-                </div>
-            </div>
-            <br />
-           <br />
-
            <div class="form-group">
-                
-                <div class="col-md-4" id="Div4">
-            <asp:RadioButton  ID="RadioButton1" runat="server" text=" Vivienda" GroupName="rdb"/>
-                    <br />
-            <asp:RadioButton  ID="RadioButton2" runat="server" text=" Local" GroupName="rdb"/>
+               <label class="col-md-4 control-label" for="textImueble">Precio entre:</label>
+               <div class="col-md-4" id="Div3">
+                   <asp:TextBox ID="txtPrecioDebajo" runat="server" class="form-control"> </asp:TextBox>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:TextBox ID="txtPrecioDebajo0" runat="server" class="form-control"> </asp:TextBox>
+               </div>
+           </div>
+           <div class="form-group">
 
-</div>
-            </div>
+               <div class="col-md-4" id="Div4">
+                   <asp:RadioButton ID="RadioButton1" runat="server" Text=" Vivienda" GroupName="rdb" />
+                   <br />
+                   <asp:RadioButton ID="RadioButton2" runat="server" Text=" Local" GroupName="rdb" />
+
+               </div>
+           </div>
                 <div class="col-md-4">
                     <asp:Button ID="Button1" runat="server" Text="Buscar"  name="singlebutton" class="btn btn-primary" OnClick="Button1_Click"/>
                 </div>
            <br/>
            
-           <div class="form-group">
-                
-                <div class="col-md-4" id="Div5">
-
-        </div>
-            </div>
+     
            <br />
             <!-- Button -->
             <div class="form-group">
@@ -202,7 +194,8 @@
 
         
     </div>
-
+    <br />
+    <br />
     <div id="anuncio">
        <div class="fb-page" data-href="https://www.facebook.com/facebook" data-width="550" data-height="350" data-hide-cover="true" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div></div>
     </div>

@@ -65,6 +65,14 @@
     <Content Include="App_Data\PostgradoDB_log.ldf">
       <DependentUpon>PostgradoDB.mdf</DependentUpon>
     </Content>
+    <Content Include="css\closelabel.gif" />
+    <Content Include="css\loading.gif" />
+    <Content Include="css\slimbox2.css" />
+    <Content Include="js\jquery_min.js" />
+    <Content Include="js\slimbox2.js" />
+    <Content Include="prueba\mapa.html" />
+    <Content Include="Scripts\AC_ActiveX.js" />
+    <Content Include="Scripts\AC_RunActiveContent.js" />
     <Content Include="vw\Administracion.aspx" />
     <Content Include="vw\AdministracionProp.aspx" />
     <Content Include="vw\Contactos.aspx" />
@@ -489,10 +497,11 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <ItemGroup>
+<ItemGroup>
     <Folder Include="Images\" />
   </ItemGroup>
-  <PropertyGroup>
+
+<PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
