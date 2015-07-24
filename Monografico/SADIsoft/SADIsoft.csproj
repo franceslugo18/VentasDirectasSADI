@@ -78,7 +78,6 @@
     <Content Include="vw\Contactos.aspx" />
     <Content Include="vw\ContratoAlquiler.aspx" />
     <Content Include="vw\ContratoLitis.aspx" />
-    <Content Include="Default.aspx" />
     <Content Include="imagenes\edi.jpg" />
     <Content Include="imagenes\imagen1.jpg" />
     <Content Include="imagenes\imagen2.jpg" />
@@ -101,7 +100,7 @@
     <Content Include="vw\CrearFactura.aspx" />
     <Content Include="vw\detalle.aspx" />
     <Content Include="vw\GananciasXmes.aspx" />
-    <Content Include="vw\Default.aspx" />
+    <Content Include="Default.aspx" />
     <Content Include="vw\INDEX.aspx" />
     <Content Include="vw\InmueblesPropietarios.aspx" />
     <Content Include="vw\InquilinoDetalle.aspx" />
@@ -185,13 +184,6 @@
     <Compile Include="DataAccess\ProvinciaDA.cs" />
     <Compile Include="DataAccess\SectorDA.cs" />
     <Compile Include="DataAccess\UsuarioDA.cs" />
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="LoginResponse.aspx.cs">
       <DependentUpon>LoginResponse.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -301,11 +293,11 @@
     <Compile Include="vw\GananciasXmes.aspx.designer.cs">
       <DependentUpon>GananciasXmes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="vw\Default.aspx.cs">
+    <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="vw\Default.aspx.designer.cs">
+    <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="vw\INDEX.aspx.cs">
@@ -497,11 +489,10 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-<ItemGroup>
+  <ItemGroup>
     <Folder Include="Images\" />
   </ItemGroup>
-
-<PropertyGroup>
+  <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>

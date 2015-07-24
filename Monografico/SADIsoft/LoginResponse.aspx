@@ -36,7 +36,7 @@
                             <input type="checkbox" value="remember-me"/>
                                 Recordar Contraseña
                         </label>
-                        <a href="/vw/Default.aspx" class="pull-right need-help">CASAS RD </a><span class="clearfix"></span>
+                        <a href="Default.aspx" class="pull-right need-help">CASAS RD </a><span class="clearfix"></span>
                     </form>
                 </div>
                 

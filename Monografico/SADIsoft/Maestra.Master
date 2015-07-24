@@ -35,8 +35,8 @@
             }
         }
 
-        var login = "/LoginResponse.aspx";
-        var salir = "/vw/INDEX.aspx";
+        var login = "./LoginResponse.aspx";
+        var salir = "./vw/INDEX.aspx";
         function Login() {
 
             location.href = login;
@@ -95,9 +95,9 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul id="Lista" class="nav navbar-nav">
-                    <li class="active"><a href="/inicio/index.aspx" />Inicio <span class="sr-only">(current)</span></a></li>
-                    <li><a href="/vw/Contactos.aspx">Contacto</a></li>
-                    <li><a href="/vw/QuienesSomos.aspx">Nosotros</a></li>
+                    <li class="active"><a href="Default.aspx" />Inicio <span class="sr-only">(current)</span></a></li>
+                    <li><a href=".\vw\Contactos.aspx">Contacto</a></li>
+                    <li><a href=".\vw\QuienesSomos.aspx">Nosotros</a></li>
                  </ul>   
                  <form class="navbar-form navbar-right">
                 <div class="form-group">
@@ -119,42 +119,41 @@
             <a href="#demo1" class="list-group-item list-group-item-success" id="pp" data-toggle="collapse" data-parent="#MainMenu">Propietarios</a>
             <div class="collapse" id="demo1">
                 <a href="#SubMenu1" class="list-group-item" data-toggle="collapse" data-parent="#SubMenu1"><i class="fa fa-caret-down"></i></a>
-                
-                <a href="/vw/MantenimientoPro.aspx" class="list-group-item">Mantenimiento</a>
+                  <a href="MantenimientoPro.aspx" class="list-group-item">Mantenimiento</a>
                
             </div>
 
             <a href="#demo2" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Inmueble</a>
             <div class="collapse" id="demo2">
-                <a href="/vw/RegistrarInmuebles.aspx" class="list-group-item">Agregar</a>
-                <a href="/vw/MantenimientoInm.aspx" class="list-group-item">Mantenimiento</a>
+                <a href="RegistrarInmuebles.aspx" class="list-group-item">Agregar</a>
+                <a href="MantenimientoInm.aspx" class="list-group-item">Mantenimiento</a>
                 
             </div>
 
             <a href="#demo3" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Cliente</a>
             <div class="collapse" id="demo3">
                 
-                <a href="/vw/MantenimientoCli.aspx" class="list-group-item">Mantenimiento</a>
+                <a href="MantenimientoCli.aspx" class="list-group-item">Mantenimiento</a>
                 
             </div>
 
             <a href="#demo4" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Contratos</a>
             <div class="collapse" id="demo4">
-                <a href="/vw/ContratoLitis.aspx" class="list-group-item">Contrato Litis</a>
-                <a href="/vw/ContratoAlquiler.aspx" class="list-group-item">Contrato Alquiler</a>
-                <a href="/vw/MantenimientoContratos.aspx" class="list-group-item">Mantenimiento Contratos</a>
+                <a href="ContratoLitis.aspx" class="list-group-item">Contrato Litis</a>
+                <a href="ContratoAlquiler.aspx" class="list-group-item">Contrato Alquiler</a>
+                <a href="MantenimientoContratos.aspx" class="list-group-item">Mantenimiento Contratos</a>
                
             </div>
 
             <a href="#demo5" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Pagos</a>
             <div class="collapse" id="demo5">
-                <a href="/vw/RegistrarPagos.aspx" class="list-group-item">Realizar pagos</a>
+                <a href="RegistrarPagos.aspx" class="list-group-item">Realizar pagos</a>
                 
             </div>
 
             <a href="#demo7" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Usuarios</a>
             <div class="collapse" id="demo7">
-                <a href="/vw/RegistroUsuario.aspx" class="list-group-item">Mantenimiento</a>
+                <a href="RegistroUsuario.aspx" class="list-group-item">Mantenimiento</a>
                 
  
            
@@ -162,7 +161,7 @@
 
             <a href="#demo6" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Reportes</a>
             <div class="collapse" id="demo6">
-                <a href="/vw/PagosXperiodos.aspx" class="list-group-item">Reportes</a>
+                <a href="PagosXperiodos.aspx" class="list-group-item">Reportes</a>
 
            
             </div>

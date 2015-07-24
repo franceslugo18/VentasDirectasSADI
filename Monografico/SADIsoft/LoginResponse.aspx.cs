@@ -30,7 +30,7 @@ namespace SADIsoft
                     {
                         Session["Usuario"] = usuario;
                         Response.Write("Logeado");
-                        Response.Redirect("/vw/LoginCambioResp.aspx");
+                        Response.Redirect("./vw/LoginCambioResp.aspx");
                     }
                     else
                     {
@@ -46,9 +46,9 @@ namespace SADIsoft
                         Session["Tipo"] = tipo;
 
                         if (tipo == 1)
-                            Response.Redirect("/vw/Administracion.aspx");
+                            Response.Redirect("./vw/Administracion.aspx");
                         if (tipo == 2)
-                            Response.Redirect("/vw/Administracion.aspx");
+                            Response.Redirect("./vw/Administracion.aspx");
                         if (tipo == 3)
                         {
                             Session["PropietarioNombre"] = LoginControlador.ConseguirPropietarioNombre(usuario);
