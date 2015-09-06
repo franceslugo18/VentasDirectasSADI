@@ -258,6 +258,7 @@ namespace SADIsoft.prueba
         protected void Button1_Click(object sender, EventArgs e)
         {
             cargarGridView();
+            slidePP.Visible = false;
         }
 
         protected void ddlProvincia1_SelectedIndexChanged(object sender, EventArgs e)
