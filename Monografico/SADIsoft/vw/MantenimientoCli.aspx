@@ -36,9 +36,27 @@
         padding-right:3px;
         border:hidden;
     }
-        #mandecl {
-            margin-left:320px;
-        }
+     #a1 
+   {
+       float:left;
+       margin-left:50px;
+       
+   }
+    #a2 
+    {
+        float:left;
+        margin-left:50px;
+    }
+    #a3
+    {
+        float:left;
+        margin-left:50px;
+    }
+    #a4 
+    {
+        float:left;
+        margin-left:50px;
+    }
     </style>
 
 </asp:Content>
@@ -109,8 +127,8 @@
                 </div>
             </div>
 
-                        <!-- Button -->
-            <div class="form-group">
+            <!-- Button -->
+            <div class="form-group" id="a1">
                 <label class="col-md-4 control-label" for="btnRegistrarr"></label>
                 <div class="col-md-4">
                     <asp:Button ID="Button1" runat="server" Text="Nuevo" class="btn btn-primary" OnClick="Button2_Click" Width="86px"/>
@@ -119,7 +137,7 @@
             </div>
 
             <!-- Button -->
-            <div class="form-group">
+            <div class="form-group" id="a2">
                 <label class="col-md-4 control-label" for="btnRegistrarr"></label>
                 <div class="col-md-4">
                     <asp:Button ID="btnRegistrar" runat="server" Text="Registrar" class="btn btn-primary" OnClick="btnRegistrar_Click" Enabled="False" Width="82px"/>
@@ -128,7 +146,7 @@
             </div>
 
              <!-- Button -->
-            <div class="form-group" id="mandecl">
+            <div class="form-group" id="a3">
                 <label class="col-md-4 control-label" for="btnRegistrarr"></label>
                 <div class="col-md-4">
                     <asp:Button ID="btnActualizarCl" runat="server" Text="Actualizar" class="btn btn-primary" OnClick="btnActualizarCl_Click" Enabled="False" Width="82px"/>
@@ -136,8 +154,8 @@
                 </div>
             </div>
 
-                         <!-- Button -->
-            <div class="form-group">
+             <!-- Button -->
+            <div class="form-group" id="a4">
                 <label class="col-md-4 control-label" for="btnRegistrarr"></label>
                 <div class="col-md-4">
                     <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" class="btn btn-primary" OnClick="btnEliminar_Click" Width="82px" Enabled="False"/>
@@ -148,13 +166,14 @@
               <!-- Text input-->
             <div class="form-group" id="centra">
                 <div class="col-md-4">
-                   <asp:GridView ID="GridView1" runat="server" CssClass="grip1" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="652px" DataKeyNames="ClienteId">
+                   <asp:GridView ID="GridView1" runat="server" CssClass="grip1" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="652px" DataKeyNames="ClienteId" OnSelectedIndexChanging="GridView1_SelectedIndexChanging">
                        <AlternatingRowStyle BackColor="White" />
                        <Columns>
 
-                           <asp:CommandField ShowDeleteButton="True" />
+                           <asp:CommandField ShowSelectButton="True" />
 
                            <asp:BoundField DataField="ClienteId" HeaderText="ClienteId" SortExpression="ClienteId" InsertVisible="False" ReadOnly="True" />
+
                            <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
                            <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
                            <asp:BoundField DataField="Cedula" HeaderText="Cedula" SortExpression="Cedula" />

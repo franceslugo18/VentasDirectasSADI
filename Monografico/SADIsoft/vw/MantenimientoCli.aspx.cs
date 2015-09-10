@@ -57,7 +57,7 @@ namespace SADIsoft.vw
         {
             
             MantenimientoClienteControlador.ActualizarCliente(idCliente, txtNombre1.Text, txtApellido1.Text, txtCedula1.Text, txtTelefonops1.Text, TxtTelefonops2.Text, TextEmail.Text);
-
+            GridView1.DataBind();
         }
 
    
@@ -107,6 +107,13 @@ namespace SADIsoft.vw
             txtTelefonops1.Text = "";
             TxtTelefonops2.Text = "";
             TextEmail.Text = "";
+        }
+
+        protected void GridView1_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        {
+            GridView1.PageIndex = e.NewSelectedIndex;
+            GridView1.DataBind();
+
         }
     }
 }

@@ -81,7 +81,39 @@ I.PropietarioId = @PropietarioId AND I.IsDisponible = 1 AND I.isContratoLitis = 
         <div class="form-group">
             <label class="col-md-4 control-label" for="textCalle">Dia De Pago</label>
             <div class="col-md-4">
-                <asp:TextBox ID="txtDia" runat="server" type="text" class="form-control input-md" placeholder="Dia Pago" required></asp:TextBox>
+                <asp:DropDownList ID="ddlDia" runat="server" class="form-control">
+                        <asp:ListItem>1</asp:ListItem>
+                        <asp:ListItem>2</asp:ListItem>
+                        <asp:ListItem>3</asp:ListItem>
+                        <asp:ListItem>4</asp:ListItem>
+                        <asp:ListItem>5</asp:ListItem>
+                        <asp:ListItem>6</asp:ListItem>
+                        <asp:ListItem>7</asp:ListItem>
+                        <asp:ListItem>8</asp:ListItem>
+                        <asp:ListItem>9</asp:ListItem>
+                        <asp:ListItem>10</asp:ListItem>
+                        <asp:ListItem>11</asp:ListItem>
+                        <asp:ListItem>12</asp:ListItem>
+                        <asp:ListItem>13</asp:ListItem>
+                        <asp:ListItem>14</asp:ListItem>
+                        <asp:ListItem>15</asp:ListItem>
+                        <asp:ListItem>16</asp:ListItem>
+                        <asp:ListItem>17</asp:ListItem>
+                        <asp:ListItem>18</asp:ListItem>
+                        <asp:ListItem>19</asp:ListItem>
+                        <asp:ListItem>20</asp:ListItem>
+                        <asp:ListItem>21</asp:ListItem>
+                        <asp:ListItem>22</asp:ListItem>
+                        <asp:ListItem>23</asp:ListItem>
+                        <asp:ListItem>24</asp:ListItem>
+                        <asp:ListItem>25</asp:ListItem>
+                        <asp:ListItem>26</asp:ListItem>
+                        <asp:ListItem>27</asp:ListItem>
+                        <asp:ListItem>28</asp:ListItem>
+                        <asp:ListItem>29</asp:ListItem>
+                        <asp:ListItem>20</asp:ListItem>
+                        <asp:ListItem Value="31">31</asp:ListItem>
+                    </asp:DropDownList>
 
             </div>
         </div>
