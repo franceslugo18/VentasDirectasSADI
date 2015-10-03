@@ -3,7 +3,7 @@
     <style type="text/css">
         #centra 
         {
-            margin-left:5px;
+            float:left;
         }
         /*Estilo general para el gridView*/
     .grip {
@@ -37,10 +37,27 @@
         padding-right:3px;
         border:hidden;
     }
-   #actu 
+   #a1 
    {
-       margin-left:310px
+       float:left;
+       margin-left:50px;
+       
    }
+    #a2 
+    {
+        float:left;
+        margin-left:50px;
+    }
+    #a3
+    {
+        float:left;
+        margin-left:50px;
+    }
+    #a4 
+    {
+        float:left;
+        margin-left:50px;
+    }
 
     </style>
 
@@ -122,45 +139,46 @@
                 </div>
             </div>
 
-             <!-- Button -->
-            <div class="form-group" id="actu">
-                <label class="col-md-4 control-label" for="btnRegistrarr"></label>
-                <div class="col-md-4">
-                    <asp:Button ID="btnNuevoPropietario" runat="server" Text="Nuevo" class="btn btn-primary" OnClick="btnNuevoPropietario_Click" Width="86px" />
+                <!-- Button -->
+                <div class="form-group" id="a1">
+                    <label class="col-md-4 control-label" for="btnRegistrarr"></label>
+                    <div class="col-md-4">
+                        <asp:Button ID="btnNuevoPropietario" runat="server" Text="Nuevo" class="btn btn-primary" OnClick="btnNuevoPropietario_Click" Width="86px" />
+                    </div>
                 </div>
-            </div>
 
-             <!-- Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="btnRegistrarr"></label>
-                <div class="col-md-4">
-                    <asp:Button ID="btnRegistrarPropietario" runat="server" Text="Registrar" class="btn btn-primary" Enabled="False" OnClick="btnRegistrarPropietario_Click" Width="82px" />
-                    <asp:Label ID="Label2" runat="server" ForeColor="Red" Text="* La cedula no es valida" Visible="False"></asp:Label>
+                <!-- Button -->
+                <div class="form-group" id="a2">
+                    <label class="col-md-4 control-label" for="btnRegistrarr"></label>
+                    <div class="col-md-4">
+                        <asp:Button ID="btnRegistrarPropietario" runat="server" Text="Registrar" class="btn btn-primary" Enabled="False" OnClick="btnRegistrarPropietario_Click" Width="82px" />
+                        <asp:Label ID="Label2" runat="server" ForeColor="Red" Text="* La cedula no es valida" Visible="False"></asp:Label>
+                    </div>
                 </div>
-            </div>
 
-             <!-- Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="btnRegistrarr"></label>
-                <div class="col-md-4">
-                    <asp:Button ID="btnActualizarPropietario" runat="server" Text="Actualizar" class="btn btn-primary" Enabled="False" OnClick="btnActualizarPropietario_Click" Width="82px" />
+                <!-- Button -->
+                <div class="form-group" id="a3">
+                    <label class="col-md-4 control-label" for="btnRegistrarr"></label>
+                    <div class="col-md-4">
+                        <asp:Button ID="btnActualizarPropietario" runat="server" Text="Actualizar" class="btn btn-primary" Enabled="False" OnClick="btnActualizarPropietario_Click" Width="82px" />
+                    </div>
                 </div>
-            </div>
 
-             <!-- Button -->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="btnRegistrarr"></label>
-                <div class="col-md-4">
-                    <asp:Button ID="btnEliminarPropietario" runat="server" Text="Eliminar" class="btn btn-primary" Enabled="False" OnClick="btnEliminarPropietario_Click" Width="82px" />
+                <!-- Button -->
+                <div class="form-group" id="a4">
+                    <label class="col-md-4 control-label" for="btnRegistrarr"></label>
+                    <div class="col-md-4">
+                        <asp:Button ID="btnEliminarPropietario" runat="server" Text="Eliminar" class="btn btn-primary" Enabled="False" OnClick="btnEliminarPropietario_Click" Width="82px" />
+                    </div>
                 </div>
-            </div>
 
-
-
+             
+            <br />
+            <br />
               <!-- Text input-->
             <div class="form-group" id="centra">
                 <div class="col-md-4">
-                <asp:GridView ID="GridView1" runat="server" AllowPaging="True" CssClass="grip" AllowSorting="True" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" DataKeyNames="PropietarioId" DataSourceID="SqlDataSource1" ForeColor="Black" AutoGenerateSelectButton="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="900px" CellSpacing="2">
+                <asp:GridView ID="GridView1" runat="server" AllowPaging="True" CssClass="grip" AllowSorting="True" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" DataKeyNames="PropietarioId" DataSourceID="SqlDataSource1" ForeColor="Black" AutoGenerateSelectButton="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="900px" CellSpacing="2" OnSelectedIndexChanging="GridView1_SelectedIndexChanging">
                     <Columns>
                         <asp:BoundField DataField="PropietarioId" HeaderText="PropietarioId" InsertVisible="False" ReadOnly="True" SortExpression="PropietarioId" />
                         <asp:BoundField DataField="Nombre" HeaderText="Nombre" ReadOnly="True" SortExpression="Nombre" />

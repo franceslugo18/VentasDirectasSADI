@@ -128,6 +128,7 @@ namespace SADIsoft.propietarios_registrados
                 //GridView1.UpdateRow(Convert.ToInt32(GridView1.SelectedDataKey.Value), false);
 
                 limpiar();
+                GridView1.DataBind();
 
 
             }
@@ -147,6 +148,12 @@ namespace SADIsoft.propietarios_registrados
                 Response.Write("No se puede eliminar el propietario. Asegurese que este no tenga ningun inmueble con contrato activo");
             else
                 Response.Write("Propietario y sus inmuebles han sido eliminados con exito");
+        }
+
+        protected void GridView1_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        {
+            GridView1.PageIndex = e.NewSelectedIndex;
+            GridView1.DataBind();
         }
     }
 }
