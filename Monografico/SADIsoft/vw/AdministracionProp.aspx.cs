@@ -13,6 +13,7 @@ namespace SADIsoft.vw
         protected void Page_Load(object sender, EventArgs e)
         {
             Label1.Text = Session["PropietarioNombre"].ToString();
+           
 
             ReportViewer1.ProcessingMode = Microsoft.Reporting.WebForms.ProcessingMode.Remote;
             ReportViewer1.ServerReport.ReportServerUrl = new System.Uri("http://localhost/Reportserver");

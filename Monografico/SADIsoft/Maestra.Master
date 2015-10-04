@@ -18,8 +18,10 @@
         function AccesoAdmin() {
 
             var username = '<%= Session["Usuario"] %>';
-            if (username == "admin") {
+            var Tipo = '<%= Session["Tipo"] %>';
+            if (Tipo == "1") {
                 document.getElementById('MainMenu').style.display = "inline";
+                document.getElementById('usu').style.display = "inline";
                 document.getElementById('MainMenu').style.width = "250px";
                 document.getElementById('MainMenu').style.marginLeft = "5px";
                 document.getElementById('MainMenu').style.marginTop = "50px";
@@ -33,6 +35,25 @@
                 document.getElementById('singlebutton').value = 'Salir';
 
             }
+            if (Tipo == "2")
+            {
+                document.getElementById('MainMenu').style.display = "inline";
+                document.getElementById('usu').style.display = "none";
+                document.getElementById('MainMenu').style.width = "250px";
+                document.getElementById('MainMenu').style.marginLeft = "5px";
+                document.getElementById('MainMenu').style.marginTop = "50px";
+                document.getElementById('MainMenu').style.cssFloat = "left";
+
+                document.getElementById('cuerpo').style.cssFloat = "right";
+                document.getElementById('cuerpo').style.marginRight = "10px";
+                document.getElementById('cuerpo').style.marginTop = "50px";
+                document.getElementById('cuerpo').style.width = "1000px";
+
+                document.getElementById('singlebutton').value = 'Salir';
+            }
+
+          
+
         }
 
         var login = "/LoginResponse.aspx";
@@ -67,6 +88,12 @@
         {
             display: none;
         }
+        #usu 
+        {
+            display:none;
+        }
+    
+    
 
         #pp
         {
@@ -164,13 +191,12 @@
                 <a href="/vw/RegistrarPagos.aspx" class="list-group-item">Realizar pagos</a>
                 
             </div>
+            <div id="usu">
+                <a href="#demo7"  class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Usuarios</a>
+                <div class="collapse" id="demo7">
+                    <a href="/vw/RegistroUsuario.aspx" class="list-group-item">Mantenimiento</a>
+                </div>
 
-            <a href="#demo7" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Usuarios</a>
-            <div class="collapse" id="demo7">
-                <a href="/vw/RegistroUsuario.aspx" class="list-group-item">Mantenimiento</a>
-                
- 
-           
             </div>
 
             <a href="#demo6" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#MainMenu">Reportes</a>

@@ -88,6 +88,7 @@ namespace SADIsoft.registrar_usuario
                 c2.Visible = true;
                 c1.Checked = false;
                 r1.Checked = false;
+                r2.Checked = false;
             }
             catch (Exception ex)
             {
@@ -153,8 +154,17 @@ namespace SADIsoft.registrar_usuario
                 con.Open();
                 string query = string.Format(@"UPDATE Usuarios SET Tipo = {0}, Estado = {1} WHERE UsuarioId = {2}", t, a, usuarioId);
                 SqlCommand com = new SqlCommand(query, con);
+                TextEmail.Text = "";
+                txtcategoria.Text = "";
+                txtestado.Text = "";
+                r1.Checked = false;
+                r2.Checked = false;
+                c1.Checked = false;
+                c2.Checked = false;
                 com.ExecuteScalar();
                 GridView1.DataBind();
+
+                
             }
             catch (Exception ex)
             {
