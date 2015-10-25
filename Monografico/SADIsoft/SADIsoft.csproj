@@ -66,11 +66,17 @@
       <DependentUpon>PostgradoDB.mdf</DependentUpon>
     </Content>
     <Content Include="css\closelabel.gif" />
+    <Content Include="css\estilos.css" />
     <Content Include="css\loading.gif" />
     <Content Include="css\slimbox2.css" />
+    <Content Include="css\fonts.css" />
+    <Content Include="fonts\icomoon.svg" />
+    <Content Include="js\jquery.slides.js" />
+    <Content Include="js\jquery.slides.min.js" />
     <Content Include="js\jquery_min.js" />
     <Content Include="js\slimbox2.js" />
     <Content Include="prueba\mapa.html" />
+    <Content Include="prueba\slide.html" />
     <Content Include="Scripts\AC_ActiveX.js" />
     <Content Include="Scripts\AC_RunActiveContent.js" />
     <Content Include="vw\Administracion.aspx" />
@@ -478,6 +484,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Maestra.Master" />
+    <Content Include="fonts\icomoon.eot" />
+    <Content Include="fonts\icomoon.ttf" />
+    <Content Include="fonts\icomoon.woff" />
     <None Include="Properties\PublishProfiles\franceslugo18.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

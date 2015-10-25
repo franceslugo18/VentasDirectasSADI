@@ -100,6 +100,7 @@
      #Div2 {
          width: 200px;
      }
+   
 
 
  </style>
@@ -191,7 +192,10 @@
         <asp:Label ID="numero" runat="server" Text="" CssClass="numero"></asp:Label>
         <asp:GridView ID="GridView1" CssClass="gridView" runat="server" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowDataBound="OnRowDataBound" AllowPaging="True" AutoGenerateColumns="False" Width="647px">
         </asp:GridView>
-
+        <br />
+        <iframe src="../prueba/slide.html" style="height:450px; width: 647px; border:0px" runat="server" id="slidePP">
+            
+        </iframe>
         
     </div>
     <br />
