@@ -174,6 +174,7 @@
                     <asp:GridView ID="GridView1" CssClass="grip2" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="770px" DataKeyNames="InmuebleId">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
+                            <asp:CommandField ShowSelectButton="True" />
                             <asp:BoundField DataField="Nombre" HeaderText="Nombre" ReadOnly="True" SortExpression="Nombre" />
                             <asp:BoundField DataField="PrecioAlquiler" HeaderText="PrecioAlquiler" SortExpression="PrecioAlquiler" />
                             <asp:BoundField DataField="Depositos" HeaderText="Depositos" SortExpression="Depositos" />

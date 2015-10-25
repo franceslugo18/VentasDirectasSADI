@@ -151,7 +151,7 @@ namespace SADIsoft.vw
                 
                //Server.Transfer("/vw/CrearFactura.aspx");
                 Session["pagoId"] = pagoId;
-                Response.Redirect("/vw/CrearFactura.aspx");
+                Response.Redirect("~/vw/CrearFactura.aspx");
             }
             else
             {

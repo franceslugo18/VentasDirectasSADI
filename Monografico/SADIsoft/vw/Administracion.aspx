@@ -146,7 +146,7 @@ SELECT Facturas.FechaGenerada, Facturas.ContratoId, Facturas.TotalCuota, Cliente
 FROM Facturas
 INNER JOIN Contratos ON Facturas.ContratoId = Contratos.ContratoId
 INNER JOIN Clientes ON Contratos.ClienteId = Clientes.ClienteId
-WHERE Facturas.FechaGenerada = DATEADD(dd,-6,CONVERT(DATE,GETDATE())) AND  Facturas.Estado = 0 AND Facturas.isMoraAplicada = 1"></asp:SqlDataSource>
+WHERE Facturas.FechaGenerada = DATEADD(dd,-5,CONVERT(DATE,GETDATE())) AND  Facturas.Estado = 0 AND Facturas.isMoraAplicada = 1"></asp:SqlDataSource>
                 
             </div>
                 <!-- Text input-->

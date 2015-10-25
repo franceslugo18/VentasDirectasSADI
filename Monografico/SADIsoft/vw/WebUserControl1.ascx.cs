@@ -159,7 +159,10 @@ namespace SADIsoft.prueba
 
                 SqlCommand com = new SqlCommand();
 
-                com.CommandText = string.Format(@"SELECT P.Nombre AS Provincia, I.Foto1, I.Observaciones, I.PrecioAlquiler, I.InmuebleId  FROM Inmuebles AS I
+                com.CommandText = string.Format(@"SELECT P.Nombre AS Provincia, I.Foto1, 
+                    I.Observaciones, 
+                    
+                    I.PrecioAlquiler, I.InmuebleId  FROM Inmuebles AS I
 
 	                INNER JOIN Direcciones AS D ON I.DireccionId = D.DireccionId
 

@@ -113,7 +113,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="btnRegistrarr"></label>
                 <div class="col-md-4">
-                    <asp:Button ID="Button1" runat="server" Text="Nuevo" class="btn btn-primary" OnClick="Button2_Click" Width="86px"/>
+                    <asp:Button ID="Button1" runat="server" Text="Nuevo" class="btn btn-primary" OnClick="Button2_Click" Width="86px" CausesValidation="False" UseSubmitBehavior="False"/>
                 &nbsp;&nbsp;
                 </div>
             </div>

@@ -29,15 +29,14 @@ namespace SADI.Model
             MailMessage mail = new MailMessage();
             SmtpClient client = new SmtpClient("smtp.gmail.com");
 
-            mail.From = new MailAddress("franciscogod18@gmail.com");
+            mail.From = new MailAddress("sadi.casard@gmail.com");
             mail.To.Add(email);
-            mail.Subject = "Validacion de la cuenta de Ventas SADI";
-            mail.Body = string.Format(@"Bienvenido a SADI\n\nEste correo es para activar su cuenta para poder ver el estado de sus inmuebles " +
-                @"administrados por SADI via Web. Con el codigo enviado en este email entre a http:\\www.SADI.com\Propietarios y siga las " +
-                "instrucciones para activar su cuenta:\n\n\n" + randomP);
+            mail.Subject = "Validacion de la cuenta CasasRD";
+            mail.Body = string.Format(@"Bienvenido a Casas RD. En este correo se encuentra el codigo con el que podra activar su cuenta de Usuario para acceder al sistema de Casas RD. Su codigo es: " +
+                randomP);
 
             client.Port = 587;
-            client.Credentials = new NetworkCredential("sadisoftwera@gmail.com", "151819151819");
+            client.Credentials = new NetworkCredential("sadi.casard@gmail.com", "franciscolopez");
             client.EnableSsl = true;
 
             client.Send(mail);
@@ -51,7 +50,7 @@ namespace SADI.Model
         //-----------------------------------------------------------
         private static string CreateRandomPassword(int PasswordLength)
         {
-            string _allowedChars = "abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789!@$?";
+            string _allowedChars = "abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789";
             Byte[] randomBytes = new Byte[PasswordLength];
             char[] chars = new char[PasswordLength];
             int allowedCharCount = _allowedChars.Length;

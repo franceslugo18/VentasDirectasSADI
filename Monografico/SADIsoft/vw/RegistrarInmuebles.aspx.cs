@@ -105,8 +105,8 @@ namespace SADIsoft.registrar_inmueble
             int sectorId = Convert.ToInt32(ddlSector1.SelectedValue);
             string calle = txtCalle1.Text;
             string numero = txtNumero1.Text;
-            bool tipo;
             
+
             decimal precioAlquiler = 0.0m;
             if (txtPrecioAlquiler1.Text != "")
             {
@@ -125,10 +125,13 @@ namespace SADIsoft.registrar_inmueble
             bool piscina = cbPiscina1.Checked;
             bool marquesina = cbMarquesina1.Checked;
             int capacidad = 0;
+            bool tipoInmueble = false;
+
             if (ddlCapacidadMarquesina1.SelectedIndex != -1)
             {
                 capacidad = ddlCapacidadMarquesina1.SelectedIndex;
             }
+
             int habitaciones = Convert.ToInt32(ddlHabitaciones1.Text);
             int banos = Convert.ToInt32(ddlBanos1.Text);
 
@@ -139,8 +142,14 @@ namespace SADIsoft.registrar_inmueble
 
             string comentarios = txtComentarios1.Text;
 
-            bool tipoInmueble = false;
-            
+            if (rbVivienda1.Checked)
+            {
+               tipoInmueble = true;
+            }
+            else if (rbLocal1.Checked)
+            {
+               tipoInmueble = false;
+            }
 
             try
             {
